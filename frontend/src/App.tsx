@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AppLayout from "@/components/layout/AppLayout";
 import { ThemeProvider } from "@/components/theme-provider";
+import CalendarPage from "@/pages/Calendar";
 import Dashboard from "@/pages/Dashboard";
 import Insights from "@/pages/Insights";
 import Landing from "@/pages/Landing";
@@ -30,6 +31,7 @@ const App = () => (
                         <Route path="/signup" element={<Signup />} />
 
                         <Route element={<AppLayout />}>
+                            <Route path="/calendar" element={<CalendarPage />} />
                             <Route path="/dashboard" element={<Dashboard />} />
                             <Route path="/insights" element={<Insights />} />
                             <Route path="/portfolio" element={<Portfolio />} />

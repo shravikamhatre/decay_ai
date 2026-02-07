@@ -1,8 +1,12 @@
 import { motion } from "framer-motion";
-import { Calendar, TrendingUp, Sparkles, ArrowRight } from "lucide-react";
+import { Calendar as CalendarIcon, TrendingUp, Sparkles, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import CustomCalendar from "@/components/CustomCalendar";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 const Dashboard = () => {
+  const [date, setDate] = useState<Date | undefined>(new Date());
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -15,22 +19,30 @@ const Dashboard = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
-          className="col-span-1 glass-card p-6 flex flex-col relative overflow-hidden group"
+          className="col-span-1 glass-card p-4 flex flex-col relative overflow-hidden group"
         >
           <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-[40px] -translate-y-1/2 translate-x-1/2" />
 
-          <div className="flex items-center gap-3 mb-4">
+          <div className="flex items-center gap-3 mb-2 z-10 relative">
             <div className="p-2 bg-primary/10 rounded-lg">
-              <Calendar className="w-5 h-5 text-primary" />
+              <CalendarIcon className="w-5 h-5 text-primary" />
             </div>
             <h2 className="text-lg font-semibold">Calendar</h2>
           </div>
 
-          <div className="flex-1 flex flex-col justify-center items-center text-center p-4 border-2 border-dashed border-muted rounded-lg bg-secondary/20">
-            <p className="text-muted-foreground mb-4">View upcoming events and schedules</p>
-            <Link to="/calendar" className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors">
-              Open Calendar <ArrowRight className="w-4 h-4" />
-            </Link>
+          <div className="flex-1 flex flex-col items-center justify-start overflow-hidden z-10 relative w-full">
+            <CustomCalendar
+              compact
+              className="w-full h-full"
+              onDayClick={(d) => setDate(d)}
+            />
+            <div className="mt-2 w-full flex justify-center shrink-0">
+              <Button asChild className="w-full" variant="outline" size="sm">
+                <Link to="/calendar">
+                  View Calendar <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </motion.div>
 
