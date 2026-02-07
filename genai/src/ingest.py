@@ -27,8 +27,8 @@ TODAY = datetime.utcnow().date()
 # ======================================================
 
 CREATOR_NICHES = [
-    "Travel", "Fitness", "Fashion", "Tech", "Food",
-    "Music", "Lifestyle", "Gaming", "Education", "Finance","Entertainment"
+    "travel", "fitness", "fashion", "tech", "food",
+    "music", "lifestyle", "gaming", "education", "finance"
 ]
 
 # ======================================================
