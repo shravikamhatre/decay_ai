@@ -28,52 +28,16 @@ interface CustomCalendarProps {
     onDayClick?: (day: Date) => void;
 }
 
-// Generate gradient class based on active categories
-const getGlowGradientStyle = (categories: DayCategories | undefined, compact: boolean) => {
-    if (!categories) return {};
-
-    const { good, okay, bad } = categories;
-    const activeColors: string[] = [];
-
-    // Order: green (good) -> yellow (okay) -> red (bad) - MORE INTENSE COLORS
-    if (good) activeColors.push("rgba(22, 163, 74, 0.9)");  // green-600 more saturated
-    if (okay) activeColors.push("rgba(202, 138, 4, 0.9)");   // yellow-600 more saturated
-    if (bad) activeColors.push("rgba(220, 38, 38, 0.9)");    // red-600 more saturated
-
-    if (activeColors.length === 0) return {};
-
-    // Create gradient string
-    let gradient: string;
-    if (activeColors.length === 1) {
-        gradient = activeColors[0];
-    } else if (activeColors.length === 2) {
-        gradient = `linear-gradient(135deg, ${activeColors[0]} 0%, ${activeColors[1]} 100%)`;
-    } else {
-        gradient = `linear-gradient(135deg, ${activeColors[0]} 0%, ${activeColors[1]} 50%, ${activeColors[2]} 100%)`;
-    }
-
-    // Box shadow for glow effect - MORE INTENSE
-    const glowShadows = activeColors.map((color, i) => {
-        const spread = compact ? 10 : 16;
-        return `0 0 ${spread + i * 6}px ${color.replace("0.9", "0.7")}`;
-    }).join(", ");
-
-    return {
-        background: gradient,
-        boxShadow: glowShadows,
-    };
-};
-
-// Get category indicator dots - using StaggeredMenu-inspired colors
+// Get category indicator dots - the decay theme colors
 const getCategoryDots = (categories: DayCategories | undefined) => {
     if (!categories) return null;
     const { good, okay, bad } = categories;
 
     return (
         <div className="flex gap-1 mt-1">
-            {good && <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 ring-1 ring-black/30 shadow-sm shadow-emerald-400/50" />}
-            {okay && <span className="w-2.5 h-2.5 rounded-full bg-amber-400 ring-1 ring-black/30 shadow-sm shadow-amber-400/50" />}
-            {bad && <span className="w-2.5 h-2.5 rounded-full bg-orange-500 ring-1 ring-black/30 shadow-sm shadow-orange-500/50" />}
+            {good && <span className="w-2.5 h-2.5 rounded-full bg-[#2DD881] shadow-sm" />}
+            {okay && <span className="w-2.5 h-2.5 rounded-full bg-[#FFE733] shadow-sm" />}
+            {bad && <span className="w-2.5 h-2.5 rounded-full bg-red-500 shadow-sm" />}
         </div>
     );
 };
@@ -95,13 +59,13 @@ const CustomCalendar = ({ className, compact = false, dayCategories, tasks, onDa
     const renderHeader = () => {
         return (
             <div className="flex items-center justify-between mb-4">
-                <Button variant="ghost" size="icon" onClick={prevMonth}>
+                <Button variant="ghost" size="icon" onClick={prevMonth} className="hover:bg-gray-100 rounded-full">
                     <ChevronLeft className="h-5 w-5" />
                 </Button>
-                <h2 className={cn("font-display font-bold text-foreground", compact ? "text-lg" : "text-2xl")}>
+                <h2 className={cn("font-airone font-bold text-black lowercase", compact ? "text-lg" : "text-2xl")}>
                     {format(currentMonth, "MMMM yyyy")}
                 </h2>
-                <Button variant="ghost" size="icon" onClick={nextMonth}>
+                <Button variant="ghost" size="icon" onClick={nextMonth} className="hover:bg-gray-100 rounded-full">
                     <ChevronRight className="h-5 w-5" />
                 </Button>
             </div>
@@ -113,12 +77,12 @@ const CustomCalendar = ({ className, compact = false, dayCategories, tasks, onDa
         const startDate = startOfWeek(currentMonth);
         for (let i = 0; i < 7; i++) {
             days.push(
-                <div key={i} className="text-center font-medium text-muted-foreground py-2 uppercase text-xs tracking-wider">
+                <div key={i} className="text-center font-medium text-gray-400 py-2 uppercase text-xs tracking-wider">
                     {format(addDays(startDate, i), "EEE")}
                 </div>
             );
         }
-        return <div className="grid grid-cols-7 mb-2 border-b border-border pb-2">{days}</div>;
+        return <div className="grid grid-cols-7 mb-2 border-b border-gray-100 pb-2">{days}</div>;
     };
 
     const renderCells = () => {
@@ -150,10 +114,10 @@ const CustomCalendar = ({ className, compact = false, dayCategories, tasks, onDa
                     <div
                         key={day.toString()}
                         className={cn(
-                            "relative border border-border/50 transition-all duration-300 cursor-pointer flex flex-col items-start justify-start p-2 group rounded-lg",
+                            "relative border border-gray-100 transition-all duration-300 cursor-pointer flex flex-col items-start justify-start p-2 group rounded-xl",
                             compact ? "h-16 text-sm" : "h-28 text-base",
-                            !isCurrentMonth ? "bg-secondary/20 text-muted-foreground opacity-50" : "bg-card text-card-foreground hover:bg-accent/30",
-                            isSelected && "ring-2 ring-primary ring-offset-2 ring-offset-background z-10"
+                            !isCurrentMonth ? "bg-gray-50 text-gray-300" : "bg-white text-black hover:bg-gray-50",
+                            isSelected && "ring-2 ring-black ring-offset-2 z-10"
                         )}
                         onClick={() => {
                             setSelectedDate(currentDay);
@@ -163,8 +127,8 @@ const CustomCalendar = ({ className, compact = false, dayCategories, tasks, onDa
                         {/* Date number */}
                         <div className="flex items-center justify-between w-full">
                             <span className={cn(
-                                "font-semibold rounded-full w-7 h-7 flex items-center justify-center text-sm",
-                                isToday && "bg-primary text-primary-foreground shadow-warm"
+                                "font-bold rounded-full w-7 h-7 flex items-center justify-center text-sm",
+                                isToday && "bg-black text-white"
                             )}>
                                 {formattedDate}
                             </span>
@@ -172,24 +136,24 @@ const CustomCalendar = ({ className, compact = false, dayCategories, tasks, onDa
                             {!compact && getCategoryDots(categories)}
                         </div>
 
-                        {/* Tasks preview (non-compact mode) - StaggeredMenu-inspired pastel colors */}
+                        {/* Tasks preview (non-compact mode) */}
                         {!compact && dayTasks.length > 0 && (
                             <div className="mt-2 w-full space-y-1 overflow-hidden">
                                 {dayTasks.slice(0, 2).map((task) => (
                                     <div
                                         key={task.id}
                                         className={cn(
-                                            "text-xs px-2 py-0.5 rounded truncate font-medium",
-                                            task.category === "good" && "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300 border border-emerald-300/50",
-                                            task.category === "okay" && "bg-amber-100 text-amber-700 dark:bg-amber-500/20 dark:text-amber-300 border border-amber-300/50",
-                                            task.category === "bad" && "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300 border border-orange-300/50"
+                                            "text-xs px-2 py-0.5 rounded-full truncate font-medium",
+                                            task.category === "good" && "bg-[#2DD881] text-black",
+                                            task.category === "okay" && "bg-[#FFE733] text-black",
+                                            task.category === "bad" && "bg-red-500 text-white"
                                         )}
                                     >
                                         {task.title}
                                     </div>
                                 ))}
                                 {dayTasks.length > 2 && (
-                                    <span className="text-xs text-muted-foreground font-medium">+{dayTasks.length - 2} more</span>
+                                    <span className="text-xs text-gray-400 font-medium">+{dayTasks.length - 2} more</span>
                                 )}
                             </div>
                         )}
