@@ -89,10 +89,24 @@ ${alternativesBlock}
 
 Task:
 Explain why this trend is beginning to weaken using the signals.
-Clearly identify which signals indicate decline.
-Recommend ONE alternative trend from the list above.
-Explain why the recommended trend is healthier using its metrics.
+Explicitly reference velocity change, engagement, appearance, and decay.
+
+Then compare it directly against ONE alternative trend from the list.
+You must compare signals, not describe the alternative in isolation.
+
+When describing the alternative:
+- If velocity_change <= 0, describe it as “more stable than the current trend”
+- If velocity_change > 0, describe it as “healthier momentum”
+
+Decay interpretation rules (mandatory):
+- High decay means a short-term opportunity
+- Low decay means a longer runway
+
+Do not describe any trend as strong, booming, or growing unless velocity_change > 0.
 Keep the explanation constructive and forward-looking.
+
+If signals conflict, prioritize velocity change and decay over all other signals.
+
 `.trim();
 
   return {
