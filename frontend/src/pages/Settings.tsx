@@ -87,7 +87,7 @@ const Settings = () => {
             <>
               <div className="glass-card p-6">
                 <h3 className="text-lg font-semibold text-foreground mb-6">Profile Information</h3>
-                
+
                 <div className="flex items-center gap-6 mb-6">
                   <div className="relative">
                     <img
@@ -152,7 +152,7 @@ const Settings = () => {
             <>
               <div className="glass-card p-6">
                 <h3 className="text-lg font-semibold text-foreground mb-6">Change Password</h3>
-                
+
                 <div className="space-y-4 max-w-md">
                   <div className="space-y-2">
                     <Label className="text-foreground">Current Password</Label>
@@ -196,7 +196,7 @@ const Settings = () => {
 
               <div className="glass-card p-6">
                 <h3 className="text-lg font-semibold text-foreground mb-4">Two-Factor Authentication</h3>
-                
+
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-4 rounded-xl bg-secondary/30">
                     <div className="flex items-center gap-3">
@@ -248,7 +248,7 @@ const Settings = () => {
           {activeSection === "notifications" && (
             <div className="glass-card p-6">
               <h3 className="text-lg font-semibold text-foreground mb-6">Notification Preferences</h3>
-              
+
               <div className="space-y-4">
                 {[
                   { title: "Transaction Alerts", description: "Get notified for all transactions" },
@@ -281,7 +281,7 @@ const Settings = () => {
             <>
               <div className="glass-card p-6">
                 <h3 className="text-lg font-semibold text-foreground mb-4">Current Plan</h3>
-                
+
                 <div className="p-4 rounded-xl border border-primary/30 bg-primary/5 mb-6">
                   <div className="flex items-center justify-between">
                     <div>
@@ -299,7 +299,7 @@ const Settings = () => {
 
               <div className="glass-card p-6">
                 <h3 className="text-lg font-semibold text-foreground mb-4">Payment Method</h3>
-                
+
                 <div className="flex items-center justify-between p-4 rounded-xl bg-secondary/30 mb-4">
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 text-white text-xs font-bold">
@@ -324,12 +324,12 @@ const Settings = () => {
           {activeSection === "help" && (
             <div className="glass-card p-6">
               <h3 className="text-lg font-semibold text-foreground mb-6">Help & Support</h3>
-              
+
               <div className="space-y-3">
                 {[
                   { title: "FAQ", description: "Frequently asked questions" },
                   { title: "Contact Support", description: "Get help from our team" },
-                  { title: "Documentation", description: "Learn how to use FinanceAI" },
+                  { title: "Documentation", description: "Learn how to use Shelf Life" },
                   { title: "Community", description: "Join our community forum" },
                 ].map((item, index) => (
                   <button

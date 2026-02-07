@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Eye, EyeOff, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,6 +16,7 @@ const Login = () => {
     e.preventDefault();
     // Handle login
     console.log("Login:", { email, password });
+    navigate("/onboarding");
   };
 
   return (
@@ -36,7 +38,7 @@ const Login = () => {
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary">
               <Sun className="h-6 w-6 text-primary-foreground" />
             </div>
-            <span className="text-xl font-semibold text-foreground">FinanceAI</span>
+            <span className="text-xl font-semibold text-foreground">Shelf Life</span>
           </Link>
           <h1 className="text-2xl font-bold text-foreground mb-2">Welcome back</h1>
           <p className="text-muted-foreground">Sign in to your account to continue</p>

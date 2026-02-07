@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Eye, EyeOff, Sun, Check, ArrowRight, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -10,10 +10,11 @@ import { cn } from "@/lib/utils";
 const steps = [
   { id: 1, title: "Account" },
   { id: 2, title: "Profile" },
-  { id: 3, title: "Preferences" },
+  { id: 3, title: "Content Focus" },
 ];
 
 const Signup = () => {
+  const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
@@ -55,10 +56,10 @@ const Signup = () => {
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary">
               <Sun className="h-6 w-6 text-primary-foreground" />
             </div>
-            <span className="text-xl font-semibold text-foreground">FinanceAI</span>
+            <span className="text-xl font-semibold text-foreground">Shelf Life</span>
           </Link>
-          <h1 className="text-2xl font-bold text-foreground mb-2">Create your account</h1>
-          <p className="text-muted-foreground">Start your financial journey today</p>
+          <h1 className="text-2xl font-bold text-foreground mb-2">Join Shelf Life</h1>
+          <p className="text-muted-foreground">Start your creator journey today</p>
         </div>
 
         {/* Progress Steps */}
@@ -71,8 +72,8 @@ const Signup = () => {
                   currentStep > step.id
                     ? "bg-primary text-primary-foreground"
                     : currentStep === step.id
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-secondary text-muted-foreground"
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-secondary text-muted-foreground"
                 )}
               >
                 {currentStep > step.id ? <Check className="h-4 w-4" /> : step.id}
@@ -172,9 +173,9 @@ const Signup = () => {
             {currentStep === 3 && (
               <div className="space-y-5">
                 <div className="space-y-2">
-                  <Label className="text-foreground">Investment Goal</Label>
+                  <Label className="text-foreground">Primary Goal</Label>
                   <div className="grid grid-cols-2 gap-3">
-                    {["Growth", "Income", "Balanced", "Preservation"].map((goal) => (
+                    {["Brand Awareness", "Engagement", "Conversion", "Community"].map((goal) => (
                       <button
                         key={goal}
                         type="button"
@@ -195,7 +196,7 @@ const Signup = () => {
                 <div className="p-4 rounded-xl bg-success/10 border border-success/30">
                   <p className="text-sm text-success font-medium">You're all set!</p>
                   <p className="text-xs text-muted-foreground mt-1">
-                    Click finish to create your account and start investing.
+                    Click finish to create your account and start creating.
                   </p>
                 </div>
               </div>
@@ -217,7 +218,10 @@ const Signup = () => {
             )}
             <Button
               type="button"
-              onClick={currentStep === 3 ? () => console.log("Submit:", formData) : nextStep}
+              onClick={currentStep === 3 ? () => {
+                console.log("Submit:", formData);
+                navigate("/onboarding");
+              } : nextStep}
               className="flex-1 h-11 bg-primary hover:bg-primary/90 text-primary-foreground font-medium"
             >
               {currentStep === 3 ? "Finish" : "Continue"}

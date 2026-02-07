@@ -75,7 +75,7 @@ const Landing = () => {
           <div className="hidden md:flex items-center gap-8">
             <a href="#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Features</a>
             <a href="#testimonials" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Testimonials</a>
-            <a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
+
           </div>
 
           <div className="flex items-center gap-3">
@@ -194,7 +194,7 @@ const Landing = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Powerful Features for <span className="text-gradient-gold">Smart Finance</span>
+              Powerful Features for <span className="text-gradient-gold">Content Impact</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Everything you need to manage, grow, and protect your wealth in one beautiful platform.
@@ -236,7 +236,7 @@ const Landing = () => {
               Loved by <span className="text-gradient-gold">Thousands</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              See what our users have to say about their experience with FinanceAI.
+              See what our users have to say about their experience with Shelf Life.
             </p>
           </motion.div>
 
@@ -322,7 +322,7 @@ const Landing = () => {
               <h4 className="font-semibold text-foreground mb-4">Product</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><a href="#" className="hover:text-foreground transition-colors">Features</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Pricing</a></li>
+
                 <li><a href="#" className="hover:text-foreground transition-colors">Security</a></li>
                 <li><a href="#" className="hover:text-foreground transition-colors">API</a></li>
               </ul>

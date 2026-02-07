@@ -10,6 +10,7 @@ import Dashboard from "@/pages/Dashboard";
 import Insights from "@/pages/Insights";
 import Landing from "@/pages/Landing";
 import Login from "@/pages/Login";
+import Onboarding from "@/pages/Onboarding";
 import Portfolio from "@/pages/Portfolio";
 import Settings from "@/pages/Settings";
 import Signup from "@/pages/Signup";
@@ -29,6 +30,7 @@ const App = () => (
                         <Route path="/" element={<Landing />} />
                         <Route path="/login" element={<Login />} />
                         <Route path="/signup" element={<Signup />} />
+                        <Route path="/onboarding" element={<Onboarding />} />
 
                         <Route element={<AppLayout />}>
                             <Route path="/calendar" element={<CalendarPage />} />
