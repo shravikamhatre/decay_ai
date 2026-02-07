@@ -1,21 +1,40 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
-import { Eye, EyeOff } from "lucide-react";
+import { Eye, EyeOff, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { login } from "@/lib/api";
 
 const Login = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Login:", { email, password });
-    navigate("/onboarding");
+    setIsLoading(true);
+    setError("");
+
+    try {
+      const result = await login({ email, password });
+
+      if (result.success) {
+        localStorage.setItem("user_email", email);
+        localStorage.setItem("user_logged_in", "true");
+        navigate("/dashboard");
+      } else {
+        setError(result.error || "Login failed. Please try again.");
+      }
+    } catch (err) {
+      setError("Network error. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -38,6 +57,13 @@ const Login = () => {
           <p className="text-gray-500">sign in to your account to continue</p>
         </div>
 
+        {/* Error Message */}
+        {error && (
+          <div className="mb-4 p-3 rounded-xl bg-red-50 border border-red-200 text-red-600 text-sm">
+            {error}
+          </div>
+        )}
+
         {/* Login Card */}
         <div className="bg-gray-50 rounded-3xl p-8 border border-gray-100">
           <form onSubmit={handleSubmit} className="space-y-5">
@@ -48,7 +74,7 @@ const Login = () => {
                 type="email"
                 placeholder="john@example.com"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => { setEmail(e.target.value); setError(""); }}
                 className="rounded-xl border-gray-200 focus:border-black focus:ring-black bg-white"
               />
             </div>
@@ -64,7 +90,7 @@ const Login = () => {
                   type={showPassword ? "text" : "password"}
                   placeholder="••••••••"
                   value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={(e) => { setPassword(e.target.value); setError(""); }}
                   className="pr-10 rounded-xl border-gray-200 focus:border-black focus:ring-black bg-white"
                 />
                 <button
@@ -77,8 +103,12 @@ const Login = () => {
               </div>
             </div>
 
-            <Button type="submit" className="w-full bg-black text-white hover:bg-gray-800 rounded-full font-bold h-12">
-              Sign In
+            <Button
+              type="submit"
+              disabled={isLoading}
+              className="w-full bg-black text-white hover:bg-gray-800 rounded-full font-bold h-12"
+            >
+              {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : "Sign In"}
             </Button>
           </form>
 

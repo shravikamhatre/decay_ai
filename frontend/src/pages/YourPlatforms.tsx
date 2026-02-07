@@ -114,7 +114,7 @@ const YourPlatforms = () => {
             </div>
 
             <div className="px-6 md:px-12 py-8 space-y-8">
-                {/* Performance Metrics */}
+                {/* Performance Metrics */} 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

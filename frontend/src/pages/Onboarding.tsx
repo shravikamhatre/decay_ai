@@ -5,16 +5,16 @@ import {
     User,
     Building2,
     Users,
-    Target,
-    BarChart3,
     Check,
     ChevronRight,
-    ChevronLeft
+    ChevronLeft,
+    Loader2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
+import { updatePreferences } from "@/lib/api";
 
 const useCases = [
     { id: "personal", label: "Personal Brand", icon: User, description: "For creators & influencers" },
@@ -38,6 +38,8 @@ const contentFormats = [
 const Onboarding = () => {
     const navigate = useNavigate();
     const [step, setStep] = useState(1);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState("");
     const [formData, setFormData] = useState({
         name: "",
         useCase: "",
@@ -55,10 +57,39 @@ const Onboarding = () => {
         if (step > 1) setStep(step - 1);
     };
 
-    const handleComplete = () => {
-        localStorage.setItem("onboarding_completed", "true");
-        localStorage.setItem("user_preferences", JSON.stringify(formData));
-        navigate("/dashboard");
+    const handleComplete = async () => {
+        setIsLoading(true);
+        setError("");
+
+        try {
+            const email = localStorage.getItem("user_email") || "";
+
+            const result = await updatePreferences({
+                email,
+                name: formData.name,
+                useCase: formData.useCase,
+                niches: formData.niches,
+                formats: formData.formats,
+            });
+
+            if (result.success) {
+                localStorage.setItem("onboarding_completed", "true");
+                localStorage.setItem("user_preferences", JSON.stringify(formData));
+                navigate("/dashboard");
+            } else {
+                // Still navigate even if API fails - preferences saved locally
+                localStorage.setItem("onboarding_completed", "true");
+                localStorage.setItem("user_preferences", JSON.stringify(formData));
+                navigate("/dashboard");
+            }
+        } catch (err) {
+            // Still navigate even if API fails - preferences saved locally
+            localStorage.setItem("onboarding_completed", "true");
+            localStorage.setItem("user_preferences", JSON.stringify(formData));
+            navigate("/dashboard");
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     const isStepValid = () => {
@@ -113,6 +144,13 @@ const Onboarding = () => {
                     />
                 </div>
             </div>
+
+            {/* Error Message */}
+            {error && (
+                <div className="w-full max-w-xl mb-4 p-3 rounded-xl bg-red-50 border border-red-200 text-red-600 text-sm">
+                    {error}
+                </div>
+            )}
 
             <div className="w-full max-w-xl">
                 <AnimatePresence mode="wait">
@@ -250,6 +288,7 @@ const Onboarding = () => {
                                 <Button
                                     variant="ghost"
                                     onClick={handleBack}
+                                    disabled={isLoading}
                                     className="text-gray-500 hover:text-black font-semibold"
                                 >
                                     <ChevronLeft className="h-4 w-4 mr-2" />
@@ -258,15 +297,15 @@ const Onboarding = () => {
                             )}
                             <Button
                                 onClick={step === totalSteps ? handleComplete : handleNext}
-                                disabled={!isStepValid()}
+                                disabled={!isStepValid() || isLoading}
                                 className={cn(
                                     "ml-auto h-12 px-8 font-bold rounded-full transition-all shadow-md",
-                                    step === totalSteps
-                                        ? "bg-black text-white hover:bg-gray-800"
-                                        : "bg-black text-white hover:bg-gray-800"
+                                    "bg-black text-white hover:bg-gray-800"
                                 )}
                             >
-                                {step === totalSteps ? (
+                                {isLoading ? (
+                                    <Loader2 className="h-4 w-4 animate-spin" />
+                                ) : step === totalSteps ? (
                                     <>
                                         Complete Setup
                                         <Check className="h-4 w-4 ml-2" />

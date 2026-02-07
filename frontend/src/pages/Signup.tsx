@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
-import { Eye, EyeOff, Check, ArrowRight, ArrowLeft } from "lucide-react";
+import { Eye, EyeOff, Check, ArrowRight, ArrowLeft, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
+import { signup } from "@/lib/api";
 
 const steps = [
   { id: 1, title: "Account" },
@@ -17,16 +18,19 @@ const Signup = () => {
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
   const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     email: "",
     password: "",
     firstName: "",
     lastName: "",
-    investmentGoal: "",
+    primaryGoal: "",
   });
 
   const updateFormData = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
+    setError("");
   };
 
   const nextStep = () => {
@@ -35,6 +39,34 @@ const Signup = () => {
 
   const prevStep = () => {
     if (currentStep > 1) setCurrentStep(currentStep - 1);
+  };
+
+  const handleSubmit = async () => {
+    setIsLoading(true);
+    setError("");
+
+    try {
+      const result = await signup({
+        email: formData.email,
+        password: formData.password,
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        primaryGoal: formData.primaryGoal,
+      });
+
+      if (result.success) {
+        // Store user info for onboarding
+        localStorage.setItem("user_email", formData.email);
+        localStorage.setItem("user_name", `${formData.firstName} ${formData.lastName}`);
+        navigate("/onboarding");
+      } else {
+        setError(result.error || "Signup failed. Please try again.");
+      }
+    } catch (err) {
+      setError("Network error. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -84,6 +116,13 @@ const Signup = () => {
             </div>
           ))}
         </div>
+
+        {/* Error Message */}
+        {error && (
+          <div className="mb-4 p-3 rounded-xl bg-red-50 border border-red-200 text-red-600 text-sm">
+            {error}
+          </div>
+        )}
 
         {/* Signup Card */}
         <div className="bg-gray-50 rounded-3xl p-8 border border-gray-100">
@@ -174,10 +213,10 @@ const Signup = () => {
                       <button
                         key={goal}
                         type="button"
-                        onClick={() => updateFormData("investmentGoal", goal)}
+                        onClick={() => updateFormData("primaryGoal", goal)}
                         className={cn(
                           "p-4 rounded-2xl border-2 text-sm font-bold transition-all duration-300",
-                          formData.investmentGoal === goal
+                          formData.primaryGoal === goal
                             ? "border-black bg-black text-white"
                             : "border-gray-200 bg-white text-black hover:border-gray-300"
                         )}
@@ -205,6 +244,7 @@ const Signup = () => {
                 type="button"
                 variant="outline"
                 onClick={prevStep}
+                disabled={isLoading}
                 className="flex-1 rounded-full border-gray-200 hover:bg-white h-12"
               >
                 <ArrowLeft className="h-4 w-4 mr-2" />
@@ -213,14 +253,20 @@ const Signup = () => {
             )}
             <Button
               type="button"
-              onClick={currentStep === 3 ? () => {
-                console.log("Submit:", formData);
-                navigate("/onboarding");
-              } : nextStep}
+              onClick={currentStep === 3 ? handleSubmit : nextStep}
+              disabled={isLoading}
               className="flex-1 bg-black text-white hover:bg-gray-800 rounded-full font-bold h-12"
             >
-              {currentStep === 3 ? "Finish" : "Continue"}
-              {currentStep < 3 && <ArrowRight className="h-4 w-4 ml-2" />}
+              {isLoading ? (
+                <Loader2 className="h-4 w-4 animate-spin" />
+              ) : currentStep === 3 ? (
+                "Finish"
+              ) : (
+                <>
+                  Continue
+                  <ArrowRight className="h-4 w-4 ml-2" />
+                </>
+              )}
             </Button>
           </div>
         </div>
