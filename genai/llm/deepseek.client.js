@@ -1,23 +1,34 @@
-import OpenAI from "openai";
-import "dotenv/config";
+require("dotenv").config();
+const fetch = (...args) =>
+  import("node-fetch").then(({ default: fetch }) => fetch(...args));
 
-const openai = new OpenAI({
-  baseURL: process.env.FEATHERLESS_API_URL,
-  apiKey: process.env.FEATHERLESS_API_KEY,
-});
+const callDeepSeek = async ({ systemPrompt, userPrompt }) => {
+  const response = await fetch(
+    `${process.env.FEATHERLESS_API_URL}/chat/completions`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.FEATHERLESS_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "deepseek-ai/DeepSeek-V3-0324",
+        temperature: 0.3,
+        messages: [
+          { role: "system", content: systemPrompt },
+          { role: "user", content: userPrompt },
+        ],
+      }),
+    },
+  );
 
-/**
- * Calls DeepSeek via Featherless (OpenAI-compatible)
- */
-export const callDeepSeek = async ({ systemPrompt, userPrompt }) => {
-  const response = await openai.chat.completions.create({
-    model: "deepseek-ai/DeepSeek-V3-0324",
-    temperature: 0.3,
-    messages: [
-      { role: "system", content: systemPrompt },
-      { role: "user", content: userPrompt },
-    ],
-  });
+  if (!response.ok) {
+    const err = await response.text();
+    throw new Error(err);
+  }
 
-  return response.choices[0].message.content;
+  const data = await response.json();
+  return data.choices[0].message.content;
 };
+
+module.exports = { callDeepSeek };

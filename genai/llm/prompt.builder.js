@@ -1,52 +1,104 @@
-export const buildExplainPrompt = ({
-  trend_name,
-  platform,
-  calendar_color,
-  signals,
-  trend_state, // "GOOD" or "DECLINING"
-}) => {
-  const signalText = Object.entries(signals)
-    .map(([k, v]) => `- ${k} (${v})`)
-    .join("\n");
+function buildExplainPrompt(trendData) {
+  const {
+    trend_name,
+    base,
+    platform,
+    calendar_color,
+    current_trend,
+    recommended_trends = [],
+  } = trendData;
 
-  const baseSystemPrompt = `
-You are an explainable AI system for social media trend analysis.
-You must explain decisions using ONLY the provided signals.
-Do not speculate or invent reasons.
-Use clear, concise, business-friendly language.
+  const {
+    score,
+    velocity_change,
+    engagement,
+    saturation,
+    decay,
+    appearance,
+    novelty,
+  } = current_trend;
+
+  const trend_state = calendar_color === "green" ? "GOOD" : "DECLINING";
+
+  const signalBlock = `
+Velocity change: ${velocity_change}
+Engagement level: ${engagement}
+Appearance level: ${appearance}
+Novelty: ${novelty}
+Saturation level: ${saturation}
+Decay level: ${decay}
+`.trim();
+
+  const alternativesBlock =
+    recommended_trends.length === 0
+      ? "None"
+      : recommended_trends
+          .map((t, i) =>
+            `
+${i + 1}. ${t.name}
+Score: ${t.score}
+Velocity change: ${t.velocity_change}
+Engagement: ${t.engagement}
+Saturation: ${t.saturation}
+Decay: ${t.decay}
+Novelty: ${t.novelty}
+`.trim(),
+          )
+          .join("\n\n");
+
+  const systemPrompt = `
+You are an explainable AI assistant for social media trend analysis.
+Your job is to explain trend decisions clearly and confidently to creators and marketers.
+Do not use markdown, bullet symbols, or emojis.
+Do not mention machine learning, models, or probabilities.
+Explain decisions using plain language and observable signals only.
+Keep the tone calm, confident, and actionable.
 `.trim();
 
   const userPrompt =
     trend_state === "GOOD"
       ? `
-Trend: ${trend_name}
+Trend name: ${trend_name}
 Platform: ${platform}
+Summary: ${base}
 Calendar status: ${calendar_color}
+Performance score: ${score}
 
-Signals (all low-risk):
-${signalText}
+Current signals:
+${signalBlock}
 
-Explain:
-1) Why this trend is a good opportunity right now
-2) What makes it safe to invest in
-3) Recommended creator action
-`
+Task:
+Explain why this trend is a good opportunity right now.
+Explain why it is safe to invest creator effort in it.
+Describe what kind of content strategy would work best at this stage.
+If relevant, mention one complementary rising trend from the alternatives list.
+Avoid warning language.
+`.trim()
       : `
-Trend: ${trend_name}
+Trend name: ${trend_name}
 Platform: ${platform}
+Summary: ${base}
 Calendar status: ${calendar_color}
+Performance score: ${score}
 
-Decline signals:
-${signalText}
+Current signals:
+${signalBlock}
 
-Explain:
-1) Primary reason for decline
-2) Secondary contributing factors
-3) Recommended creator action
-`;
+Alternative rising trends:
+${alternativesBlock}
+
+Task:
+Explain why this trend is beginning to weaken using the signals.
+Clearly identify which signals indicate decline.
+Recommend ONE alternative trend from the list above.
+Explain why the recommended trend is healthier using its metrics.
+Keep the explanation constructive and forward-looking.
+`.trim();
 
   return {
-    systemPrompt: baseSystemPrompt,
-    userPrompt: userPrompt.trim(),
+    systemPrompt,
+    userPrompt,
   };
-};
+}
+
+module.exports = { buildExplainPrompt };
