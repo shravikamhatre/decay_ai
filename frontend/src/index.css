@@ -2,84 +2,123 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ═══════════════════════════════════════════════════════════════════════════
+   SOLAR NOIR THEME SYSTEM
+   A warm, cinematic aesthetic with amber/gold accents
+   ═══════════════════════════════════════════════════════════════════════════ */
+
 @layer base {
     :root {
-        --background: 0 0% 100%;
-        --foreground: 222.2 84% 4.9%;
+        /* ─── Background & Surface ─── */
+        --background: 45 33% 99%;          /* #FEFCF8 warm off-white */
+        --foreground: 24 10% 10%;          /* #1C1917 deep espresso */
 
-        --card: 0 0% 100%;
-        --card-foreground: 222.2 84% 4.9%;
+        --card: 48 100% 99%;               /* #FFFDF7 cream */
+        --card-foreground: 24 10% 10%;
 
-        --popover: 0 0% 100%;
-        --popover-foreground: 222.2 84% 4.9%;
+        --popover: 48 100% 99%;
+        --popover-foreground: 24 10% 10%;
 
-        --primary: 222.2 47.4% 11.2%;
-        --primary-foreground: 210 40% 98%;
+        /* ─── Primary: Rich Amber ─── */
+        --primary: 32 95% 44%;             /* #D97706 rich amber */
+        --primary-foreground: 48 100% 99%;
 
-        --secondary: 210 40% 96.1%;
-        --secondary-foreground: 222.2 47.4% 11.2%;
+        /* ─── Secondary: Warm Beige ─── */
+        --secondary: 40 33% 93%;           /* #F5F0E6 warm beige */
+        --secondary-foreground: 24 10% 10%;
 
-        --muted: 210 40% 96.1%;
-        --muted-foreground: 215.4 16.3% 46.9%;
+        /* ─── Muted: Stone Tones ─── */
+        --muted: 36 20% 88%;               /* #E7E1D8 warm gray */
+        --muted-foreground: 30 6% 46%;     /* #78716C stone */
 
-        --accent: 210 40% 96.1%;
-        --accent-foreground: 222.2 47.4% 11.2%;
+        /* ─── Accent: Amber Tint ─── */
+        --accent: 48 96% 89%;              /* #FEF3C7 light amber */
+        --accent-foreground: 24 10% 10%;
 
-        --destructive: 0 84.2% 60.2%;
-        --destructive-foreground: 210 40% 98%;
+        /* ─── Destructive ─── */
+        --destructive: 0 72% 51%;          /* #DC2626 */
+        --destructive-foreground: 48 100% 99%;
 
-        --border: 214.3 31.8% 91.4%;
-        --input: 214.3 31.8% 91.4%;
-        --ring: 222.2 84% 4.9%;
+        /* ─── Utility Colors ─── */
+        --border: 38 24% 87%;              /* #E7DFD3 warm border */
+        --input: 38 24% 87%;
+        --ring: 32 95% 44%;                /* amber ring */
 
-        --radius: 0.5rem;
+        --radius: 0.625rem;
 
-        --sidebar-background: 0 0% 98%;
-        --sidebar-foreground: 240 5.3% 26.1%;
-        --sidebar-primary: 240 5.9% 10%;
-        --sidebar-primary-foreground: 0 0% 98%;
-        --sidebar-accent: 240 4.8% 95.9%;
-        --sidebar-accent-foreground: 240 5.9% 10%;
-        --sidebar-border: 220 13% 91%;
-        --sidebar-ring: 217.2 91.2% 59.8%;
+        /* ─── Sidebar ─── */
+        --sidebar-background: 45 33% 97%;
+        --sidebar-foreground: 30 6% 32%;
+        --sidebar-primary: 32 95% 44%;
+        --sidebar-primary-foreground: 48 100% 99%;
+        --sidebar-accent: 40 33% 93%;
+        --sidebar-accent-foreground: 24 10% 10%;
+        --sidebar-border: 38 24% 87%;
+        --sidebar-ring: 32 95% 44%;
 
-        /* Accent colors for UI pops */
+        /* ─── Accent Palette ─── */
+        --accent-amber: 32 95% 44%;
+        --accent-gold: 45 93% 47%;
         --accent-orange: 25 95% 53%;
-        --accent-blue: 217 91% 60%;
-        --accent-gray: 220 9% 46%;
-        --accent-green: 142 71% 45%;
-        --accent-yellow: 45 93% 47%;
+        --accent-sienna: 16 85% 50%;
+        --accent-success: 142 71% 45%;
+
+        /* ─── Solar Noir Specials ─── */
+        --glow-amber: 32 95% 44%;
+        --glass-tint: 45 40% 98%;
     }
 
     .dark {
-        --background: 0 0% 0%;
-        --foreground: 0 0% 98%;
+        /* ─── Background & Surface ─── */
+        --background: 20 8% 4%;            /* #0D0C0B deep charcoal */
+        --foreground: 40 17% 95%;          /* #F5F3EF warm cream */
 
-        --card: 0 0% 4%;
-        --card-foreground: 0 0% 98%;
+        --card: 24 12% 9%;                 /* #1A1816 warm dark */
+        --card-foreground: 40 17% 95%;
 
-        --popover: 0 0% 4%;
-        --popover-foreground: 0 0% 98%;
+        --popover: 24 12% 9%;
+        --popover-foreground: 40 17% 95%;
 
-        --primary: 142 76% 80%;
-        --primary-foreground: 142 80% 10%;
+        /* ─── Primary: Golden Amber ─── */
+        --primary: 38 92% 50%;             /* #F59E0B golden amber */
+        --primary-foreground: 20 8% 4%;
 
-        --secondary: 0 0% 12%;
-        --secondary-foreground: 0 0% 98%;
+        /* ─── Secondary: Dark Stone ─── */
+        --secondary: 24 9% 15%;            /* #292524 dark stone */
+        --secondary-foreground: 40 17% 95%;
 
-        --muted: 0 0% 12%;
-        --muted-foreground: 0 0% 63%;
+        /* ─── Muted: Stone ─── */
+        --muted: 24 6% 24%;                /* #44403C stone */
+        --muted-foreground: 30 4% 64%;     /* #A8A29E cool stone */
 
-        --accent: 0 0% 12%;
-        --accent-foreground: 0 0% 98%;
+        /* ─── Accent: Burnt Umber ─── */
+        --accent: 20 100% 14%;             /* #451A03 burnt umber */
+        --accent-foreground: 40 17% 95%;
 
-        --destructive: 0 62.8% 30.6%;
-        --destructive-foreground: 0 0% 98%;
+        /* ─── Destructive ─── */
+        --destructive: 0 84% 60%;          /* #EF4444 */
+        --destructive-foreground: 40 17% 95%;
 
-        --ring: 142 76% 80%;
+        /* ─── Utility Colors ─── */
+        --border: 24 7% 22%;               /* #3D3835 dark stone */
+        --input: 24 7% 22%;
+        --ring: 38 92% 50%;
+
+        /* ─── Sidebar ─── */
+        --sidebar-background: 20 8% 6%;
+        --sidebar-foreground: 30 4% 64%;
+        --sidebar-primary: 38 92% 50%;
+        --sidebar-primary-foreground: 20 8% 4%;
+        --sidebar-accent: 24 9% 15%;
+        --sidebar-accent-foreground: 40 17% 95%;
+        --sidebar-border: 24 7% 22%;
+        --sidebar-ring: 38 92% 50%;
+
+        /* ─── Solar Noir Specials ─── */
+        --glow-amber: 38 92% 50%;
+        --glass-tint: 24 12% 8%;
     }
 }
-
 
 @layer base {
     * {
@@ -88,5 +127,240 @@
 
     body {
         @apply bg-background text-foreground;
+        font-family: 'Satoshi', system-ui, sans-serif;
+        font-feature-settings: "rlig" 1, "calt" 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SOLAR NOIR UTILITY CLASSES
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@layer components {
+    /* ─── Glass Card with Warm Tint ─── */
+    .glass-card {
+        @apply rounded-2xl border border-border/60;
+        background: linear-gradient(
+            135deg,
+            hsl(var(--glass-tint) / 0.85) 0%,
+            hsl(var(--glass-tint) / 0.7) 100%
+        );
+        backdrop-filter: blur(20px) saturate(1.2);
+        box-shadow: 
+            0 4px 24px -4px hsl(var(--glow-amber) / 0.08),
+            0 1px 2px -1px hsl(20 8% 20% / 0.08),
+            inset 0 1px 0 0 hsl(48 100% 99% / 0.1);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .glass-card:hover {
+        box-shadow: 
+            0 8px 32px -4px hsl(var(--glow-amber) / 0.15),
+            0 4px 8px -2px hsl(20 8% 20% / 0.1),
+            inset 0 1px 0 0 hsl(48 100% 99% / 0.15);
+    }
+
+    .dark .glass-card {
+        background: linear-gradient(
+            135deg,
+            hsl(var(--glass-tint) / 0.9) 0%,
+            hsl(var(--glass-tint) / 0.75) 100%
+        );
+        box-shadow: 
+            0 4px 24px -4px hsl(var(--glow-amber) / 0.12),
+            0 1px 2px -1px hsl(0 0% 0% / 0.3),
+            inset 0 1px 0 0 hsl(40 17% 95% / 0.05);
+    }
+
+    .dark .glass-card:hover {
+        box-shadow: 
+            0 8px 40px -4px hsl(var(--glow-amber) / 0.2),
+            0 4px 8px -2px hsl(0 0% 0% / 0.4),
+            inset 0 1px 0 0 hsl(40 17% 95% / 0.08);
+    }
+
+    /* ─── Golden Gradient Text ─── */
+    .text-gradient-gold {
+        background: linear-gradient(
+            135deg,
+            hsl(38 92% 50%) 0%,
+            hsl(32 95% 55%) 50%,
+            hsl(25 95% 53%) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    /* ─── Hover Lift Effect ─── */
+    .hover-lift {
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .hover-lift:hover {
+        transform: translateY(-4px);
+    }
+
+    /* ─── Golden Glow Button Effect ─── */
+    .golden-glow {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .golden-glow::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            135deg,
+            transparent 0%,
+            hsl(48 100% 80% / 0.3) 50%,
+            transparent 100%
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .golden-glow:hover::before {
+        opacity: 1;
+    }
+
+    /* ─── Film Grain Overlay ─── */
+    .grain-overlay {
+        position: relative;
+    }
+
+    .grain-overlay::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.03;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        background-repeat: repeat;
+        mix-blend-mode: overlay;
+    }
+
+    .dark .grain-overlay::after {
+        opacity: 0.05;
+    }
+
+    /* ─── Warm Blur Blob ─── */
+    .warm-blob {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        opacity: 0.4;
+        animation: float 8s ease-in-out infinite;
+    }
+
+    .warm-blob-amber {
+        background: radial-gradient(
+            circle,
+            hsl(38 92% 50% / 0.4) 0%,
+            hsl(32 95% 44% / 0.2) 50%,
+            transparent 70%
+        );
+    }
+
+    .warm-blob-orange {
+        background: radial-gradient(
+            circle,
+            hsl(25 95% 53% / 0.3) 0%,
+            hsl(16 85% 50% / 0.15) 50%,
+            transparent 70%
+        );
+    }
+
+    /* ─── Premium Button Shine ─── */
+    .btn-shine {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn-shine::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(
+            90deg,
+            transparent 0%,
+            hsl(48 100% 90% / 0.25) 50%,
+            transparent 100%
+        );
+        transform: skewX(-25deg);
+        transition: left 0.6s ease;
+    }
+
+    .btn-shine:hover::after {
+        left: 130%;
+    }
+
+    /* ─── Ambient Glow ─── */
+    .ambient-glow {
+        box-shadow: 
+            0 0 60px -15px hsl(var(--glow-amber) / 0.3),
+            0 0 30px -10px hsl(var(--glow-amber) / 0.2);
+    }
+
+    /* ─── Warm Input Focus ─── */
+    .input-warm:focus {
+        box-shadow: 
+            0 0 0 3px hsl(var(--glow-amber) / 0.15),
+            inset 0 1px 2px hsl(var(--glow-amber) / 0.1);
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   ANIMATIONS
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-20px) scale(1.05);
+    }
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px -5px hsl(var(--glow-amber) / 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px -5px hsl(var(--glow-amber) / 0.5);
+    }
+}
+
+@keyframes shimmer {
+    from {
+        background-position: 200% 0;
+    }
+    to {
+        background-position: -200% 0;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+    background: hsl(var(--primary) / 0.2);
+    color: hsl(var(--foreground));
 }
