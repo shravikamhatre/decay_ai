@@ -1,0 +1,532 @@
+{
+  "niche": "Education",
+  "lookback_days": 7,
+  "top_trends_good": [
+    {
+      "name": "get ready with me shorts - exam prep",
+      "base": "get ready with me shorts",
+      "score": 302.975,
+      "signals": {
+        "velocity_pct": 2311.969,
+        "engagement_pct": 10.739,
+        "appearance_pct": 0.333,
+        "saturation_pct": 13.02,
+        "novelty": 0.0,
+        "decay_score": 0.892
+      }
+    },
+    {
+      "name": "clean girl edit - study session",
+      "base": "clean girl edit",
+      "score": 13.697,
+      "signals": {
+        "velocity_pct": 63.088,
+        "engagement_pct": -0.554,
+        "appearance_pct": 1.571,
+        "saturation_pct": 2.681,
+        "novelty": 0.316,
+        "decay_score": 0.192
+      }
+    },
+    {
+      "name": "storytime with captions - exam prep",
+      "base": "storytime with captions",
+      "score": 7.491,
+      "signals": {
+        "velocity_pct": 40.468,
+        "engagement_pct": -0.487,
+        "appearance_pct": -0.471,
+        "saturation_pct": 20.957,
+        "novelty": 0.133,
+        "decay_score": 0.009
+      }
+    },
+    {
+      "name": "routine reel shorts - exam prep",
+      "base": "routine reel shorts",
+      "score": 6.217,
+      "signals": {
+        "velocity_pct": 20.928,
+        "engagement_pct": 2.909,
+        "appearance_pct": -0.7,
+        "saturation_pct": 2.831,
+        "novelty": 0.096,
+        "decay_score": 0.188
+      }
+    },
+    {
+      "name": "#facelesscontent #growth - exam prep",
+      "base": "#facelesscontent #growth",
+      "score": 3.4,
+      "signals": {
+        "velocity_pct": 25.216,
+        "engagement_pct": -0.161,
+        "appearance_pct": 1.0,
+        "saturation_pct": 5.618,
+        "novelty": 0.102,
+        "decay_score": 0.724
+      }
+    },
+    {
+      "name": "day in my life with captions - exam prep",
+      "base": "day in my life with captions",
+      "score": 3.111,
+      "signals": {
+        "velocity_pct": 17.385,
+        "engagement_pct": 2.872,
+        "appearance_pct": 0.75,
+        "saturation_pct": 2.622,
+        "novelty": 0.244,
+        "decay_score": 0.422
+      }
+    },
+    {
+      "name": "photo dump vlog - exam prep",
+      "base": "photo dump vlog",
+      "score": 2.789,
+      "signals": {
+        "velocity_pct": 11.847,
+        "engagement_pct": 0.555,
+        "appearance_pct": 2.0,
+        "saturation_pct": 5.444,
+        "novelty": 0.0,
+        "decay_score": 0.262
+      }
+    },
+    {
+      "name": "clean girl aesthetic - study session",
+      "base": "clean girl aesthetic",
+      "score": 2.57,
+      "signals": {
+        "velocity_pct": -0.198,
+        "engagement_pct": 11.764,
+        "appearance_pct": 0.625,
+        "saturation_pct": -0.197,
+        "novelty": 0.346,
+        "decay_score": 0.214
+      }
+    },
+    {
+      "name": "cozy minimal aesthetic - exam prep",
+      "base": "cozy minimal aesthetic",
+      "score": 2.555,
+      "signals": {
+        "velocity_pct": 1.718,
+        "engagement_pct": 7.576,
+        "appearance_pct": 2.0,
+        "saturation_pct": 0.779,
+        "novelty": 0.293,
+        "decay_score": 0.083
+      }
+    },
+    {
+      "name": "photo dump with captions - study session",
+      "base": "photo dump with captions",
+      "score": 2.522,
+      "signals": {
+        "velocity_pct": 2.219,
+        "engagement_pct": -0.902,
+        "appearance_pct": 15.0,
+        "saturation_pct": 1.029,
+        "novelty": 0.126,
+        "decay_score": 0.319
+      }
+    }
+  ],
+  "top_trends_declining": [
+    {
+      "name": "old money routine - study session",
+      "base": "old money routine",
+      "score": 0.129,
+      "signals": {
+        "velocity_pct": -0.859,
+        "engagement_pct": -0.616,
+        "appearance_pct": -0.333,
+        "saturation_pct": -0.631,
+        "novelty": 0.631,
+        "decay_score": 0.793
+      }
+    },
+    {
+      "name": "day in my life voiceover - study session",
+      "base": "day in my life voiceover",
+      "score": 0.132,
+      "signals": {
+        "velocity_pct": -0.717,
+        "engagement_pct": -0.781,
+        "appearance_pct": -0.167,
+        "saturation_pct": -0.52,
+        "novelty": 0.52,
+        "decay_score": 0.866
+      }
+    },
+    {
+      "name": "storytime reel - study session",
+      "base": "storytime reel",
+      "score": 0.154,
+      "signals": {
+        "velocity_pct": -0.798,
+        "engagement_pct": -0.954,
+        "appearance_pct": 0.286,
+        "saturation_pct": -0.774,
+        "novelty": 0.774,
+        "decay_score": 0.966
+      }
+    },
+    {
+      "name": "get ready with me with captions - study session",
+      "base": "get ready with me with captions",
+      "score": 0.161,
+      "signals": {
+        "velocity_pct": -0.317,
+        "engagement_pct": -0.419,
+        "appearance_pct": -0.286,
+        "saturation_pct": -0.191,
+        "novelty": 0.434,
+        "decay_score": 0.97
+      }
+    },
+    {
+      "name": "quiet luxury aesthetic - study session",
+      "base": "quiet luxury aesthetic",
+      "score": 0.167,
+      "signals": {
+        "velocity_pct": -0.86,
+        "engagement_pct": -0.555,
+        "appearance_pct": 0.125,
+        "saturation_pct": -0.594,
+        "novelty": 0.813,
+        "decay_score": 0.687
+      }
+    },
+    {
+      "name": "routine reel with captions - study session",
+      "base": "routine reel with captions",
+      "score": 0.171,
+      "signals": {
+        "velocity_pct": -0.695,
+        "engagement_pct": -0.658,
+        "appearance_pct": -0.312,
+        "saturation_pct": -0.518,
+        "novelty": 0.736,
+        "decay_score": 0.603
+      }
+    },
+    {
+      "name": "cozy minimal vibe - exam prep",
+      "base": "cozy minimal vibe",
+      "score": 0.173,
+      "signals": {
+        "velocity_pct": -0.883,
+        "engagement_pct": -0.73,
+        "appearance_pct": 1.2,
+        "saturation_pct": -0.681,
+        "novelty": 0.916,
+        "decay_score": 0.955
+      }
+    },
+    {
+      "name": "i wish i knew this earlier before traveling - exam prep",
+      "base": "i wish i knew this earlier before traveling",
+      "score": 0.174,
+      "signals": {
+        "velocity_pct": -0.57,
+        "engagement_pct": -0.163,
+        "appearance_pct": -0.833,
+        "saturation_pct": -0.207,
+        "novelty": 0.771,
+        "decay_score": 0.558
+      }
+    },
+    {
+      "name": "day in my life shorts - study session",
+      "base": "day in my life shorts",
+      "score": 0.193,
+      "signals": {
+        "velocity_pct": -0.751,
+        "engagement_pct": -0.479,
+        "appearance_pct": -0.5,
+        "saturation_pct": -0.525,
+        "novelty": 0.631,
+        "decay_score": 0.349
+      }
+    },
+    {
+      "name": "before after with captions - study session",
+      "base": "before after with captions",
+      "score": 0.193,
+      "signals": {
+        "velocity_pct": -0.023,
+        "engagement_pct": -0.126,
+        "appearance_pct": -0.947,
+        "saturation_pct": 0.109,
+        "novelty": 0.557,
+        "decay_score": 0.847
+      }
+    }
+  ],
+  "top_music_good": [
+    {
+      "name": "calm down sped up - exam prep",
+      "base": "calm down sped up",
+      "score": 5.463,
+      "signals": {
+        "velocity_pct": 16.019,
+        "engagement_pct": 2.751,
+        "appearance_pct": 2.0,
+        "saturation_pct": 3.55,
+        "novelty": 0.788,
+        "decay_score": 0.284
+      }
+    },
+    {
+      "name": "golden hour slowed - study session",
+      "base": "golden hour slowed",
+      "score": 5.332,
+      "signals": {
+        "velocity_pct": 16.035,
+        "engagement_pct": -0.609,
+        "appearance_pct": 17.0,
+        "saturation_pct": 2.03,
+        "novelty": 0.347,
+        "decay_score": 0.029
+      }
+    },
+    {
+      "name": "sunroof nightcore - study session",
+      "base": "sunroof nightcore",
+      "score": 3.925,
+      "signals": {
+        "velocity_pct": 16.618,
+        "engagement_pct": -0.443,
+        "appearance_pct": 0.053,
+        "saturation_pct": 3.502,
+        "novelty": 0.024,
+        "decay_score": 0.358
+      }
+    },
+    {
+      "name": "sunroof slowed - exam prep",
+      "base": "sunroof slowed",
+      "score": 3.39,
+      "signals": {
+        "velocity_pct": 6.562,
+        "engagement_pct": 4.386,
+        "appearance_pct": 2.0,
+        "saturation_pct": 1.406,
+        "novelty": 0.171,
+        "decay_score": 0.078
+      }
+    },
+    {
+      "name": "lush life nightcore - study session",
+      "base": "lush life nightcore",
+      "score": 2.483,
+      "signals": {
+        "velocity_pct": 8.001,
+        "engagement_pct": 0.749,
+        "appearance_pct": 0.429,
+        "saturation_pct": 1.775,
+        "novelty": 0.309,
+        "decay_score": 0.094
+      }
+    },
+    {
+      "name": "golden hour sped up - exam prep",
+      "base": "golden hour sped up",
+      "score": 2.174,
+      "signals": {
+        "velocity_pct": 4.93,
+        "engagement_pct": -0.74,
+        "appearance_pct": 5.0,
+        "saturation_pct": 2.79,
+        "novelty": 0.0,
+        "decay_score": 0.106
+      }
+    },
+    {
+      "name": "greedy remix - study session",
+      "base": "greedy remix",
+      "score": 2.123,
+      "signals": {
+        "velocity_pct": 7.847,
+        "engagement_pct": -0.803,
+        "appearance_pct": 0.0,
+        "saturation_pct": 3.527,
+        "novelty": 0.0,
+        "decay_score": 0.012
+      }
+    },
+    {
+      "name": "lush life instrumental - study session",
+      "base": "lush life instrumental",
+      "score": 1.747,
+      "signals": {
+        "velocity_pct": -0.468,
+        "engagement_pct": 19.745,
+        "appearance_pct": -0.8,
+        "saturation_pct": -0.336,
+        "novelty": 0.336,
+        "decay_score": 0.77
+      }
+    },
+    {
+      "name": "greedy remix - exam prep",
+      "base": "greedy remix",
+      "score": 1.633,
+      "signals": {
+        "velocity_pct": 0.68,
+        "engagement_pct": 4.283,
+        "appearance_pct": -0.1,
+        "saturation_pct": 0.352,
+        "novelty": 0.074,
+        "decay_score": 0.031
+      }
+    },
+    {
+      "name": "greedy lofi edit - study session",
+      "base": "greedy lofi edit",
+      "score": 1.621,
+      "signals": {
+        "velocity_pct": 2.066,
+        "engagement_pct": 3.044,
+        "appearance_pct": 0.357,
+        "saturation_pct": 0.841,
+        "novelty": 0.0,
+        "decay_score": 0.322
+      }
+    }
+  ],
+  "top_music_declining": [
+    {
+      "name": "anti hero slowed - study session",
+      "base": "anti hero slowed",
+      "score": 0.136,
+      "signals": {
+        "velocity_pct": -0.548,
+        "engagement_pct": -0.752,
+        "appearance_pct": -0.625,
+        "saturation_pct": -0.334,
+        "novelty": 0.617,
+        "decay_score": 0.774
+      }
+    },
+    {
+      "name": "as it was nightcore - study session",
+      "base": "as it was nightcore",
+      "score": 0.144,
+      "signals": {
+        "velocity_pct": -0.975,
+        "engagement_pct": -0.298,
+        "appearance_pct": -0.818,
+        "saturation_pct": -0.877,
+        "novelty": 0.973,
+        "decay_score": 0.814
+      }
+    },
+    {
+      "name": "as it was slowed - exam prep",
+      "base": "as it was slowed",
+      "score": 0.148,
+      "signals": {
+        "velocity_pct": 0.728,
+        "engagement_pct": 0.11,
+        "appearance_pct": -0.556,
+        "saturation_pct": 1.789,
+        "novelty": 0.416,
+        "decay_score": 0.929
+      }
+    },
+    {
+      "name": "greedy instrumental - exam prep",
+      "base": "greedy instrumental",
+      "score": 0.163,
+      "signals": {
+        "velocity_pct": -0.774,
+        "engagement_pct": -0.734,
+        "appearance_pct": -0.5,
+        "saturation_pct": -0.548,
+        "novelty": 0.672,
+        "decay_score": 0.364
+      }
+    },
+    {
+      "name": "espresso slowed - exam prep",
+      "base": "espresso slowed",
+      "score": 0.167,
+      "signals": {
+        "velocity_pct": -0.726,
+        "engagement_pct": -0.955,
+        "appearance_pct": 1.0,
+        "saturation_pct": -0.463,
+        "novelty": 0.913,
+        "decay_score": 0.893
+      }
+    },
+    {
+      "name": "blinding lights instrumental - study session",
+      "base": "blinding lights instrumental",
+      "score": 0.178,
+      "signals": {
+        "velocity_pct": -0.08,
+        "engagement_pct": -0.463,
+        "appearance_pct": -0.471,
+        "saturation_pct": 0.652,
+        "novelty": 0.47,
+        "decay_score": 0.323
+      }
+    },
+    {
+      "name": "golden hour remix - study session",
+      "base": "golden hour remix",
+      "score": 0.194,
+      "signals": {
+        "velocity_pct": -0.729,
+        "engagement_pct": -0.22,
+        "appearance_pct": -0.938,
+        "saturation_pct": -0.759,
+        "novelty": 0.884,
+        "decay_score": 0.647
+      }
+    },
+    {
+      "name": "greedy instrumental - study session",
+      "base": "greedy instrumental",
+      "score": 0.195,
+      "signals": {
+        "velocity_pct": -0.98,
+        "engagement_pct": -0.748,
+        "appearance_pct": 0.0,
+        "saturation_pct": -0.848,
+        "novelty": 0.887,
+        "decay_score": 0.377
+      }
+    },
+    {
+      "name": "calm down remix - study session",
+      "base": "calm down remix",
+      "score": 0.198,
+      "signals": {
+        "velocity_pct": -0.329,
+        "engagement_pct": -0.866,
+        "appearance_pct": -0.6,
+        "saturation_pct": 0.024,
+        "novelty": 0.522,
+        "decay_score": 0.093
+      }
+    },
+    {
+      "name": "until i found you slowed - exam prep",
+      "base": "until i found you slowed",
+      "score": 0.207,
+      "signals": {
+        "velocity_pct": -0.518,
+        "engagement_pct": -0.356,
+        "appearance_pct": -0.3,
+        "saturation_pct": -0.457,
+        "novelty": 0.471,
+        "decay_score": 0.888
+      }
+    }
+  ]
+}

@@ -91,16 +91,17 @@ HASHTAG_BUNDLES = [
 # ======================================================
 
 NICHE_CONTEXT = {
-    "travel": ["airport morning", "packing", "hotel day", "exploring a city", "sunrise travel"],
-    "fitness": ["leg day", "workout routine", "gym session", "meal prep"],
-    "fashion": ["outfit styling", "thrift haul", "wardrobe planning"],
-    "tech": ["workspace setup", "conference day", "coding session"],
-    "food": ["cooking", "recipe prep", "street food hunt"],
-    "music": ["studio day", "practice session", "recording session"],
-    "lifestyle": ["morning routine", "self care day"],
-    "gaming": ["stream setup", "grind session"],
-    "education": ["study session", "exam prep"],
-    "finance": ["workday routine", "budget planning"]
+    "Travel": ["airport morning", "packing", "hotel day", "exploring a city", "sunrise travel"],
+    "Fitness": ["leg day", "workout routine", "gym session", "meal prep"],
+    "Fashion": ["outfit styling", "thrift haul", "wardrobe planning"],
+    "Tech": ["workspace setup", "conference day", "coding session"],
+    "Food": ["cooking", "recipe prep", "street food hunt"],
+    "Music": ["studio day", "practice session", "recording session"],
+    "Lifestyle": ["morning routine", "self care day"],
+    "Gaming": ["stream setup", "grind session"],
+    "Education": ["study session", "exam prep"],
+    "Finance": ["workday routine", "budget planning"],
+    "Entertainment":["memes","skits","brainrot","reaction"],
 }
 
 # ======================================================

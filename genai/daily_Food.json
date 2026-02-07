@@ -1,0 +1,532 @@
+{
+  "niche": "Food",
+  "lookback_days": 7,
+  "top_trends_good": [
+    {
+      "name": "old money edit - street food hunt",
+      "base": "old money edit",
+      "score": 29.536,
+      "signals": {
+        "velocity_pct": 246.443,
+        "engagement_pct": 0.83,
+        "appearance_pct": 0.333,
+        "saturation_pct": 4.857,
+        "novelty": 0.565,
+        "decay_score": 0.68
+      }
+    },
+    {
+      "name": "soft life edit - cooking",
+      "base": "soft life edit",
+      "score": 18.422,
+      "signals": {
+        "velocity_pct": 152.822,
+        "engagement_pct": 4.284,
+        "appearance_pct": 0.111,
+        "saturation_pct": 8.519,
+        "novelty": 0.146,
+        "decay_score": 0.912
+      }
+    },
+    {
+      "name": "things nobody tells you about as a creator - street food hunt",
+      "base": "things nobody tells you about as a creator",
+      "score": 5.155,
+      "signals": {
+        "velocity_pct": 23.851,
+        "engagement_pct": -0.771,
+        "appearance_pct": 0.0,
+        "saturation_pct": 6.364,
+        "novelty": 0.269,
+        "decay_score": 0.022
+      }
+    },
+    {
+      "name": "get ready with me vlog - cooking",
+      "base": "get ready with me vlog",
+      "score": 4.026,
+      "signals": {
+        "velocity_pct": 8.983,
+        "engagement_pct": 2.8,
+        "appearance_pct": 14.0,
+        "saturation_pct": 4.568,
+        "novelty": 0.0,
+        "decay_score": 0.285
+      }
+    },
+    {
+      "name": "routine reel vlog - street food hunt",
+      "base": "routine reel vlog",
+      "score": 3.679,
+      "signals": {
+        "velocity_pct": 11.214,
+        "engagement_pct": -0.132,
+        "appearance_pct": 1.8,
+        "saturation_pct": 2.162,
+        "novelty": 0.124,
+        "decay_score": 0.068
+      }
+    },
+    {
+      "name": "#facelesscontent #growth - street food hunt",
+      "base": "#facelesscontent #growth",
+      "score": 3.495,
+      "signals": {
+        "velocity_pct": 16.628,
+        "engagement_pct": 0.097,
+        "appearance_pct": 0.273,
+        "saturation_pct": 3.079,
+        "novelty": 0.753,
+        "decay_score": 0.476
+      }
+    },
+    {
+      "name": "old money aesthetic - cooking",
+      "base": "old money aesthetic",
+      "score": 3.471,
+      "signals": {
+        "velocity_pct": 28.877,
+        "engagement_pct": 9.958,
+        "appearance_pct": 0.0,
+        "saturation_pct": 4.007,
+        "novelty": 0.466,
+        "decay_score": 0.868
+      }
+    },
+    {
+      "name": "this changed everything for me before traveling - street food hunt",
+      "base": "this changed everything for me before traveling",
+      "score": 2.866,
+      "signals": {
+        "velocity_pct": 11.076,
+        "engagement_pct": 0.031,
+        "appearance_pct": 5.0,
+        "saturation_pct": 4.308,
+        "novelty": 0.352,
+        "decay_score": 0.028
+      }
+    },
+    {
+      "name": "old money aesthetic - recipe prep",
+      "base": "old money aesthetic",
+      "score": 2.807,
+      "signals": {
+        "velocity_pct": 0.053,
+        "engagement_pct": 0.507,
+        "appearance_pct": 16.0,
+        "saturation_pct": 0.106,
+        "novelty": 0.0,
+        "decay_score": 0.068
+      }
+    },
+    {
+      "name": "old money edit - recipe prep",
+      "base": "old money edit",
+      "score": 2.73,
+      "signals": {
+        "velocity_pct": 8.174,
+        "engagement_pct": 1.51,
+        "appearance_pct": 2.333,
+        "saturation_pct": 5.018,
+        "novelty": 0.0,
+        "decay_score": 0.067
+      }
+    }
+  ],
+  "top_trends_declining": [
+    {
+      "name": "routine reel vlog - recipe prep",
+      "base": "routine reel vlog",
+      "score": 0.077,
+      "signals": {
+        "velocity_pct": -0.991,
+        "engagement_pct": 1.067,
+        "appearance_pct": 0.0,
+        "saturation_pct": -0.632,
+        "novelty": 0.187,
+        "decay_score": 0.849
+      }
+    },
+    {
+      "name": "quiet luxury aesthetic - street food hunt",
+      "base": "quiet luxury aesthetic",
+      "score": 0.11,
+      "signals": {
+        "velocity_pct": -0.689,
+        "engagement_pct": -0.335,
+        "appearance_pct": -0.727,
+        "saturation_pct": 0.496,
+        "novelty": 0.698,
+        "decay_score": 0.142
+      }
+    },
+    {
+      "name": "old money vibe - street food hunt",
+      "base": "old money vibe",
+      "score": 0.114,
+      "signals": {
+        "velocity_pct": -0.532,
+        "engagement_pct": -0.935,
+        "appearance_pct": -0.938,
+        "saturation_pct": -0.372,
+        "novelty": 0.554,
+        "decay_score": 0.617
+      }
+    },
+    {
+      "name": "soft life routine - recipe prep",
+      "base": "soft life routine",
+      "score": 0.124,
+      "signals": {
+        "velocity_pct": -0.995,
+        "engagement_pct": -0.817,
+        "appearance_pct": -0.091,
+        "saturation_pct": -0.326,
+        "novelty": 0.854,
+        "decay_score": 0.44
+      }
+    },
+    {
+      "name": "clean girl edit - recipe prep",
+      "base": "clean girl edit",
+      "score": 0.126,
+      "signals": {
+        "velocity_pct": -0.889,
+        "engagement_pct": -0.779,
+        "appearance_pct": 0.077,
+        "saturation_pct": -0.57,
+        "novelty": 0.725,
+        "decay_score": 0.792
+      }
+    },
+    {
+      "name": "photo dump shorts - recipe prep",
+      "base": "photo dump shorts",
+      "score": 0.131,
+      "signals": {
+        "velocity_pct": -0.908,
+        "engagement_pct": 0.097,
+        "appearance_pct": -0.333,
+        "saturation_pct": -0.509,
+        "novelty": 0.717,
+        "decay_score": 0.915
+      }
+    },
+    {
+      "name": "cozy minimal aesthetic - street food hunt",
+      "base": "cozy minimal aesthetic",
+      "score": 0.141,
+      "signals": {
+        "velocity_pct": -0.889,
+        "engagement_pct": 0.209,
+        "appearance_pct": -0.545,
+        "saturation_pct": -0.352,
+        "novelty": 0.777,
+        "decay_score": 0.844
+      }
+    },
+    {
+      "name": "this changed everything for me right now - recipe prep",
+      "base": "this changed everything for me right now",
+      "score": 0.154,
+      "signals": {
+        "velocity_pct": -0.858,
+        "engagement_pct": -0.668,
+        "appearance_pct": 0.062,
+        "saturation_pct": -0.865,
+        "novelty": 0.881,
+        "decay_score": 0.993
+      }
+    },
+    {
+      "name": "clean girl vibe - street food hunt",
+      "base": "clean girl vibe",
+      "score": 0.156,
+      "signals": {
+        "velocity_pct": -0.626,
+        "engagement_pct": -0.327,
+        "appearance_pct": -0.8,
+        "saturation_pct": -0.362,
+        "novelty": 0.47,
+        "decay_score": 0.689
+      }
+    },
+    {
+      "name": "things nobody tells you about as a creator - cooking",
+      "base": "things nobody tells you about as a creator",
+      "score": 0.195,
+      "signals": {
+        "velocity_pct": -0.806,
+        "engagement_pct": 0.236,
+        "appearance_pct": -0.85,
+        "saturation_pct": -0.66,
+        "novelty": 0.66,
+        "decay_score": 0.728
+      }
+    }
+  ],
+  "top_music_good": [
+    {
+      "name": "golden hour slowed - cooking",
+      "base": "golden hour slowed",
+      "score": 14.234,
+      "signals": {
+        "velocity_pct": 68.401,
+        "engagement_pct": -0.679,
+        "appearance_pct": 18.0,
+        "saturation_pct": 3.158,
+        "novelty": 0.238,
+        "decay_score": 0.538
+      }
+    },
+    {
+      "name": "calm down instrumental - cooking",
+      "base": "calm down instrumental",
+      "score": 14.028,
+      "signals": {
+        "velocity_pct": 64.352,
+        "engagement_pct": -0.399,
+        "appearance_pct": 0.0,
+        "saturation_pct": 5.641,
+        "novelty": 0.0,
+        "decay_score": 0.42
+      }
+    },
+    {
+      "name": "blinding lights sped up - street food hunt",
+      "base": "blinding lights sped up",
+      "score": 12.129,
+      "signals": {
+        "velocity_pct": 95.234,
+        "engagement_pct": 2.147,
+        "appearance_pct": 0.0,
+        "saturation_pct": 3.238,
+        "novelty": 0.322,
+        "decay_score": 0.657
+      }
+    },
+    {
+      "name": "espresso nightcore - cooking",
+      "base": "espresso nightcore",
+      "score": 8.909,
+      "signals": {
+        "velocity_pct": 76.736,
+        "engagement_pct": -0.415,
+        "appearance_pct": 0.444,
+        "saturation_pct": 2.165,
+        "novelty": 0.48,
+        "decay_score": 0.85
+      }
+    },
+    {
+      "name": "greedy slowed - street food hunt",
+      "base": "greedy slowed",
+      "score": 5.462,
+      "signals": {
+        "velocity_pct": 34.383,
+        "engagement_pct": -0.682,
+        "appearance_pct": 5.0,
+        "saturation_pct": 19.067,
+        "novelty": 0.0,
+        "decay_score": 0.327
+      }
+    },
+    {
+      "name": "until i found you nightcore - recipe prep",
+      "base": "until i found you nightcore",
+      "score": 4.592,
+      "signals": {
+        "velocity_pct": 17.377,
+        "engagement_pct": 0.36,
+        "appearance_pct": 0.545,
+        "saturation_pct": 3.371,
+        "novelty": 0.19,
+        "decay_score": 0.114
+      }
+    },
+    {
+      "name": "sunroof lofi edit - recipe prep",
+      "base": "sunroof lofi edit",
+      "score": 4.183,
+      "signals": {
+        "velocity_pct": 31.039,
+        "engagement_pct": -0.884,
+        "appearance_pct": -0.706,
+        "saturation_pct": 2.998,
+        "novelty": 0.0,
+        "decay_score": 0.971
+      }
+    },
+    {
+      "name": "sunroof remix - street food hunt",
+      "base": "sunroof remix",
+      "score": 4.053,
+      "signals": {
+        "velocity_pct": 20.907,
+        "engagement_pct": 0.717,
+        "appearance_pct": -0.273,
+        "saturation_pct": 0.376,
+        "novelty": 0.715,
+        "decay_score": 0.088
+      }
+    },
+    {
+      "name": "lush life instrumental - recipe prep",
+      "base": "lush life instrumental",
+      "score": 3.261,
+      "signals": {
+        "velocity_pct": 13.841,
+        "engagement_pct": 1.408,
+        "appearance_pct": 14.0,
+        "saturation_pct": 1.271,
+        "novelty": 0.642,
+        "decay_score": 0.508
+      }
+    },
+    {
+      "name": "golden hour instrumental - recipe prep",
+      "base": "golden hour instrumental",
+      "score": 3.028,
+      "signals": {
+        "velocity_pct": 14.029,
+        "engagement_pct": 1.039,
+        "appearance_pct": 0.571,
+        "saturation_pct": 7.439,
+        "novelty": 0.006,
+        "decay_score": 0.155
+      }
+    }
+  ],
+  "top_music_declining": [
+    {
+      "name": "until i found you remix - recipe prep",
+      "base": "until i found you remix",
+      "score": 0.11,
+      "signals": {
+        "velocity_pct": 0.49,
+        "engagement_pct": -0.854,
+        "appearance_pct": -0.857,
+        "saturation_pct": 1.243,
+        "novelty": 0.762,
+        "decay_score": 0.574
+      }
+    },
+    {
+      "name": "calm down lofi edit - recipe prep",
+      "base": "calm down lofi edit",
+      "score": 0.112,
+      "signals": {
+        "velocity_pct": -0.922,
+        "engagement_pct": -0.649,
+        "appearance_pct": -0.692,
+        "saturation_pct": -0.629,
+        "novelty": 0.745,
+        "decay_score": 0.681
+      }
+    },
+    {
+      "name": "greedy instrumental - recipe prep",
+      "base": "greedy instrumental",
+      "score": 0.133,
+      "signals": {
+        "velocity_pct": -0.84,
+        "engagement_pct": -0.901,
+        "appearance_pct": 0.25,
+        "saturation_pct": -0.746,
+        "novelty": 0.746,
+        "decay_score": 0.977
+      }
+    },
+    {
+      "name": "until i found you slowed - street food hunt",
+      "base": "until i found you slowed",
+      "score": 0.173,
+      "signals": {
+        "velocity_pct": 0.204,
+        "engagement_pct": -0.919,
+        "appearance_pct": -0.385,
+        "saturation_pct": 0.168,
+        "novelty": 0.095,
+        "decay_score": 0.987
+      }
+    },
+    {
+      "name": "espresso instrumental - recipe prep",
+      "base": "espresso instrumental",
+      "score": 0.173,
+      "signals": {
+        "velocity_pct": -0.375,
+        "engagement_pct": -0.576,
+        "appearance_pct": -0.2,
+        "saturation_pct": -0.165,
+        "novelty": 0.317,
+        "decay_score": 0.889
+      }
+    },
+    {
+      "name": "blinding lights remix - recipe prep",
+      "base": "blinding lights remix",
+      "score": 0.174,
+      "signals": {
+        "velocity_pct": -0.537,
+        "engagement_pct": -0.864,
+        "appearance_pct": 0.083,
+        "saturation_pct": -0.407,
+        "novelty": 0.567,
+        "decay_score": 0.701
+      }
+    },
+    {
+      "name": "calm down instrumental - street food hunt",
+      "base": "calm down instrumental",
+      "score": 0.179,
+      "signals": {
+        "velocity_pct": -0.63,
+        "engagement_pct": -0.524,
+        "appearance_pct": -0.733,
+        "saturation_pct": -0.446,
+        "novelty": 0.475,
+        "decay_score": 0.509
+      }
+    },
+    {
+      "name": "calm down instrumental - recipe prep",
+      "base": "calm down instrumental",
+      "score": 0.18,
+      "signals": {
+        "velocity_pct": -0.744,
+        "engagement_pct": -0.453,
+        "appearance_pct": 0.0,
+        "saturation_pct": -0.54,
+        "novelty": 0.561,
+        "decay_score": 0.668
+      }
+    },
+    {
+      "name": "as it was nightcore - recipe prep",
+      "base": "as it was nightcore",
+      "score": 0.185,
+      "signals": {
+        "velocity_pct": 0.138,
+        "engagement_pct": 0.098,
+        "appearance_pct": -0.45,
+        "saturation_pct": 0.363,
+        "novelty": 0.601,
+        "decay_score": 0.828
+      }
+    },
+    {
+      "name": "greedy instrumental - street food hunt",
+      "base": "greedy instrumental",
+      "score": 0.192,
+      "signals": {
+        "velocity_pct": -0.812,
+        "engagement_pct": -0.804,
+        "appearance_pct": 0.667,
+        "saturation_pct": -0.599,
+        "novelty": 0.627,
+        "decay_score": 0.624
+      }
+    }
+  ]
+}

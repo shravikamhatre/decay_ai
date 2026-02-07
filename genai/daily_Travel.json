@@ -1,0 +1,532 @@
+{
+  "niche": "Travel",
+  "lookback_days": 7,
+  "top_trends_good": [
+    {
+      "name": "storytime shorts - packing",
+      "base": "storytime shorts",
+      "score": 45.403,
+      "signals": {
+        "velocity_pct": 382.4,
+        "engagement_pct": -0.516,
+        "appearance_pct": -0.8,
+        "saturation_pct": 42.017,
+        "novelty": 0.2,
+        "decay_score": 0.608
+      }
+    },
+    {
+      "name": "photo dump with captions - hotel day",
+      "base": "photo dump with captions",
+      "score": 12.864,
+      "signals": {
+        "velocity_pct": 55.499,
+        "engagement_pct": -0.205,
+        "appearance_pct": 0.25,
+        "saturation_pct": 1.122,
+        "novelty": 0.482,
+        "decay_score": 0.026
+      }
+    },
+    {
+      "name": "storytime shorts - airport morning",
+      "base": "storytime shorts",
+      "score": 8.705,
+      "signals": {
+        "velocity_pct": 26.024,
+        "engagement_pct": 3.94,
+        "appearance_pct": 3.5,
+        "saturation_pct": 2.824,
+        "novelty": 0.0,
+        "decay_score": 0.163
+      }
+    },
+    {
+      "name": "stop scrolling if you as a creator - packing",
+      "base": "stop scrolling if you as a creator",
+      "score": 6.758,
+      "signals": {
+        "velocity_pct": 76.416,
+        "engagement_pct": -0.489,
+        "appearance_pct": 0.125,
+        "saturation_pct": 43.77,
+        "novelty": 0.477,
+        "decay_score": 0.525
+      }
+    },
+    {
+      "name": "#dailyvlog #travelreels - sunrise travel",
+      "base": "#dailyvlog #travelreels",
+      "score": 5.092,
+      "signals": {
+        "velocity_pct": 25.828,
+        "engagement_pct": -0.85,
+        "appearance_pct": 0.583,
+        "saturation_pct": 3.38,
+        "novelty": 0.106,
+        "decay_score": 0.535
+      }
+    },
+    {
+      "name": "faceless reel shorts - sunrise travel",
+      "base": "faceless reel shorts",
+      "score": 4.861,
+      "signals": {
+        "velocity_pct": 26.017,
+        "engagement_pct": 0.624,
+        "appearance_pct": -0.312,
+        "saturation_pct": 4.633,
+        "novelty": 0.239,
+        "decay_score": 0.459
+      }
+    },
+    {
+      "name": "before after vlog - packing",
+      "base": "before after vlog",
+      "score": 4.707,
+      "signals": {
+        "velocity_pct": 28.123,
+        "engagement_pct": 0.027,
+        "appearance_pct": 0.333,
+        "saturation_pct": 2.624,
+        "novelty": 0.431,
+        "decay_score": 0.462
+      }
+    },
+    {
+      "name": "day in my life with captions - exploring a city",
+      "base": "day in my life with captions",
+      "score": 4.51,
+      "signals": {
+        "velocity_pct": 17.254,
+        "engagement_pct": -0.23,
+        "appearance_pct": -0.444,
+        "saturation_pct": 2.644,
+        "novelty": 0.0,
+        "decay_score": 0.205
+      }
+    },
+    {
+      "name": "cozy minimal routine - packing",
+      "base": "cozy minimal routine",
+      "score": 4.267,
+      "signals": {
+        "velocity_pct": 17.064,
+        "engagement_pct": 0.666,
+        "appearance_pct": 0.154,
+        "saturation_pct": 1.969,
+        "novelty": 0.202,
+        "decay_score": 0.114
+      }
+    },
+    {
+      "name": "soft life vibe - airport morning",
+      "base": "soft life vibe",
+      "score": 3.825,
+      "signals": {
+        "velocity_pct": 38.125,
+        "engagement_pct": 0.145,
+        "appearance_pct": -0.846,
+        "saturation_pct": 18.554,
+        "novelty": 0.252,
+        "decay_score": 0.549
+      }
+    }
+  ],
+  "top_trends_declining": [
+    {
+      "name": "get ready with me voiceover - airport morning",
+      "base": "get ready with me voiceover",
+      "score": 0.08,
+      "signals": {
+        "velocity_pct": -0.839,
+        "engagement_pct": -0.86,
+        "appearance_pct": -0.846,
+        "saturation_pct": -0.625,
+        "novelty": 0.777,
+        "decay_score": 0.982
+      }
+    },
+    {
+      "name": "faceless reel with captions - sunrise travel",
+      "base": "faceless reel with captions",
+      "score": 0.094,
+      "signals": {
+        "velocity_pct": -0.88,
+        "engagement_pct": -0.608,
+        "appearance_pct": -0.789,
+        "saturation_pct": -0.632,
+        "novelty": 0.767,
+        "decay_score": 0.952
+      }
+    },
+    {
+      "name": "routine reel voiceover - hotel day",
+      "base": "routine reel voiceover",
+      "score": 0.114,
+      "signals": {
+        "velocity_pct": 0.678,
+        "engagement_pct": -0.151,
+        "appearance_pct": -0.167,
+        "saturation_pct": 2.711,
+        "novelty": 0.695,
+        "decay_score": 0.3
+      }
+    },
+    {
+      "name": "storytime voiceover - packing",
+      "base": "storytime voiceover",
+      "score": 0.122,
+      "signals": {
+        "velocity_pct": -0.837,
+        "engagement_pct": -0.294,
+        "appearance_pct": -0.947,
+        "saturation_pct": -0.601,
+        "novelty": 0.876,
+        "decay_score": 0.86
+      }
+    },
+    {
+      "name": "i wish i knew this earlier before traveling - exploring a city",
+      "base": "i wish i knew this earlier before traveling",
+      "score": 0.123,
+      "signals": {
+        "velocity_pct": -0.768,
+        "engagement_pct": 0.042,
+        "appearance_pct": -0.1,
+        "saturation_pct": -0.346,
+        "novelty": 0.13,
+        "decay_score": 0.608
+      }
+    },
+    {
+      "name": "storytime reel - packing",
+      "base": "storytime reel",
+      "score": 0.146,
+      "signals": {
+        "velocity_pct": -0.944,
+        "engagement_pct": -0.773,
+        "appearance_pct": -0.417,
+        "saturation_pct": -0.76,
+        "novelty": 0.778,
+        "decay_score": 0.494
+      }
+    },
+    {
+      "name": "clean girl routine - exploring a city",
+      "base": "clean girl routine",
+      "score": 0.148,
+      "signals": {
+        "velocity_pct": -0.993,
+        "engagement_pct": -0.541,
+        "appearance_pct": -0.929,
+        "saturation_pct": -0.88,
+        "novelty": 0.91,
+        "decay_score": 0.485
+      }
+    },
+    {
+      "name": "dark academia edit - sunrise travel",
+      "base": "dark academia edit",
+      "score": 0.149,
+      "signals": {
+        "velocity_pct": -0.893,
+        "engagement_pct": -0.678,
+        "appearance_pct": -0.125,
+        "saturation_pct": -0.813,
+        "novelty": 0.846,
+        "decay_score": 0.869
+      }
+    },
+    {
+      "name": "cozy minimal edit - packing",
+      "base": "cozy minimal edit",
+      "score": 0.15,
+      "signals": {
+        "velocity_pct": -0.823,
+        "engagement_pct": -0.519,
+        "appearance_pct": -0.278,
+        "saturation_pct": -0.704,
+        "novelty": 0.774,
+        "decay_score": 0.878
+      }
+    },
+    {
+      "name": "before after vlog - hotel day",
+      "base": "before after vlog",
+      "score": 0.157,
+      "signals": {
+        "velocity_pct": -0.926,
+        "engagement_pct": -0.715,
+        "appearance_pct": -0.889,
+        "saturation_pct": -0.894,
+        "novelty": 0.945,
+        "decay_score": 0.445
+      }
+    }
+  ],
+  "top_music_good": [
+    {
+      "name": "calm down nightcore - sunrise travel",
+      "base": "calm down nightcore",
+      "score": 3667.873,
+      "signals": {
+        "velocity_pct": 17836.137,
+        "engagement_pct": -0.404,
+        "appearance_pct": 0.545,
+        "saturation_pct": 5.17,
+        "novelty": 0.0,
+        "decay_score": 0.628
+      }
+    },
+    {
+      "name": "lush life nightcore - airport morning",
+      "base": "lush life nightcore",
+      "score": 51.973,
+      "signals": {
+        "velocity_pct": 315.195,
+        "engagement_pct": -0.728,
+        "appearance_pct": 0.429,
+        "saturation_pct": 1.381,
+        "novelty": 0.41,
+        "decay_score": 0.495
+      }
+    },
+    {
+      "name": "calm down slowed - airport morning",
+      "base": "calm down slowed",
+      "score": 27.228,
+      "signals": {
+        "velocity_pct": 123.869,
+        "engagement_pct": 0.448,
+        "appearance_pct": -0.438,
+        "saturation_pct": 1.772,
+        "novelty": 0.328,
+        "decay_score": 0.025
+      }
+    },
+    {
+      "name": "until i found you nightcore - exploring a city",
+      "base": "until i found you nightcore",
+      "score": 6.039,
+      "signals": {
+        "velocity_pct": 37.827,
+        "engagement_pct": -0.816,
+        "appearance_pct": -0.077,
+        "saturation_pct": 5.79,
+        "novelty": 0.0,
+        "decay_score": 0.657
+      }
+    },
+    {
+      "name": "golden hour remix - sunrise travel",
+      "base": "golden hour remix",
+      "score": 4.811,
+      "signals": {
+        "velocity_pct": 33.357,
+        "engagement_pct": -0.81,
+        "appearance_pct": 9.0,
+        "saturation_pct": 2.24,
+        "novelty": 0.328,
+        "decay_score": 0.776
+      }
+    },
+    {
+      "name": "calm down lofi edit - airport morning",
+      "base": "calm down lofi edit",
+      "score": 4.344,
+      "signals": {
+        "velocity_pct": 19.875,
+        "engagement_pct": 0.42,
+        "appearance_pct": 1.0,
+        "saturation_pct": 9.272,
+        "novelty": 0.0,
+        "decay_score": 0.225
+      }
+    },
+    {
+      "name": "blinding lights sped up - packing",
+      "base": "blinding lights sped up",
+      "score": 4.337,
+      "signals": {
+        "velocity_pct": 34.492,
+        "engagement_pct": -0.062,
+        "appearance_pct": 1.4,
+        "saturation_pct": 1.956,
+        "novelty": 0.472,
+        "decay_score": 0.605
+      }
+    },
+    {
+      "name": "lush life slowed - sunrise travel",
+      "base": "lush life slowed",
+      "score": 3.204,
+      "signals": {
+        "velocity_pct": 19.407,
+        "engagement_pct": -0.751,
+        "appearance_pct": -0.7,
+        "saturation_pct": 10.762,
+        "novelty": 0.0,
+        "decay_score": 0.354
+      }
+    },
+    {
+      "name": "anti hero remix - packing",
+      "base": "anti hero remix",
+      "score": 3.197,
+      "signals": {
+        "velocity_pct": -0.513,
+        "engagement_pct": 9.068,
+        "appearance_pct": 16.0,
+        "saturation_pct": -0.338,
+        "novelty": 0.392,
+        "decay_score": 0.173
+      }
+    },
+    {
+      "name": "calm down nightcore - exploring a city",
+      "base": "calm down nightcore",
+      "score": 3.125,
+      "signals": {
+        "velocity_pct": 11.418,
+        "engagement_pct": 0.112,
+        "appearance_pct": 4.667,
+        "saturation_pct": 2.553,
+        "novelty": 0.181,
+        "decay_score": 0.382
+      }
+    }
+  ],
+  "top_music_declining": [
+    {
+      "name": "espresso nightcore - airport morning",
+      "base": "espresso nightcore",
+      "score": 0.1,
+      "signals": {
+        "velocity_pct": -0.43,
+        "engagement_pct": -0.67,
+        "appearance_pct": -0.8,
+        "saturation_pct": -0.124,
+        "novelty": 0.434,
+        "decay_score": 1.0
+      }
+    },
+    {
+      "name": "until i found you slowed - exploring a city",
+      "base": "until i found you slowed",
+      "score": 0.122,
+      "signals": {
+        "velocity_pct": -0.939,
+        "engagement_pct": -0.485,
+        "appearance_pct": -0.389,
+        "saturation_pct": -0.577,
+        "novelty": 0.721,
+        "decay_score": 0.723
+      }
+    },
+    {
+      "name": "anti hero slowed - packing",
+      "base": "anti hero slowed",
+      "score": 0.123,
+      "signals": {
+        "velocity_pct": -0.834,
+        "engagement_pct": -0.774,
+        "appearance_pct": 0.111,
+        "saturation_pct": 0.045,
+        "novelty": 0.743,
+        "decay_score": 0.385
+      }
+    },
+    {
+      "name": "anti hero nightcore - sunrise travel",
+      "base": "anti hero nightcore",
+      "score": 0.127,
+      "signals": {
+        "velocity_pct": -0.83,
+        "engagement_pct": -0.576,
+        "appearance_pct": 0.176,
+        "saturation_pct": -0.534,
+        "novelty": 0.722,
+        "decay_score": 0.935
+      }
+    },
+    {
+      "name": "as it was remix - hotel day",
+      "base": "as it was remix",
+      "score": 0.13,
+      "signals": {
+        "velocity_pct": -0.783,
+        "engagement_pct": -0.707,
+        "appearance_pct": -0.556,
+        "saturation_pct": -0.74,
+        "novelty": 0.819,
+        "decay_score": 0.884
+      }
+    },
+    {
+      "name": "anti hero sped up - packing",
+      "base": "anti hero sped up",
+      "score": 0.134,
+      "signals": {
+        "velocity_pct": -0.906,
+        "engagement_pct": -0.752,
+        "appearance_pct": -0.294,
+        "saturation_pct": -0.892,
+        "novelty": 0.914,
+        "decay_score": 0.962
+      }
+    },
+    {
+      "name": "sunroof instrumental - hotel day",
+      "base": "sunroof instrumental",
+      "score": 0.142,
+      "signals": {
+        "velocity_pct": -0.877,
+        "engagement_pct": -0.731,
+        "appearance_pct": -0.882,
+        "saturation_pct": -0.748,
+        "novelty": 0.823,
+        "decay_score": 0.459
+      }
+    },
+    {
+      "name": "espresso lofi edit - packing",
+      "base": "espresso lofi edit",
+      "score": 0.143,
+      "signals": {
+        "velocity_pct": -0.635,
+        "engagement_pct": -0.558,
+        "appearance_pct": -0.667,
+        "saturation_pct": -0.484,
+        "novelty": 0.641,
+        "decay_score": 0.733
+      }
+    },
+    {
+      "name": "blinding lights nightcore - exploring a city",
+      "base": "blinding lights nightcore",
+      "score": 0.151,
+      "signals": {
+        "velocity_pct": -0.709,
+        "engagement_pct": -0.729,
+        "appearance_pct": -0.286,
+        "saturation_pct": -0.686,
+        "novelty": 0.686,
+        "decay_score": 0.974
+      }
+    },
+    {
+      "name": "golden hour slowed - hotel day",
+      "base": "golden hour slowed",
+      "score": 0.155,
+      "signals": {
+        "velocity_pct": -0.596,
+        "engagement_pct": -0.841,
+        "appearance_pct": 0.545,
+        "saturation_pct": -0.313,
+        "novelty": 0.5,
+        "decay_score": 0.925
+      }
+    }
+  ]
+}
