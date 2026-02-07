@@ -1,0 +1,532 @@
+{
+  "niche": "Lifestyle",
+  "lookback_days": 7,
+  "top_trends_good": [
+    {
+      "name": "storytime vlog - self care day",
+      "base": "storytime vlog",
+      "score": 3.787,
+      "signals": {
+        "velocity_pct": 26.03,
+        "engagement_pct": 1.025,
+        "appearance_pct": -0.688,
+        "saturation_pct": -0.27,
+        "novelty": 0.852,
+        "decay_score": 0.4
+      }
+    },
+    {
+      "name": "clean girl vibe - morning routine",
+      "base": "clean girl vibe",
+      "score": 3.332,
+      "signals": {
+        "velocity_pct": 7.305,
+        "engagement_pct": 1.178,
+        "appearance_pct": 10.0,
+        "saturation_pct": 3.12,
+        "novelty": 0.237,
+        "decay_score": 0.176
+      }
+    },
+    {
+      "name": "stop scrolling if you before traveling - self care day",
+      "base": "stop scrolling if you before traveling",
+      "score": 2.317,
+      "signals": {
+        "velocity_pct": -0.4,
+        "engagement_pct": 10.398,
+        "appearance_pct": 0.4,
+        "saturation_pct": -0.287,
+        "novelty": 0.291,
+        "decay_score": 0.059
+      }
+    },
+    {
+      "name": "storytime with captions - self care day",
+      "base": "storytime with captions",
+      "score": 1.996,
+      "signals": {
+        "velocity_pct": 14.685,
+        "engagement_pct": -0.463,
+        "appearance_pct": 0.875,
+        "saturation_pct": 0.346,
+        "novelty": 0.763,
+        "decay_score": 0.611
+      }
+    },
+    {
+      "name": "clean girl routine - morning routine",
+      "base": "clean girl routine",
+      "score": 1.927,
+      "signals": {
+        "velocity_pct": 4.606,
+        "engagement_pct": 3.49,
+        "appearance_pct": -0.273,
+        "saturation_pct": 2.863,
+        "novelty": 0.002,
+        "decay_score": 0.277
+      }
+    },
+    {
+      "name": "faceless reel shorts - self care day",
+      "base": "faceless reel shorts",
+      "score": 1.806,
+      "signals": {
+        "velocity_pct": 1.448,
+        "engagement_pct": 2.827,
+        "appearance_pct": 5.0,
+        "saturation_pct": 1.453,
+        "novelty": 0.115,
+        "decay_score": 0.19
+      }
+    },
+    {
+      "name": "quiet luxury vibe - self care day",
+      "base": "quiet luxury vibe",
+      "score": 1.742,
+      "signals": {
+        "velocity_pct": 2.124,
+        "engagement_pct": 4.377,
+        "appearance_pct": 0.0,
+        "saturation_pct": 1.501,
+        "novelty": 0.174,
+        "decay_score": 0.102
+      }
+    },
+    {
+      "name": "photo dump voiceover - self care day",
+      "base": "photo dump voiceover",
+      "score": 1.66,
+      "signals": {
+        "velocity_pct": 5.394,
+        "engagement_pct": -0.148,
+        "appearance_pct": 8.5,
+        "saturation_pct": 0.294,
+        "novelty": 0.637,
+        "decay_score": 0.473
+      }
+    },
+    {
+      "name": "things nobody tells you about right now - self care day",
+      "base": "things nobody tells you about right now",
+      "score": 1.625,
+      "signals": {
+        "velocity_pct": 0.209,
+        "engagement_pct": -0.799,
+        "appearance_pct": 9.0,
+        "saturation_pct": 0.038,
+        "novelty": 0.154,
+        "decay_score": 0.163
+      }
+    },
+    {
+      "name": "photo dump vlog - morning routine",
+      "base": "photo dump vlog",
+      "score": 1.598,
+      "signals": {
+        "velocity_pct": 9.267,
+        "engagement_pct": -0.291,
+        "appearance_pct": -0.111,
+        "saturation_pct": 1.385,
+        "novelty": 0.417,
+        "decay_score": 0.474
+      }
+    }
+  ],
+  "top_trends_declining": [
+    {
+      "name": "faceless reel with captions - morning routine",
+      "base": "faceless reel with captions",
+      "score": 0.11,
+      "signals": {
+        "velocity_pct": -0.732,
+        "engagement_pct": -0.604,
+        "appearance_pct": -0.154,
+        "saturation_pct": -0.487,
+        "novelty": 0.61,
+        "decay_score": 0.996
+      }
+    },
+    {
+      "name": "day in my life with captions - self care day",
+      "base": "day in my life with captions",
+      "score": 0.132,
+      "signals": {
+        "velocity_pct": -0.165,
+        "engagement_pct": -0.726,
+        "appearance_pct": -0.667,
+        "saturation_pct": 0.068,
+        "novelty": 0.665,
+        "decay_score": 0.919
+      }
+    },
+    {
+      "name": "soft life routine - self care day",
+      "base": "soft life routine",
+      "score": 0.152,
+      "signals": {
+        "velocity_pct": -0.756,
+        "engagement_pct": -0.942,
+        "appearance_pct": -0.316,
+        "saturation_pct": -0.573,
+        "novelty": 0.573,
+        "decay_score": 0.545
+      }
+    },
+    {
+      "name": "dark academia aesthetic - self care day",
+      "base": "dark academia aesthetic",
+      "score": 0.172,
+      "signals": {
+        "velocity_pct": -0.961,
+        "engagement_pct": -0.575,
+        "appearance_pct": 0.4,
+        "saturation_pct": -0.841,
+        "novelty": 0.856,
+        "decay_score": 0.793
+      }
+    },
+    {
+      "name": "before after shorts - morning routine",
+      "base": "before after shorts",
+      "score": 0.174,
+      "signals": {
+        "velocity_pct": -0.021,
+        "engagement_pct": -0.45,
+        "appearance_pct": -0.526,
+        "saturation_pct": -0.181,
+        "novelty": 0.828,
+        "decay_score": 0.922
+      }
+    },
+    {
+      "name": "old money edit - self care day",
+      "base": "old money edit",
+      "score": 0.176,
+      "signals": {
+        "velocity_pct": -0.331,
+        "engagement_pct": -0.712,
+        "appearance_pct": -0.667,
+        "saturation_pct": -0.165,
+        "novelty": 0.179,
+        "decay_score": 0.699
+      }
+    },
+    {
+      "name": "routine reel voiceover - self care day",
+      "base": "routine reel voiceover",
+      "score": 0.185,
+      "signals": {
+        "velocity_pct": -0.084,
+        "engagement_pct": -0.808,
+        "appearance_pct": 0.25,
+        "saturation_pct": 0.039,
+        "novelty": 0.228,
+        "decay_score": 0.933
+      }
+    },
+    {
+      "name": "dark academia edit - self care day",
+      "base": "dark academia edit",
+      "score": 0.192,
+      "signals": {
+        "velocity_pct": -0.456,
+        "engagement_pct": -0.736,
+        "appearance_pct": 0.778,
+        "saturation_pct": -0.191,
+        "novelty": 0.533,
+        "decay_score": 0.811
+      }
+    },
+    {
+      "name": "this changed everything for me right now - morning routine",
+      "base": "this changed everything for me right now",
+      "score": 0.192,
+      "signals": {
+        "velocity_pct": -0.341,
+        "engagement_pct": -0.46,
+        "appearance_pct": -0.214,
+        "saturation_pct": 0.26,
+        "novelty": 0.579,
+        "decay_score": 0.338
+      }
+    },
+    {
+      "name": "soft life edit - morning routine",
+      "base": "soft life edit",
+      "score": 0.197,
+      "signals": {
+        "velocity_pct": 0.371,
+        "engagement_pct": -0.768,
+        "appearance_pct": -0.75,
+        "saturation_pct": 0.379,
+        "novelty": 0.455,
+        "decay_score": 0.639
+      }
+    }
+  ],
+  "top_music_good": [
+    {
+      "name": "anti hero sped up - self care day",
+      "base": "anti hero sped up",
+      "score": 18.618,
+      "signals": {
+        "velocity_pct": 75.832,
+        "engagement_pct": 0.246,
+        "appearance_pct": 0.5,
+        "saturation_pct": 4.632,
+        "novelty": 0.052,
+        "decay_score": 0.206
+      }
+    },
+    {
+      "name": "until i found you slowed - morning routine",
+      "base": "until i found you slowed",
+      "score": 7.633,
+      "signals": {
+        "velocity_pct": 32.086,
+        "engagement_pct": -0.925,
+        "appearance_pct": -0.688,
+        "saturation_pct": 6.122,
+        "novelty": 0.076,
+        "decay_score": 0.061
+      }
+    },
+    {
+      "name": "espresso remix - self care day",
+      "base": "espresso remix",
+      "score": 3.452,
+      "signals": {
+        "velocity_pct": 2.816,
+        "engagement_pct": 22.68,
+        "appearance_pct": -0.75,
+        "saturation_pct": 2.563,
+        "novelty": 0.024,
+        "decay_score": 0.682
+      }
+    },
+    {
+      "name": "sunroof nightcore - self care day",
+      "base": "sunroof nightcore",
+      "score": 2.48,
+      "signals": {
+        "velocity_pct": 0.714,
+        "engagement_pct": 10.292,
+        "appearance_pct": -0.111,
+        "saturation_pct": 0.344,
+        "novelty": 0.0,
+        "decay_score": 0.431
+      }
+    },
+    {
+      "name": "anti hero lofi edit - self care day",
+      "base": "anti hero lofi edit",
+      "score": 1.922,
+      "signals": {
+        "velocity_pct": 11.266,
+        "engagement_pct": -0.871,
+        "appearance_pct": -0.737,
+        "saturation_pct": 3.979,
+        "novelty": 0.0,
+        "decay_score": 0.444
+      }
+    },
+    {
+      "name": "espresso slowed - morning routine",
+      "base": "espresso slowed",
+      "score": 1.66,
+      "signals": {
+        "velocity_pct": 1.748,
+        "engagement_pct": 0.772,
+        "appearance_pct": 9.0,
+        "saturation_pct": 1.423,
+        "novelty": 0.251,
+        "decay_score": 0.242
+      }
+    },
+    {
+      "name": "blinding lights sped up - self care day",
+      "base": "blinding lights sped up",
+      "score": 1.221,
+      "signals": {
+        "velocity_pct": 2.44,
+        "engagement_pct": -0.577,
+        "appearance_pct": 2.75,
+        "saturation_pct": 1.068,
+        "novelty": 0.0,
+        "decay_score": 0.383
+      }
+    },
+    {
+      "name": "greedy lofi edit - morning routine",
+      "base": "greedy lofi edit",
+      "score": 1.2,
+      "signals": {
+        "velocity_pct": 4.828,
+        "engagement_pct": 2.058,
+        "appearance_pct": -0.389,
+        "saturation_pct": 2.486,
+        "novelty": 0.134,
+        "decay_score": 0.502
+      }
+    },
+    {
+      "name": "sunroof lofi edit - morning routine",
+      "base": "sunroof lofi edit",
+      "score": 1.199,
+      "signals": {
+        "velocity_pct": -0.608,
+        "engagement_pct": 10.365,
+        "appearance_pct": -0.267,
+        "saturation_pct": -0.443,
+        "novelty": 0.637,
+        "decay_score": 0.446
+      }
+    },
+    {
+      "name": "blinding lights sped up - morning routine",
+      "base": "blinding lights sped up",
+      "score": 1.153,
+      "signals": {
+        "velocity_pct": 2.491,
+        "engagement_pct": 3.591,
+        "appearance_pct": -0.667,
+        "saturation_pct": 1.561,
+        "novelty": 0.0,
+        "decay_score": 0.539
+      }
+    }
+  ],
+  "top_music_declining": [
+    {
+      "name": "greedy instrumental - morning routine",
+      "base": "greedy instrumental",
+      "score": 0.088,
+      "signals": {
+        "velocity_pct": -0.969,
+        "engagement_pct": -0.805,
+        "appearance_pct": -0.944,
+        "saturation_pct": -0.935,
+        "novelty": 0.468,
+        "decay_score": 0.546
+      }
+    },
+    {
+      "name": "lush life nightcore - self care day",
+      "base": "lush life nightcore",
+      "score": 0.137,
+      "signals": {
+        "velocity_pct": -0.958,
+        "engagement_pct": 0.165,
+        "appearance_pct": -0.5,
+        "saturation_pct": -0.383,
+        "novelty": 0.76,
+        "decay_score": 0.77
+      }
+    },
+    {
+      "name": "until i found you sped up - self care day",
+      "base": "until i found you sped up",
+      "score": 0.147,
+      "signals": {
+        "velocity_pct": -0.408,
+        "engagement_pct": -0.489,
+        "appearance_pct": -0.333,
+        "saturation_pct": -0.13,
+        "novelty": 0.576,
+        "decay_score": 0.784
+      }
+    },
+    {
+      "name": "as it was slowed - morning routine",
+      "base": "as it was slowed",
+      "score": 0.156,
+      "signals": {
+        "velocity_pct": -0.701,
+        "engagement_pct": -0.029,
+        "appearance_pct": -0.75,
+        "saturation_pct": -0.545,
+        "novelty": 0.619,
+        "decay_score": 0.928
+      }
+    },
+    {
+      "name": "lush life remix - morning routine",
+      "base": "lush life remix",
+      "score": 0.156,
+      "signals": {
+        "velocity_pct": -0.958,
+        "engagement_pct": -0.802,
+        "appearance_pct": -0.385,
+        "saturation_pct": -0.803,
+        "novelty": 0.837,
+        "decay_score": 0.44
+      }
+    },
+    {
+      "name": "lush life sped up - self care day",
+      "base": "lush life sped up",
+      "score": 0.159,
+      "signals": {
+        "velocity_pct": -0.907,
+        "engagement_pct": -0.617,
+        "appearance_pct": -0.071,
+        "saturation_pct": -0.9,
+        "novelty": 0.9,
+        "decay_score": 0.928
+      }
+    },
+    {
+      "name": "sunroof sped up - self care day",
+      "base": "sunroof sped up",
+      "score": 0.168,
+      "signals": {
+        "velocity_pct": -0.057,
+        "engagement_pct": -0.77,
+        "appearance_pct": -0.375,
+        "saturation_pct": 0.063,
+        "novelty": 0.349,
+        "decay_score": 0.763
+      }
+    },
+    {
+      "name": "lush life lofi edit - morning routine",
+      "base": "lush life lofi edit",
+      "score": 0.175,
+      "signals": {
+        "velocity_pct": 0.274,
+        "engagement_pct": -0.797,
+        "appearance_pct": 0.3,
+        "saturation_pct": 0.968,
+        "novelty": 0.342,
+        "decay_score": 0.709
+      }
+    },
+    {
+      "name": "blinding lights nightcore - morning routine",
+      "base": "blinding lights nightcore",
+      "score": 0.176,
+      "signals": {
+        "velocity_pct": -0.864,
+        "engagement_pct": -0.933,
+        "appearance_pct": 1.4,
+        "saturation_pct": -0.64,
+        "novelty": 0.688,
+        "decay_score": 0.818
+      }
+    },
+    {
+      "name": "until i found you slowed - self care day",
+      "base": "until i found you slowed",
+      "score": 0.182,
+      "signals": {
+        "velocity_pct": -0.642,
+        "engagement_pct": 0.331,
+        "appearance_pct": -0.85,
+        "saturation_pct": -0.443,
+        "novelty": 0.913,
+        "decay_score": 0.842
+      }
+    }
+  ]
+}

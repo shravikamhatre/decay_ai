@@ -1,0 +1,532 @@
+{
+  "niche": "Finance",
+  "lookback_days": 7,
+  "top_trends_good": [
+    {
+      "name": "day in my life with captions - budget planning",
+      "base": "day in my life with captions",
+      "score": 12.333,
+      "signals": {
+        "velocity_pct": 70.31,
+        "engagement_pct": -0.374,
+        "appearance_pct": -0.692,
+        "saturation_pct": 4.568,
+        "novelty": 0.0,
+        "decay_score": 0.676
+      }
+    },
+    {
+      "name": "old money aesthetic - budget planning",
+      "base": "old money aesthetic",
+      "score": 10.492,
+      "signals": {
+        "velocity_pct": 48.526,
+        "engagement_pct": -0.524,
+        "appearance_pct": -0.727,
+        "saturation_pct": 5.123,
+        "novelty": 0.062,
+        "decay_score": 0.37
+      }
+    },
+    {
+      "name": "photo dump shorts - workday routine",
+      "base": "photo dump shorts",
+      "score": 10.123,
+      "signals": {
+        "velocity_pct": 50.34,
+        "engagement_pct": 0.555,
+        "appearance_pct": 1.333,
+        "saturation_pct": 11.565,
+        "novelty": 0.0,
+        "decay_score": 0.353
+      }
+    },
+    {
+      "name": "day in my life voiceover - budget planning",
+      "base": "day in my life voiceover",
+      "score": 3.177,
+      "signals": {
+        "velocity_pct": 13.737,
+        "engagement_pct": 1.735,
+        "appearance_pct": 2.6,
+        "saturation_pct": 3.18,
+        "novelty": 0.314,
+        "decay_score": 0.394
+      }
+    },
+    {
+      "name": "soft life edit - workday routine",
+      "base": "soft life edit",
+      "score": 2.914,
+      "signals": {
+        "velocity_pct": 19.034,
+        "engagement_pct": 2.933,
+        "appearance_pct": 0.0,
+        "saturation_pct": 5.56,
+        "novelty": 0.0,
+        "decay_score": 0.942
+      }
+    },
+    {
+      "name": "get ready with me shorts - budget planning",
+      "base": "get ready with me shorts",
+      "score": 2.273,
+      "signals": {
+        "velocity_pct": 23.969,
+        "engagement_pct": 1.62,
+        "appearance_pct": -0.947,
+        "saturation_pct": 7.78,
+        "novelty": 0.252,
+        "decay_score": 0.87
+      }
+    },
+    {
+      "name": "things nobody tells you about in your 20s - workday routine",
+      "base": "things nobody tells you about in your 20s",
+      "score": 2.235,
+      "signals": {
+        "velocity_pct": 44.166,
+        "engagement_pct": 0.105,
+        "appearance_pct": 0.538,
+        "saturation_pct": 30.557,
+        "novelty": 0.731,
+        "decay_score": 0.993
+      }
+    },
+    {
+      "name": "before after shorts - workday routine",
+      "base": "before after shorts",
+      "score": 1.993,
+      "signals": {
+        "velocity_pct": 17.241,
+        "engagement_pct": -0.41,
+        "appearance_pct": 0.077,
+        "saturation_pct": 2.926,
+        "novelty": 0.193,
+        "decay_score": 0.931
+      }
+    },
+    {
+      "name": "routine reel voiceover - workday routine",
+      "base": "routine reel voiceover",
+      "score": 1.9,
+      "signals": {
+        "velocity_pct": 0.077,
+        "engagement_pct": 5.921,
+        "appearance_pct": 17.0,
+        "saturation_pct": -0.019,
+        "novelty": 0.776,
+        "decay_score": 0.629
+      }
+    },
+    {
+      "name": "stop scrolling if you as a creator - workday routine",
+      "base": "stop scrolling if you as a creator",
+      "score": 1.803,
+      "signals": {
+        "velocity_pct": 1.794,
+        "engagement_pct": 3.812,
+        "appearance_pct": 16.0,
+        "saturation_pct": 1.12,
+        "novelty": 0.621,
+        "decay_score": 0.641
+      }
+    }
+  ],
+  "top_trends_declining": [
+    {
+      "name": "faceless reel with captions - workday routine",
+      "base": "faceless reel with captions",
+      "score": 0.071,
+      "signals": {
+        "velocity_pct": 0.113,
+        "engagement_pct": -0.562,
+        "appearance_pct": -0.786,
+        "saturation_pct": 1.535,
+        "novelty": 0.628,
+        "decay_score": 0.538
+      }
+    },
+    {
+      "name": "dark academia aesthetic - budget planning",
+      "base": "dark academia aesthetic",
+      "score": 0.126,
+      "signals": {
+        "velocity_pct": -0.986,
+        "engagement_pct": 0.094,
+        "appearance_pct": -0.778,
+        "saturation_pct": -0.828,
+        "novelty": 0.828,
+        "decay_score": 0.984
+      }
+    },
+    {
+      "name": "dark academia edit - workday routine",
+      "base": "dark academia edit",
+      "score": 0.144,
+      "signals": {
+        "velocity_pct": -0.806,
+        "engagement_pct": -0.723,
+        "appearance_pct": -0.1,
+        "saturation_pct": 0.091,
+        "novelty": 0.768,
+        "decay_score": 0.103
+      }
+    },
+    {
+      "name": "photo dump voiceover - budget planning",
+      "base": "photo dump voiceover",
+      "score": 0.145,
+      "signals": {
+        "velocity_pct": -0.972,
+        "engagement_pct": -0.684,
+        "appearance_pct": -0.071,
+        "saturation_pct": -0.569,
+        "novelty": 0.766,
+        "decay_score": 0.491
+      }
+    },
+    {
+      "name": "i wish i knew this earlier as a creator - workday routine",
+      "base": "i wish i knew this earlier as a creator",
+      "score": 0.148,
+      "signals": {
+        "velocity_pct": -0.998,
+        "engagement_pct": -0.576,
+        "appearance_pct": -0.857,
+        "saturation_pct": -0.754,
+        "novelty": 0.754,
+        "decay_score": 0.227
+      }
+    },
+    {
+      "name": "#dailyvlog #travelreels - budget planning",
+      "base": "#dailyvlog #travelreels",
+      "score": 0.161,
+      "signals": {
+        "velocity_pct": 0.542,
+        "engagement_pct": -0.693,
+        "appearance_pct": -0.25,
+        "saturation_pct": 0.712,
+        "novelty": 0.504,
+        "decay_score": 0.93
+      }
+    },
+    {
+      "name": "before after voiceover - budget planning",
+      "base": "before after voiceover",
+      "score": 0.166,
+      "signals": {
+        "velocity_pct": -0.835,
+        "engagement_pct": -0.65,
+        "appearance_pct": -0.824,
+        "saturation_pct": -0.656,
+        "novelty": 0.706,
+        "decay_score": 0.285
+      }
+    },
+    {
+      "name": "soft life vibe - workday routine",
+      "base": "soft life vibe",
+      "score": 0.178,
+      "signals": {
+        "velocity_pct": -0.358,
+        "engagement_pct": -0.678,
+        "appearance_pct": 0.125,
+        "saturation_pct": -0.214,
+        "novelty": 0.281,
+        "decay_score": 0.986
+      }
+    },
+    {
+      "name": "routine reel shorts - workday routine",
+      "base": "routine reel shorts",
+      "score": 0.179,
+      "signals": {
+        "velocity_pct": 0.721,
+        "engagement_pct": -0.779,
+        "appearance_pct": -0.833,
+        "saturation_pct": 0.814,
+        "novelty": 0.284,
+        "decay_score": 0.852
+      }
+    },
+    {
+      "name": "photo dump vlog - workday routine",
+      "base": "photo dump vlog",
+      "score": 0.187,
+      "signals": {
+        "velocity_pct": -0.868,
+        "engagement_pct": -0.402,
+        "appearance_pct": -0.818,
+        "saturation_pct": -0.652,
+        "novelty": 0.713,
+        "decay_score": 0.202
+      }
+    }
+  ],
+  "top_music_good": [
+    {
+      "name": "sunroof slowed - budget planning",
+      "base": "sunroof slowed",
+      "score": 20.094,
+      "signals": {
+        "velocity_pct": 162.951,
+        "engagement_pct": -0.888,
+        "appearance_pct": -0.733,
+        "saturation_pct": 14.03,
+        "novelty": 0.107,
+        "decay_score": 0.895
+      }
+    },
+    {
+      "name": "until i found you remix - budget planning",
+      "base": "until i found you remix",
+      "score": 12.047,
+      "signals": {
+        "velocity_pct": 48.486,
+        "engagement_pct": -0.239,
+        "appearance_pct": -0.9,
+        "saturation_pct": 8.665,
+        "novelty": 0.0,
+        "decay_score": 0.025
+      }
+    },
+    {
+      "name": "blinding lights remix - budget planning",
+      "base": "blinding lights remix",
+      "score": 8.55,
+      "signals": {
+        "velocity_pct": 75.441,
+        "engagement_pct": 0.149,
+        "appearance_pct": -0.944,
+        "saturation_pct": 1.743,
+        "novelty": 0.516,
+        "decay_score": 0.931
+      }
+    },
+    {
+      "name": "espresso slowed - budget planning",
+      "base": "espresso slowed",
+      "score": 4.415,
+      "signals": {
+        "velocity_pct": 30.569,
+        "engagement_pct": -0.209,
+        "appearance_pct": 0.583,
+        "saturation_pct": 2.761,
+        "novelty": 0.0,
+        "decay_score": 0.845
+      }
+    },
+    {
+      "name": "calm down sped up - budget planning",
+      "base": "calm down sped up",
+      "score": 3.163,
+      "signals": {
+        "velocity_pct": 9.801,
+        "engagement_pct": 2.355,
+        "appearance_pct": 8.0,
+        "saturation_pct": 5.11,
+        "novelty": 0.002,
+        "decay_score": 0.523
+      }
+    },
+    {
+      "name": "blinding lights sped up - workday routine",
+      "base": "blinding lights sped up",
+      "score": 2.917,
+      "signals": {
+        "velocity_pct": 23.781,
+        "engagement_pct": -0.168,
+        "appearance_pct": -0.444,
+        "saturation_pct": 5.073,
+        "novelty": 0.137,
+        "decay_score": 0.762
+      }
+    },
+    {
+      "name": "anti hero lofi edit - workday routine",
+      "base": "anti hero lofi edit",
+      "score": 2.858,
+      "signals": {
+        "velocity_pct": 9.994,
+        "engagement_pct": 8.868,
+        "appearance_pct": 0.333,
+        "saturation_pct": 3.814,
+        "novelty": 0.078,
+        "decay_score": 0.468
+      }
+    },
+    {
+      "name": "anti hero lofi edit - budget planning",
+      "base": "anti hero lofi edit",
+      "score": 2.365,
+      "signals": {
+        "velocity_pct": -0.177,
+        "engagement_pct": 0.858,
+        "appearance_pct": 16.0,
+        "saturation_pct": -0.12,
+        "novelty": 0.12,
+        "decay_score": 0.299
+      }
+    },
+    {
+      "name": "golden hour lofi edit - budget planning",
+      "base": "golden hour lofi edit",
+      "score": 2.256,
+      "signals": {
+        "velocity_pct": 1.007,
+        "engagement_pct": -0.36,
+        "appearance_pct": 14.0,
+        "saturation_pct": 0.454,
+        "novelty": 0.205,
+        "decay_score": 0.282
+      }
+    },
+    {
+      "name": "golden hour instrumental - budget planning",
+      "base": "golden hour instrumental",
+      "score": 2.255,
+      "signals": {
+        "velocity_pct": 6.698,
+        "engagement_pct": 0.298,
+        "appearance_pct": 0.4,
+        "saturation_pct": 2.073,
+        "novelty": 0.02,
+        "decay_score": 0.075
+      }
+    }
+  ],
+  "top_music_declining": [
+    {
+      "name": "sunroof sped up - budget planning",
+      "base": "sunroof sped up",
+      "score": 0.116,
+      "signals": {
+        "velocity_pct": -0.947,
+        "engagement_pct": -0.798,
+        "appearance_pct": 0.429,
+        "saturation_pct": -0.416,
+        "novelty": 0.766,
+        "decay_score": 0.817
+      }
+    },
+    {
+      "name": "sunroof instrumental - budget planning",
+      "base": "sunroof instrumental",
+      "score": 0.157,
+      "signals": {
+        "velocity_pct": -0.309,
+        "engagement_pct": -0.717,
+        "appearance_pct": -0.5,
+        "saturation_pct": -0.059,
+        "novelty": 0.554,
+        "decay_score": 0.694
+      }
+    },
+    {
+      "name": "espresso lofi edit - budget planning",
+      "base": "espresso lofi edit",
+      "score": 0.168,
+      "signals": {
+        "velocity_pct": -0.691,
+        "engagement_pct": -0.347,
+        "appearance_pct": -0.111,
+        "saturation_pct": -0.563,
+        "novelty": 0.653,
+        "decay_score": 0.966
+      }
+    },
+    {
+      "name": "sunroof instrumental - workday routine",
+      "base": "sunroof instrumental",
+      "score": 0.173,
+      "signals": {
+        "velocity_pct": -0.394,
+        "engagement_pct": -0.762,
+        "appearance_pct": 0.1,
+        "saturation_pct": -0.258,
+        "novelty": 0.558,
+        "decay_score": 0.831
+      }
+    },
+    {
+      "name": "espresso slowed - workday routine",
+      "base": "espresso slowed",
+      "score": 0.173,
+      "signals": {
+        "velocity_pct": -0.984,
+        "engagement_pct": -0.386,
+        "appearance_pct": -0.5,
+        "saturation_pct": -0.978,
+        "novelty": 0.981,
+        "decay_score": 0.736
+      }
+    },
+    {
+      "name": "blinding lights nightcore - budget planning",
+      "base": "blinding lights nightcore",
+      "score": 0.183,
+      "signals": {
+        "velocity_pct": -0.008,
+        "engagement_pct": -0.044,
+        "appearance_pct": -0.917,
+        "saturation_pct": 0.016,
+        "novelty": 0.705,
+        "decay_score": 0.846
+      }
+    },
+    {
+      "name": "greedy remix - budget planning",
+      "base": "greedy remix",
+      "score": 0.184,
+      "signals": {
+        "velocity_pct": -0.874,
+        "engagement_pct": -0.206,
+        "appearance_pct": 0.0,
+        "saturation_pct": -0.845,
+        "novelty": 0.855,
+        "decay_score": 0.966
+      }
+    },
+    {
+      "name": "greedy instrumental - budget planning",
+      "base": "greedy instrumental",
+      "score": 0.19,
+      "signals": {
+        "velocity_pct": -0.419,
+        "engagement_pct": -0.592,
+        "appearance_pct": -0.9,
+        "saturation_pct": -0.346,
+        "novelty": 0.517,
+        "decay_score": 0.538
+      }
+    },
+    {
+      "name": "lush life remix - workday routine",
+      "base": "lush life remix",
+      "score": 0.201,
+      "signals": {
+        "velocity_pct": -0.865,
+        "engagement_pct": -0.748,
+        "appearance_pct": -0.4,
+        "saturation_pct": -0.771,
+        "novelty": 0.799,
+        "decay_score": 0.258
+      }
+    },
+    {
+      "name": "until i found you nightcore - workday routine",
+      "base": "until i found you nightcore",
+      "score": 0.203,
+      "signals": {
+        "velocity_pct": -0.857,
+        "engagement_pct": -0.01,
+        "appearance_pct": 0.667,
+        "saturation_pct": -0.718,
+        "novelty": 0.785,
+        "decay_score": 0.957
+      }
+    }
+  ]
+}

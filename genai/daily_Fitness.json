@@ -1,0 +1,532 @@
+{
+  "niche": "Fitness",
+  "lookback_days": 7,
+  "top_trends_good": [
+    {
+      "name": "this changed everything for me right now - leg day",
+      "base": "this changed everything for me right now",
+      "score": 31.097,
+      "signals": {
+        "velocity_pct": 186.379,
+        "engagement_pct": -0.905,
+        "appearance_pct": 0.778,
+        "saturation_pct": 32.069,
+        "novelty": 0.0,
+        "decay_score": 0.538
+      }
+    },
+    {
+      "name": "photo dump voiceover - gym session",
+      "base": "photo dump voiceover",
+      "score": 23.855,
+      "signals": {
+        "velocity_pct": 145.768,
+        "engagement_pct": -0.162,
+        "appearance_pct": 1.0,
+        "saturation_pct": 8.527,
+        "novelty": 0.176,
+        "decay_score": 0.606
+      }
+    },
+    {
+      "name": "before after reel - leg day",
+      "base": "before after reel",
+      "score": 16.107,
+      "signals": {
+        "velocity_pct": 128.663,
+        "engagement_pct": -0.3,
+        "appearance_pct": -0.412,
+        "saturation_pct": 0.968,
+        "novelty": 0.569,
+        "decay_score": 0.677
+      }
+    },
+    {
+      "name": "day in my life with captions - meal prep",
+      "base": "day in my life with captions",
+      "score": 12.676,
+      "signals": {
+        "velocity_pct": 47.28,
+        "engagement_pct": -0.721,
+        "appearance_pct": -0.25,
+        "saturation_pct": 2.734,
+        "novelty": 0.234,
+        "decay_score": 0.054
+      }
+    },
+    {
+      "name": "quiet luxury edit - leg day",
+      "base": "quiet luxury edit",
+      "score": 5.0,
+      "signals": {
+        "velocity_pct": 24.662,
+        "engagement_pct": 0.543,
+        "appearance_pct": -0.667,
+        "saturation_pct": 8.167,
+        "novelty": 0.029,
+        "decay_score": 0.378
+      }
+    },
+    {
+      "name": "quiet luxury vibe - leg day",
+      "base": "quiet luxury vibe",
+      "score": 4.755,
+      "signals": {
+        "velocity_pct": 22.753,
+        "engagement_pct": -0.559,
+        "appearance_pct": -0.105,
+        "saturation_pct": 3.613,
+        "novelty": 0.327,
+        "decay_score": 0.074
+      }
+    },
+    {
+      "name": "old money aesthetic - gym session",
+      "base": "old money aesthetic",
+      "score": 4.457,
+      "signals": {
+        "velocity_pct": 20.247,
+        "engagement_pct": -0.209,
+        "appearance_pct": -0.643,
+        "saturation_pct": 1.956,
+        "novelty": 0.44,
+        "decay_score": 0.189
+      }
+    },
+    {
+      "name": "get ready with me shorts - meal prep",
+      "base": "get ready with me shorts",
+      "score": 4.37,
+      "signals": {
+        "velocity_pct": 36.146,
+        "engagement_pct": -0.791,
+        "appearance_pct": -0.167,
+        "saturation_pct": 2.185,
+        "novelty": 0.186,
+        "decay_score": 0.992
+      }
+    },
+    {
+      "name": "get ready with me reel - gym session",
+      "base": "get ready with me reel",
+      "score": 3.95,
+      "signals": {
+        "velocity_pct": 22.219,
+        "engagement_pct": 1.665,
+        "appearance_pct": 0.111,
+        "saturation_pct": 2.938,
+        "novelty": 0.067,
+        "decay_score": 0.784
+      }
+    },
+    {
+      "name": "before after reel - workout routine",
+      "base": "before after reel",
+      "score": 3.896,
+      "signals": {
+        "velocity_pct": 19.887,
+        "engagement_pct": -0.486,
+        "appearance_pct": 0.429,
+        "saturation_pct": 6.201,
+        "novelty": 0.071,
+        "decay_score": 0.307
+      }
+    }
+  ],
+  "top_trends_declining": [
+    {
+      "name": "before after with captions - workout routine",
+      "base": "before after with captions",
+      "score": 0.071,
+      "signals": {
+        "velocity_pct": -0.737,
+        "engagement_pct": -0.892,
+        "appearance_pct": -0.833,
+        "saturation_pct": -0.505,
+        "novelty": 0.296,
+        "decay_score": 0.838
+      }
+    },
+    {
+      "name": "faceless reel reel - leg day",
+      "base": "faceless reel reel",
+      "score": 0.101,
+      "signals": {
+        "velocity_pct": -0.954,
+        "engagement_pct": -0.948,
+        "appearance_pct": -0.95,
+        "saturation_pct": -0.798,
+        "novelty": 0.865,
+        "decay_score": 0.584
+      }
+    },
+    {
+      "name": "i wish i knew this earlier as a creator - meal prep",
+      "base": "i wish i knew this earlier as a creator",
+      "score": 0.108,
+      "signals": {
+        "velocity_pct": -0.615,
+        "engagement_pct": -0.256,
+        "appearance_pct": -0.182,
+        "saturation_pct": 0.678,
+        "novelty": 0.69,
+        "decay_score": 0.561
+      }
+    },
+    {
+      "name": "old money aesthetic - leg day",
+      "base": "old money aesthetic",
+      "score": 0.136,
+      "signals": {
+        "velocity_pct": -0.867,
+        "engagement_pct": -0.42,
+        "appearance_pct": -0.75,
+        "saturation_pct": -0.637,
+        "novelty": 0.721,
+        "decay_score": 0.658
+      }
+    },
+    {
+      "name": "stop scrolling if you right now - gym session",
+      "base": "stop scrolling if you right now",
+      "score": 0.139,
+      "signals": {
+        "velocity_pct": -0.624,
+        "engagement_pct": -0.809,
+        "appearance_pct": -0.533,
+        "saturation_pct": -0.576,
+        "novelty": 0.699,
+        "decay_score": 0.914
+      }
+    },
+    {
+      "name": "old money edit - gym session",
+      "base": "old money edit",
+      "score": 0.14,
+      "signals": {
+        "velocity_pct": -0.886,
+        "engagement_pct": -0.69,
+        "appearance_pct": 0.0,
+        "saturation_pct": -0.818,
+        "novelty": 0.818,
+        "decay_score": 0.99
+      }
+    },
+    {
+      "name": "faceless reel shorts - gym session",
+      "base": "faceless reel shorts",
+      "score": 0.145,
+      "signals": {
+        "velocity_pct": -0.921,
+        "engagement_pct": -0.23,
+        "appearance_pct": 0.6,
+        "saturation_pct": -0.644,
+        "novelty": 0.707,
+        "decay_score": 0.984
+      }
+    },
+    {
+      "name": "this changed everything for me as a creator - workout routine",
+      "base": "this changed everything for me as a creator",
+      "score": 0.145,
+      "signals": {
+        "velocity_pct": -0.602,
+        "engagement_pct": -0.616,
+        "appearance_pct": -0.143,
+        "saturation_pct": 0.115,
+        "novelty": 0.932,
+        "decay_score": 0.546
+      }
+    },
+    {
+      "name": "day in my life reel - gym session",
+      "base": "day in my life reel",
+      "score": 0.149,
+      "signals": {
+        "velocity_pct": -0.957,
+        "engagement_pct": -0.376,
+        "appearance_pct": -0.842,
+        "saturation_pct": -0.818,
+        "novelty": 0.861,
+        "decay_score": 0.627
+      }
+    },
+    {
+      "name": "dark academia vibe - leg day",
+      "base": "dark academia vibe",
+      "score": 0.151,
+      "signals": {
+        "velocity_pct": -0.935,
+        "engagement_pct": 0.017,
+        "appearance_pct": 0.143,
+        "saturation_pct": -0.619,
+        "novelty": 0.73,
+        "decay_score": 0.918
+      }
+    }
+  ],
+  "top_music_good": [
+    {
+      "name": "anti hero slowed - workout routine",
+      "base": "anti hero slowed",
+      "score": 6.549,
+      "signals": {
+        "velocity_pct": 63.762,
+        "engagement_pct": 2.206,
+        "appearance_pct": 0.667,
+        "saturation_pct": 3.144,
+        "novelty": 0.384,
+        "decay_score": 0.88
+      }
+    },
+    {
+      "name": "golden hour lofi edit - meal prep",
+      "base": "golden hour lofi edit",
+      "score": 6.003,
+      "signals": {
+        "velocity_pct": 53.417,
+        "engagement_pct": 0.142,
+        "appearance_pct": 0.8,
+        "saturation_pct": 4.936,
+        "novelty": 0.056,
+        "decay_score": 0.927
+      }
+    },
+    {
+      "name": "sunroof slowed - meal prep",
+      "base": "sunroof slowed",
+      "score": 4.645,
+      "signals": {
+        "velocity_pct": 7.943,
+        "engagement_pct": 9.95,
+        "appearance_pct": 9.0,
+        "saturation_pct": 1.731,
+        "novelty": 0.818,
+        "decay_score": 0.816
+      }
+    },
+    {
+      "name": "calm down slowed - leg day",
+      "base": "calm down slowed",
+      "score": 2.998,
+      "signals": {
+        "velocity_pct": 0.478,
+        "engagement_pct": 10.582,
+        "appearance_pct": 0.25,
+        "saturation_pct": 0.095,
+        "novelty": 0.0,
+        "decay_score": 0.238
+      }
+    },
+    {
+      "name": "lush life slowed - meal prep",
+      "base": "lush life slowed",
+      "score": 2.993,
+      "signals": {
+        "velocity_pct": 8.09,
+        "engagement_pct": 0.144,
+        "appearance_pct": 1.143,
+        "saturation_pct": 1.989,
+        "novelty": 0.0,
+        "decay_score": 0.003
+      }
+    },
+    {
+      "name": "golden hour remix - meal prep",
+      "base": "golden hour remix",
+      "score": 2.808,
+      "signals": {
+        "velocity_pct": 12.86,
+        "engagement_pct": 4.133,
+        "appearance_pct": -0.444,
+        "saturation_pct": 5.962,
+        "novelty": 0.0,
+        "decay_score": 0.374
+      }
+    },
+    {
+      "name": "anti hero sped up - gym session",
+      "base": "anti hero sped up",
+      "score": 2.316,
+      "signals": {
+        "velocity_pct": 14.139,
+        "engagement_pct": -0.288,
+        "appearance_pct": -0.333,
+        "saturation_pct": 6.582,
+        "novelty": 0.124,
+        "decay_score": 0.501
+      }
+    },
+    {
+      "name": "until i found you sped up - gym session",
+      "base": "until i found you sped up",
+      "score": 2.283,
+      "signals": {
+        "velocity_pct": 4.439,
+        "engagement_pct": 9.033,
+        "appearance_pct": -0.105,
+        "saturation_pct": 4.255,
+        "novelty": 0.309,
+        "decay_score": 0.235
+      }
+    },
+    {
+      "name": "greedy sped up - gym session",
+      "base": "greedy sped up",
+      "score": 2.128,
+      "signals": {
+        "velocity_pct": 35.806,
+        "engagement_pct": 0.397,
+        "appearance_pct": -0.375,
+        "saturation_pct": 38.224,
+        "novelty": 0.379,
+        "decay_score": 0.097
+      }
+    },
+    {
+      "name": "sunroof instrumental - workout routine",
+      "base": "sunroof instrumental",
+      "score": 2.089,
+      "signals": {
+        "velocity_pct": -0.2,
+        "engagement_pct": 17.211,
+        "appearance_pct": 17.0,
+        "saturation_pct": 0.098,
+        "novelty": 0.429,
+        "decay_score": 0.919
+      }
+    }
+  ],
+  "top_music_declining": [
+    {
+      "name": "anti hero nightcore - workout routine",
+      "base": "anti hero nightcore",
+      "score": 0.099,
+      "signals": {
+        "velocity_pct": -0.568,
+        "engagement_pct": -0.483,
+        "appearance_pct": -0.615,
+        "saturation_pct": -0.16,
+        "novelty": 0.675,
+        "decay_score": 0.945
+      }
+    },
+    {
+      "name": "anti hero sped up - workout routine",
+      "base": "anti hero sped up",
+      "score": 0.11,
+      "signals": {
+        "velocity_pct": -0.921,
+        "engagement_pct": -0.134,
+        "appearance_pct": -0.545,
+        "saturation_pct": 0.327,
+        "novelty": 0.848,
+        "decay_score": 0.422
+      }
+    },
+    {
+      "name": "golden hour instrumental - gym session",
+      "base": "golden hour instrumental",
+      "score": 0.12,
+      "signals": {
+        "velocity_pct": -0.986,
+        "engagement_pct": -0.39,
+        "appearance_pct": 0.0,
+        "saturation_pct": -0.705,
+        "novelty": 0.784,
+        "decay_score": 0.945
+      }
+    },
+    {
+      "name": "blinding lights nightcore - gym session",
+      "base": "blinding lights nightcore",
+      "score": 0.151,
+      "signals": {
+        "velocity_pct": -0.552,
+        "engagement_pct": -0.434,
+        "appearance_pct": -0.875,
+        "saturation_pct": -0.25,
+        "novelty": 0.583,
+        "decay_score": 0.569
+      }
+    },
+    {
+      "name": "golden hour nightcore - workout routine",
+      "base": "golden hour nightcore",
+      "score": 0.152,
+      "signals": {
+        "velocity_pct": 0.108,
+        "engagement_pct": -0.444,
+        "appearance_pct": -0.389,
+        "saturation_pct": 1.138,
+        "novelty": 0.587,
+        "decay_score": 0.351
+      }
+    },
+    {
+      "name": "until i found you instrumental - gym session",
+      "base": "until i found you instrumental",
+      "score": 0.154,
+      "signals": {
+        "velocity_pct": -0.889,
+        "engagement_pct": -0.436,
+        "appearance_pct": -0.857,
+        "saturation_pct": -0.754,
+        "novelty": 0.759,
+        "decay_score": 0.595
+      }
+    },
+    {
+      "name": "as it was remix - gym session",
+      "base": "as it was remix",
+      "score": 0.154,
+      "signals": {
+        "velocity_pct": -0.072,
+        "engagement_pct": -0.864,
+        "appearance_pct": -0.7,
+        "saturation_pct": -0.053,
+        "novelty": 0.644,
+        "decay_score": 0.642
+      }
+    },
+    {
+      "name": "lush life nightcore - leg day",
+      "base": "lush life nightcore",
+      "score": 0.158,
+      "signals": {
+        "velocity_pct": -0.674,
+        "engagement_pct": -0.77,
+        "appearance_pct": -0.429,
+        "saturation_pct": -0.485,
+        "novelty": 0.684,
+        "decay_score": 0.584
+      }
+    },
+    {
+      "name": "sunroof slowed - workout routine",
+      "base": "sunroof slowed",
+      "score": 0.158,
+      "signals": {
+        "velocity_pct": -0.884,
+        "engagement_pct": -0.303,
+        "appearance_pct": -0.368,
+        "saturation_pct": -0.671,
+        "novelty": 0.784,
+        "decay_score": 0.712
+      }
+    },
+    {
+      "name": "until i found you lofi edit - meal prep",
+      "base": "until i found you lofi edit",
+      "score": 0.168,
+      "signals": {
+        "velocity_pct": -0.653,
+        "engagement_pct": -0.759,
+        "appearance_pct": -0.889,
+        "saturation_pct": -0.598,
+        "novelty": 0.598,
+        "decay_score": 0.511
+      }
+    }
+  ]
+}

@@ -1,0 +1,532 @@
+{
+  "niche": "Gaming",
+  "lookback_days": 7,
+  "top_trends_good": [
+    {
+      "name": "i wish i knew this earlier right now - stream setup",
+      "base": "i wish i knew this earlier right now",
+      "score": 14.423,
+      "signals": {
+        "velocity_pct": 127.9,
+        "engagement_pct": 1.277,
+        "appearance_pct": -0.059,
+        "saturation_pct": 6.589,
+        "novelty": 0.44,
+        "decay_score": 0.858
+      }
+    },
+    {
+      "name": "day in my life reel - grind session",
+      "base": "day in my life reel",
+      "score": 6.628,
+      "signals": {
+        "velocity_pct": 18.203,
+        "engagement_pct": 17.72,
+        "appearance_pct": 0.0,
+        "saturation_pct": 2.098,
+        "novelty": 0.542,
+        "decay_score": 0.017
+      }
+    },
+    {
+      "name": "old money aesthetic - stream setup",
+      "base": "old money aesthetic",
+      "score": 3.84,
+      "signals": {
+        "velocity_pct": -0.0,
+        "engagement_pct": 18.962,
+        "appearance_pct": -0.737,
+        "saturation_pct": 0.019,
+        "novelty": 0.142,
+        "decay_score": 0.068
+      }
+    },
+    {
+      "name": "this changed everything for me as a creator - stream setup",
+      "base": "this changed everything for me as a creator",
+      "score": 3.293,
+      "signals": {
+        "velocity_pct": 14.041,
+        "engagement_pct": 1.255,
+        "appearance_pct": -0.938,
+        "saturation_pct": 2.565,
+        "novelty": 0.259,
+        "decay_score": 0.33
+      }
+    },
+    {
+      "name": "photo dump shorts - grind session",
+      "base": "photo dump shorts",
+      "score": 2.924,
+      "signals": {
+        "velocity_pct": 16.323,
+        "engagement_pct": 1.791,
+        "appearance_pct": -0.833,
+        "saturation_pct": 2.026,
+        "novelty": 0.288,
+        "decay_score": 0.456
+      }
+    },
+    {
+      "name": "old money edit - stream setup",
+      "base": "old money edit",
+      "score": 2.572,
+      "signals": {
+        "velocity_pct": 17.978,
+        "engagement_pct": -0.577,
+        "appearance_pct": 12.0,
+        "saturation_pct": 13.123,
+        "novelty": 0.111,
+        "decay_score": 0.749
+      }
+    },
+    {
+      "name": "quiet luxury aesthetic - grind session",
+      "base": "quiet luxury aesthetic",
+      "score": 2.349,
+      "signals": {
+        "velocity_pct": 19.686,
+        "engagement_pct": 0.686,
+        "appearance_pct": -0.55,
+        "saturation_pct": 7.194,
+        "novelty": 0.654,
+        "decay_score": 0.368
+      }
+    },
+    {
+      "name": "i wish i knew this earlier before traveling - grind session",
+      "base": "i wish i knew this earlier before traveling",
+      "score": 2.088,
+      "signals": {
+        "velocity_pct": 11.956,
+        "engagement_pct": -0.387,
+        "appearance_pct": -0.438,
+        "saturation_pct": 3.29,
+        "novelty": 0.0,
+        "decay_score": 0.699
+      }
+    },
+    {
+      "name": "faceless reel with captions - stream setup",
+      "base": "faceless reel with captions",
+      "score": 2.077,
+      "signals": {
+        "velocity_pct": 4.819,
+        "engagement_pct": 2.2,
+        "appearance_pct": 5.0,
+        "saturation_pct": 1.761,
+        "novelty": 0.123,
+        "decay_score": 0.265
+      }
+    },
+    {
+      "name": "get ready with me with captions - stream setup",
+      "base": "get ready with me with captions",
+      "score": 2.026,
+      "signals": {
+        "velocity_pct": 5.873,
+        "engagement_pct": 5.241,
+        "appearance_pct": -0.714,
+        "saturation_pct": 3.121,
+        "novelty": 0.0,
+        "decay_score": 0.588
+      }
+    }
+  ],
+  "top_trends_declining": [
+    {
+      "name": "dark academia edit - stream setup",
+      "base": "dark academia edit",
+      "score": 0.119,
+      "signals": {
+        "velocity_pct": 0.183,
+        "engagement_pct": -0.705,
+        "appearance_pct": -0.526,
+        "saturation_pct": 0.87,
+        "novelty": 0.609,
+        "decay_score": 0.781
+      }
+    },
+    {
+      "name": "before after vlog - grind session",
+      "base": "before after vlog",
+      "score": 0.15,
+      "signals": {
+        "velocity_pct": -0.415,
+        "engagement_pct": -0.694,
+        "appearance_pct": -0.6,
+        "saturation_pct": -0.203,
+        "novelty": 0.203,
+        "decay_score": 0.871
+      }
+    },
+    {
+      "name": "photo dump vlog - stream setup",
+      "base": "photo dump vlog",
+      "score": 0.161,
+      "signals": {
+        "velocity_pct": -0.642,
+        "engagement_pct": -0.193,
+        "appearance_pct": -0.941,
+        "saturation_pct": -0.406,
+        "novelty": 0.454,
+        "decay_score": 0.712
+      }
+    },
+    {
+      "name": "faceless reel reel - grind session",
+      "base": "faceless reel reel",
+      "score": 0.162,
+      "signals": {
+        "velocity_pct": -0.766,
+        "engagement_pct": -0.807,
+        "appearance_pct": -0.375,
+        "saturation_pct": -0.766,
+        "novelty": 0.771,
+        "decay_score": 0.831
+      }
+    },
+    {
+      "name": "storytime reel - grind session",
+      "base": "storytime reel",
+      "score": 0.179,
+      "signals": {
+        "velocity_pct": -0.318,
+        "engagement_pct": -0.49,
+        "appearance_pct": -0.188,
+        "saturation_pct": -0.276,
+        "novelty": 0.591,
+        "decay_score": 0.922
+      }
+    },
+    {
+      "name": "things nobody tells you about in your 20s - grind session",
+      "base": "things nobody tells you about in your 20s",
+      "score": 0.187,
+      "signals": {
+        "velocity_pct": -0.957,
+        "engagement_pct": -0.614,
+        "appearance_pct": -0.25,
+        "saturation_pct": -0.8,
+        "novelty": 0.8,
+        "decay_score": 0.372
+      }
+    },
+    {
+      "name": "get ready with me shorts - grind session",
+      "base": "get ready with me shorts",
+      "score": 0.195,
+      "signals": {
+        "velocity_pct": -0.338,
+        "engagement_pct": 0.06,
+        "appearance_pct": -0.158,
+        "saturation_pct": -0.379,
+        "novelty": 0.769,
+        "decay_score": 0.988
+      }
+    },
+    {
+      "name": "before after vlog - stream setup",
+      "base": "before after vlog",
+      "score": 0.207,
+      "signals": {
+        "velocity_pct": -0.585,
+        "engagement_pct": -0.512,
+        "appearance_pct": -0.611,
+        "saturation_pct": -0.364,
+        "novelty": 0.518,
+        "decay_score": 0.289
+      }
+    },
+    {
+      "name": "stop scrolling if you right now - grind session",
+      "base": "stop scrolling if you right now",
+      "score": 0.212,
+      "signals": {
+        "velocity_pct": -0.649,
+        "engagement_pct": -0.117,
+        "appearance_pct": -0.7,
+        "saturation_pct": -0.476,
+        "novelty": 0.735,
+        "decay_score": 0.521
+      }
+    },
+    {
+      "name": "before after with captions - stream setup",
+      "base": "before after with captions",
+      "score": 0.221,
+      "signals": {
+        "velocity_pct": -0.994,
+        "engagement_pct": -0.165,
+        "appearance_pct": -0.65,
+        "saturation_pct": -0.796,
+        "novelty": 0.806,
+        "decay_score": 0.144
+      }
+    }
+  ],
+  "top_music_good": [
+    {
+      "name": "as it was remix - stream setup",
+      "base": "as it was remix",
+      "score": 9.656,
+      "signals": {
+        "velocity_pct": 38.449,
+        "engagement_pct": -0.581,
+        "appearance_pct": 1.25,
+        "saturation_pct": 4.207,
+        "novelty": 0.0,
+        "decay_score": 0.179
+      }
+    },
+    {
+      "name": "calm down instrumental - stream setup",
+      "base": "calm down instrumental",
+      "score": 5.541,
+      "signals": {
+        "velocity_pct": 46.907,
+        "engagement_pct": 2.132,
+        "appearance_pct": -0.273,
+        "saturation_pct": 1.558,
+        "novelty": 0.739,
+        "decay_score": 0.748
+      }
+    },
+    {
+      "name": "golden hour instrumental - grind session",
+      "base": "golden hour instrumental",
+      "score": 4.899,
+      "signals": {
+        "velocity_pct": 9.709,
+        "engagement_pct": 7.163,
+        "appearance_pct": 15.0,
+        "saturation_pct": 2.086,
+        "novelty": 0.598,
+        "decay_score": 0.03
+      }
+    },
+    {
+      "name": "as it was sped up - grind session",
+      "base": "as it was sped up",
+      "score": 3.329,
+      "signals": {
+        "velocity_pct": 0.183,
+        "engagement_pct": 2.234,
+        "appearance_pct": 19.0,
+        "saturation_pct": 0.183,
+        "novelty": 0.137,
+        "decay_score": 0.05
+      }
+    },
+    {
+      "name": "lush life instrumental - stream setup",
+      "base": "lush life instrumental",
+      "score": 3.27,
+      "signals": {
+        "velocity_pct": 0.59,
+        "engagement_pct": -0.231,
+        "appearance_pct": 17.0,
+        "saturation_pct": 0.473,
+        "novelty": 0.0,
+        "decay_score": 0.012
+      }
+    },
+    {
+      "name": "blinding lights nightcore - grind session",
+      "base": "blinding lights nightcore",
+      "score": 3.058,
+      "signals": {
+        "velocity_pct": 14.627,
+        "engagement_pct": 3.413,
+        "appearance_pct": 0.0,
+        "saturation_pct": 7.69,
+        "novelty": 0.525,
+        "decay_score": 0.06
+      }
+    },
+    {
+      "name": "calm down sped up - grind session",
+      "base": "calm down sped up",
+      "score": 3.004,
+      "signals": {
+        "velocity_pct": 0.918,
+        "engagement_pct": 3.43,
+        "appearance_pct": 16.0,
+        "saturation_pct": 0.654,
+        "novelty": 0.117,
+        "decay_score": 0.363
+      }
+    },
+    {
+      "name": "lush life nightcore - stream setup",
+      "base": "lush life nightcore",
+      "score": 3.002,
+      "signals": {
+        "velocity_pct": 11.481,
+        "engagement_pct": -0.51,
+        "appearance_pct": 0.0,
+        "saturation_pct": 2.436,
+        "novelty": 0.0,
+        "decay_score": 0.285
+      }
+    },
+    {
+      "name": "as it was nightcore - stream setup",
+      "base": "as it was nightcore",
+      "score": 2.318,
+      "signals": {
+        "velocity_pct": 10.368,
+        "engagement_pct": -0.169,
+        "appearance_pct": -0.111,
+        "saturation_pct": 2.603,
+        "novelty": 0.199,
+        "decay_score": 0.388
+      }
+    },
+    {
+      "name": "greedy instrumental - stream setup",
+      "base": "greedy instrumental",
+      "score": 2.28,
+      "signals": {
+        "velocity_pct": -0.507,
+        "engagement_pct": 12.63,
+        "appearance_pct": -0.2,
+        "saturation_pct": -0.366,
+        "novelty": 0.366,
+        "decay_score": 0.052
+      }
+    }
+  ],
+  "top_music_declining": [
+    {
+      "name": "calm down remix - grind session",
+      "base": "calm down remix",
+      "score": 0.03,
+      "signals": {
+        "velocity_pct": 2.402,
+        "engagement_pct": 0.255,
+        "appearance_pct": -0.737,
+        "saturation_pct": 5.897,
+        "novelty": 0.663,
+        "decay_score": 0.647
+      }
+    },
+    {
+      "name": "lush life nightcore - grind session",
+      "base": "lush life nightcore",
+      "score": 0.096,
+      "signals": {
+        "velocity_pct": -0.797,
+        "engagement_pct": -0.853,
+        "appearance_pct": -0.625,
+        "saturation_pct": -0.621,
+        "novelty": 0.774,
+        "decay_score": 0.953
+      }
+    },
+    {
+      "name": "espresso sped up - grind session",
+      "base": "espresso sped up",
+      "score": 0.102,
+      "signals": {
+        "velocity_pct": -0.565,
+        "engagement_pct": -0.835,
+        "appearance_pct": -0.789,
+        "saturation_pct": -0.354,
+        "novelty": 0.506,
+        "decay_score": 0.927
+      }
+    },
+    {
+      "name": "blinding lights nightcore - stream setup",
+      "base": "blinding lights nightcore",
+      "score": 0.115,
+      "signals": {
+        "velocity_pct": -0.983,
+        "engagement_pct": -0.131,
+        "appearance_pct": -0.929,
+        "saturation_pct": -0.826,
+        "novelty": 0.836,
+        "decay_score": 0.951
+      }
+    },
+    {
+      "name": "golden hour nightcore - grind session",
+      "base": "golden hour nightcore",
+      "score": 0.146,
+      "signals": {
+        "velocity_pct": 0.544,
+        "engagement_pct": -0.642,
+        "appearance_pct": -0.923,
+        "saturation_pct": 0.63,
+        "novelty": 0.505,
+        "decay_score": 0.994
+      }
+    },
+    {
+      "name": "sunroof remix - stream setup",
+      "base": "sunroof remix",
+      "score": 0.154,
+      "signals": {
+        "velocity_pct": -0.493,
+        "engagement_pct": -0.852,
+        "appearance_pct": -0.714,
+        "saturation_pct": -0.481,
+        "novelty": 0.481,
+        "decay_score": 0.814
+      }
+    },
+    {
+      "name": "sunroof lofi edit - grind session",
+      "base": "sunroof lofi edit",
+      "score": 0.154,
+      "signals": {
+        "velocity_pct": -0.903,
+        "engagement_pct": -0.067,
+        "appearance_pct": -0.647,
+        "saturation_pct": -0.773,
+        "novelty": 0.773,
+        "decay_score": 0.842
+      }
+    },
+    {
+      "name": "lush life sped up - stream setup",
+      "base": "lush life sped up",
+      "score": 0.172,
+      "signals": {
+        "velocity_pct": -0.585,
+        "engagement_pct": -0.578,
+        "appearance_pct": -0.154,
+        "saturation_pct": -0.49,
+        "novelty": 0.49,
+        "decay_score": 0.894
+      }
+    },
+    {
+      "name": "greedy lofi edit - grind session",
+      "base": "greedy lofi edit",
+      "score": 0.172,
+      "signals": {
+        "velocity_pct": -0.264,
+        "engagement_pct": -0.761,
+        "appearance_pct": -0.526,
+        "saturation_pct": 0.162,
+        "novelty": 0.365,
+        "decay_score": 0.378
+      }
+    },
+    {
+      "name": "greedy slowed - stream setup",
+      "base": "greedy slowed",
+      "score": 0.184,
+      "signals": {
+        "velocity_pct": -0.373,
+        "engagement_pct": -0.12,
+        "appearance_pct": -0.5,
+        "saturation_pct": -0.306,
+        "novelty": 0.543,
+        "decay_score": 0.924
+      }
+    }
+  ]
+}
