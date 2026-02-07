@@ -18,29 +18,29 @@ const insights = [
     id: 1,
     type: "opportunity",
     icon: Lightbulb,
-    title: "Investment Opportunity",
+    title: "Viral Opportunity",
     description:
-      "Based on your risk profile, consider allocating 10% more to index funds. Historical data suggests potential returns of 8-12% annually.",
-    impact: "+$2,400/year",
+      "Based on your niche, consider posting a 'Day in the Life' reel. Current trend data suggests potential 300% reach increase.",
+    impact: "+15k views",
     priority: "high",
   },
   {
     id: 2,
     type: "warning",
     icon: AlertTriangle,
-    title: "Spending Alert",
+    title: "Engagement Drop",
     description:
-      "Your dining expenses increased by 45% this month compared to your 3-month average. Consider setting a budget limit.",
-    impact: "-$340 overspent",
+      "Your story engagement decreased by 45% this week compared to your 3-month average. Consider adding interactive stickers.",
+    impact: "-5% engagement",
     priority: "medium",
   },
   {
     id: 3,
     type: "success",
     icon: TrendingUp,
-    title: "Savings Goal Progress",
+    title: "Follower Goal Progress",
     description:
-      "Great job! You're on track to reach your vacation savings goal 2 months ahead of schedule.",
+      "Great job! You're on track to reach your 100k follower milestone 2 weeks ahead of schedule.",
     impact: "128% of target",
     priority: "low",
   },
@@ -48,19 +48,19 @@ const insights = [
     id: 4,
     type: "prediction",
     icon: Target,
-    title: "Bill Prediction",
+    title: "Reach Prediction",
     description:
-      "Based on usage patterns, your electricity bill next month is estimated to be $180-$210. Consider reducing AC usage during peak hours.",
-    impact: "Save up to $40",
+      "Based on posting patterns, your next carousel is estimated to reach 18k-21k non-followers. Use trending audio to boost.",
+    impact: "Reach up to 21k",
     priority: "medium",
   },
 ];
 
 const categories = [
-  { name: "Spending Analysis", icon: PieChart, count: 5 },
-  { name: "Investment Tips", icon: TrendingUp, count: 3 },
-  { name: "Risk Alerts", icon: Shield, count: 2 },
-  { name: "Quick Wins", icon: Zap, count: 4 },
+  { name: "Engagement Analysis", icon: PieChart, count: 5 },
+  { name: "Growth Hacks", icon: TrendingUp, count: 3 },
+  { name: "Shadowban Alerts", icon: Shield, count: 2 },
+  { name: "Trending Now", icon: Zap, count: 4 },
 ];
 
 const Insights = () => {
@@ -74,16 +74,16 @@ const Insights = () => {
         className="glass-card p-6 relative overflow-hidden"
       >
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
-        
+
         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex items-center gap-4">
             <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/20 animate-pulse-glow">
               <Sparkles className="h-7 w-7 text-primary" />
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-foreground">AI Insights</h2>
+              <h2 className="text-2xl font-bold text-foreground">Trend Insights</h2>
               <p className="text-muted-foreground">
-                Personalized recommendations powered by advanced AI
+                Personalized strategies powered by AI trend analysis
               </p>
             </div>
           </div>
@@ -177,8 +177,8 @@ const Insights = () => {
                   insight.impact.startsWith("+") && "text-success",
                   insight.impact.startsWith("-") && "text-destructive",
                   !insight.impact.startsWith("+") &&
-                    !insight.impact.startsWith("-") &&
-                    "text-primary"
+                  !insight.impact.startsWith("-") &&
+                  "text-primary"
                 )}
               >
                 {insight.impact}
@@ -202,11 +202,11 @@ const Insights = () => {
         >
           <div className="flex items-center gap-3 mb-4">
             <TrendingUp className="h-5 w-5 text-success" />
-            <h3 className="font-semibold text-foreground">Potential Savings</h3>
+            <h3 className="font-semibold text-foreground">Potential Reach</h3>
           </div>
-          <p className="text-3xl font-bold text-success mb-2">$4,820</p>
+          <p className="text-3xl font-bold text-success mb-2">+450k</p>
           <p className="text-sm text-muted-foreground">
-            Following all AI recommendations could save you this amount annually
+            Following all AI recommendations could boost your reach by this amount
           </p>
         </motion.div>
 
@@ -218,11 +218,11 @@ const Insights = () => {
         >
           <div className="flex items-center gap-3 mb-4">
             <Shield className="h-5 w-5 text-primary" />
-            <h3 className="font-semibold text-foreground">Risk Score</h3>
+            <h3 className="font-semibold text-foreground">Account Health</h3>
           </div>
-          <p className="text-3xl font-bold text-primary mb-2">72/100</p>
+          <p className="text-3xl font-bold text-primary mb-2">98/100</p>
           <p className="text-sm text-muted-foreground">
-            Your portfolio has a moderate risk level. Consider diversifying.
+            Your account has a healthy standing. No shadowban risks detected.
           </p>
         </motion.div>
 
@@ -234,11 +234,11 @@ const Insights = () => {
         >
           <div className="flex items-center gap-3 mb-4">
             <Target className="h-5 w-5 text-blue-500" />
-            <h3 className="font-semibold text-foreground">Goal Progress</h3>
+            <h3 className="font-semibold text-foreground">Content Quota</h3>
           </div>
-          <p className="text-3xl font-bold text-foreground mb-2">3/5</p>
+          <p className="text-3xl font-bold text-foreground mb-2">12/15</p>
           <p className="text-sm text-muted-foreground">
-            You're making good progress on your financial goals this quarter
+            You're on track with your content posting schedule this week
           </p>
         </motion.div>
       </div>

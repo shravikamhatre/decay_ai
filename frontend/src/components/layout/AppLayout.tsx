@@ -10,9 +10,9 @@ interface AppLayoutProps {
 
 const menuItems = [
   { label: 'Dashboard', ariaLabel: 'Go to dashboard', link: '/dashboard' },
-  { label: 'Transactions', ariaLabel: 'View transactions', link: '/transactions' },
-  { label: 'Insights', ariaLabel: 'View insights', link: '/insights' },
-  { label: 'Portfolio', ariaLabel: 'View portfolio', link: '/portfolio' },
+  { label: 'Scheduled Posts', ariaLabel: 'View scheduled posts', link: '/transactions' },
+  { label: 'Trend Insights', ariaLabel: 'View trend insights', link: '/insights' },
+  { label: 'Content Calendar', ariaLabel: 'View content calendar', link: '/portfolio' },
   { label: 'Settings', ariaLabel: 'Go to settings', link: '/settings' }
 ];
 

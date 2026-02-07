@@ -25,7 +25,7 @@ const TopBar = () => {
           </Avatar>
           <div className="hidden md:block text-left">
             <p className="text-sm font-medium text-foreground">John Doe</p>
-            <p className="text-xs text-muted-foreground">Premium</p>
+            <p className="text-xs text-muted-foreground">Pro Creator</p>
           </div>
           <ChevronDown className="h-4 w-4 text-muted-foreground" />
         </button>
@@ -40,8 +40,8 @@ const TopBar = () => {
 
         {/* Balance indicator */}
         <div className="hidden lg:flex items-center gap-2 rounded-xl bg-secondary/50 px-4 py-2">
-          <span className="text-sm text-muted-foreground">Balance:</span>
-          <span className="text-sm font-semibold text-primary">$34,280.56</span>
+          <span className="text-sm text-muted-foreground">Engagement:</span>
+          <span className="text-sm font-bold text-primary">98.5%</span>
         </div>
       </div>
 
@@ -50,7 +50,7 @@ const TopBar = () => {
         <div className="relative">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <Input
-            placeholder="Search transactions, insights..."
+            placeholder="Search posts, trends, creators..."
             className="w-80 bg-secondary/50 border-0 pl-10 focus-visible:ring-1 focus-visible:ring-primary"
           />
         </div>

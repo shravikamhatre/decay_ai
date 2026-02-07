@@ -11,61 +11,61 @@ import { cn } from "@/lib/utils";
 const assets = [
   {
     id: 1,
-    name: "Bitcoin",
-    symbol: "BTC",
-    amount: "0.4521 BTC",
-    value: 19245.67,
+    name: "TikTok",
+    symbol: "TT",
+    amount: "850k Followers",
+    value: 850000,
     change: 5.42,
-    allocation: 35,
-    color: "bg-orange-500",
+    allocation: 45,
+    color: "bg-black",
   },
   {
     id: 2,
-    name: "Ethereum",
-    symbol: "ETH",
-    amount: "4.2 ETH",
-    value: 8420.0,
+    name: "Instagram",
+    symbol: "IG",
+    amount: "420k Followers",
+    value: 420000,
     change: -2.18,
-    allocation: 22,
-    color: "bg-blue-500",
+    allocation: 25,
+    color: "bg-pink-500",
   },
   {
     id: 3,
-    name: "Apple Stock",
-    symbol: "AAPL",
-    amount: "25 shares",
-    value: 4875.0,
+    name: "YouTube",
+    symbol: "YT",
+    amount: "250k Subscribers",
+    value: 250000,
     change: 1.23,
-    allocation: 18,
-    color: "bg-gray-400",
+    allocation: 15,
+    color: "bg-red-500",
   },
   {
     id: 4,
-    name: "S&P 500 Index",
-    symbol: "SPY",
-    amount: "12 shares",
-    value: 5640.0,
+    name: "Twitter/X",
+    symbol: "X",
+    amount: "120k Followers",
+    value: 120000,
     change: 0.87,
-    allocation: 15,
-    color: "bg-green-500",
+    allocation: 10,
+    color: "bg-blue-400",
   },
   {
     id: 5,
-    name: "Gold",
-    symbol: "XAU",
-    amount: "2.5 oz",
-    value: 4750.0,
+    name: "LinkedIn",
+    symbol: "LI",
+    amount: "25k Connections",
+    value: 25000,
     change: 0.32,
-    allocation: 10,
-    color: "bg-yellow-500",
+    allocation: 5,
+    color: "bg-blue-700",
   },
 ];
 
 const performanceMetrics = [
-  { label: "Total Value", value: "$42,930.67", change: "+$3,420.50", isPositive: true },
-  { label: "Today's P&L", value: "+$892.34", change: "+2.12%", isPositive: true },
-  { label: "All-time Return", value: "+$12,450", change: "+41.2%", isPositive: true },
-  { label: "Best Performer", value: "BTC", change: "+128%", isPositive: true },
+  { label: "Total Audience", value: "1.6M", change: "+45k", isPositive: true },
+  { label: "New Followers", value: "+3.2k", change: "+2.12%", isPositive: true },
+  { label: "Avg Engagement", value: "8.5%", change: "+0.4%", isPositive: true },
+  { label: "Top Platform", value: "TikTok", change: "+5.4%", isPositive: true },
 ];
 
 const Portfolio = () => {
@@ -79,8 +79,8 @@ const Portfolio = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-2xl font-bold text-foreground">Portfolio</h2>
-        <p className="text-muted-foreground">Track your assets and performance</p>
+        <h2 className="text-2xl font-bold text-foreground">Content Calendar</h2>
+        <p className="text-muted-foreground">Track your content performance across platforms</p>
       </motion.div>
 
       {/* Performance Metrics */}
@@ -126,7 +126,7 @@ const Portfolio = () => {
           className="glass-card p-6"
         >
           <div className="flex items-center justify-between mb-6">
-            <h3 className="font-semibold text-foreground">Asset Allocation</h3>
+            <h3 className="font-semibold text-foreground">Audience Distribution</h3>
             <button className="text-muted-foreground hover:text-foreground">
               <MoreHorizontal className="h-5 w-5" />
             </button>
@@ -152,11 +152,11 @@ const Portfolio = () => {
                     fill="none"
                     strokeWidth="16"
                     className={cn(
-                      asset.id === 1 && "stroke-orange-500",
-                      asset.id === 2 && "stroke-blue-500",
-                      asset.id === 3 && "stroke-gray-400",
-                      asset.id === 4 && "stroke-green-500",
-                      asset.id === 5 && "stroke-yellow-500"
+                      asset.id === 1 && "stroke-black",
+                      asset.id === 2 && "stroke-pink-500",
+                      asset.id === 3 && "stroke-red-500",
+                      asset.id === 4 && "stroke-blue-400",
+                      asset.id === 5 && "stroke-blue-700"
                     )}
                     strokeDasharray={strokeDasharray}
                     strokeDashoffset={strokeDashoffset}
@@ -167,9 +167,9 @@ const Portfolio = () => {
             </svg>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
               <p className="text-2xl font-bold text-foreground">
-                ${(totalValue / 1000).toFixed(1)}k
+                {(totalValue / 1000).toFixed(1)}k
               </p>
-              <p className="text-xs text-muted-foreground">Total Value</p>
+              <p className="text-xs text-muted-foreground">Total Reach</p>
             </div>
           </div>
 
@@ -195,7 +195,7 @@ const Portfolio = () => {
           className="lg:col-span-2 glass-card p-6"
         >
           <div className="flex items-center justify-between mb-6">
-            <h3 className="font-semibold text-foreground">Your Assets</h3>
+            <h3 className="font-semibold text-foreground">Your Channels</h3>
             <button className="flex items-center gap-1 text-sm font-medium text-primary hover:underline">
               View All
               <ChevronRight className="h-4 w-4" />
@@ -223,7 +223,7 @@ const Portfolio = () => {
 
                 <div className="text-right">
                   <p className="font-medium text-foreground">
-                    ${asset.value.toLocaleString()}
+                    {asset.value.toLocaleString()}
                   </p>
                   <div
                     className={cn(

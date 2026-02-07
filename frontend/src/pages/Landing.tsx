@@ -13,48 +13,48 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const words = ["Intelligent", "Secure", "Powerful", "Effortless"];
+const words = ["Viral", "Trending", "Engaging", "Effortless"];
 
 const features = [
   {
     icon: Brain,
-    title: "AI Insights",
-    description: "Get personalized financial recommendations powered by advanced AI algorithms.",
+    title: "Trend Intelligence",
+    description: "Get personalized content recommendations powered by advanced AI trend analysis.",
   },
   {
     icon: Zap,
-    title: "Smart Transactions",
-    description: "Lightning-fast transactions with intelligent categorization and tracking.",
+    title: "Smart Scheduling",
+    description: "Lightning-fast scheduling with intelligent best-time-to-post predictions.",
   },
   {
     icon: PieChart,
-    title: "Portfolio Intelligence",
-    description: "Real-time portfolio analysis with predictive performance metrics.",
+    title: "Engagement Analytics",
+    description: "Real-time performance tracking with predictive virality metrics.",
   },
   {
     icon: Shield,
-    title: "Secure & Private",
-    description: "Bank-grade encryption with complete privacy and data protection.",
+    title: "Brand Safety",
+    description: "Enterprise-grade security with complete privacy and content protection.",
   },
 ];
 
 const testimonials = [
   {
     name: "Sarah Chen",
-    role: "Investment Analyst",
-    content: "FinanceAI transformed how I manage my investments. The AI insights are incredibly accurate.",
+    role: "Content Creator",
+    content: "Shelf Life transformed how I manage my content. The trend insights are incredibly accurate.",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
   },
   {
     name: "Michael Torres",
-    role: "Entrepreneur",
-    content: "The portfolio tracking is phenomenal. I've increased my returns by 40% in just 6 months.",
+    role: "Social Media Manager",
+    content: "The calendar planning is phenomenal. I've increased audience engagement by 40% in just 6 months.",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
   },
   {
     name: "Emily Watson",
-    role: "Financial Advisor",
-    content: "Best fintech platform I've used. The UI is beautiful and the AI recommendations are spot-on.",
+    role: "Digital Strategist",
+    content: "Best social media tool I've used. The UI is beautiful and the AI recommendations are spot-on.",
     avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
   },
 ];
@@ -69,7 +69,7 @@ const Landing = () => {
             <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary">
               <Sun className="h-5 w-5 text-primary-foreground" />
             </div>
-            <span className="text-lg font-semibold text-foreground">FinanceAI</span>
+            <span className="text-lg font-semibold text-foreground">Shelf Life</span>
           </div>
 
           <div className="hidden md:flex items-center gap-8">
@@ -108,7 +108,7 @@ const Landing = () => {
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm text-primary">
               <Sparkles className="h-4 w-4" />
-              AI-Powered Finance Platform
+              AI-Powered Content Platform
             </span>
           </motion.div>
 
@@ -118,7 +118,7 @@ const Landing = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6"
           >
-            Your Finances,{" "}
+            Your Content,{" "}
             <span className="relative">
               <motion.span
                 key={words[0]}
@@ -126,7 +126,7 @@ const Landing = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="text-gradient-gold"
               >
-                Reimagined
+                Amplified
               </motion.span>
             </span>
           </motion.h1>
@@ -137,8 +137,8 @@ const Landing = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mx-auto max-w-2xl text-lg text-muted-foreground mb-10"
           >
-            Experience the future of wealth management with AI-driven insights,
-            seamless transactions, and intelligent portfolio optimization.
+            Experience the future of creator management with AI-driven insights,
+            seamless scheduling, and intelligent audience optimization.
           </motion.p>
 
           <motion.div
@@ -169,10 +169,10 @@ const Landing = () => {
             className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
           >
             {[
-              { value: "$2.4B+", label: "Assets Managed" },
-              { value: "150K+", label: "Active Users" },
+              { value: "2.4B+", label: "Views Generated" },
+              { value: "150K+", label: "Active Creators" },
               { value: "99.9%", label: "Uptime" },
-              { value: "4.9★", label: "User Rating" },
+              { value: "4.9★", label: "Creator Rating" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <p className="text-3xl md:text-4xl font-bold text-gradient-gold">{stat.value}</p>
@@ -311,10 +311,10 @@ const Landing = () => {
                 <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary">
                   <Sun className="h-5 w-5 text-primary-foreground" />
                 </div>
-                <span className="text-lg font-semibold text-foreground">FinanceAI</span>
+                <span className="text-lg font-semibold text-foreground">Shelf Life</span>
               </div>
               <p className="text-sm text-muted-foreground">
-                The future of intelligent wealth management.
+                The future of intelligent content management.
               </p>
             </div>
 
@@ -349,7 +349,7 @@ const Landing = () => {
           </div>
 
           <div className="mt-12 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            © 2026 FinanceAI. All rights reserved.
+            © 2026 Shelf Life. All rights reserved.
           </div>
         </div>
       </footer>

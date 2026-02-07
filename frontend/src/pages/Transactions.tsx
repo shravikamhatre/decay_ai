@@ -15,97 +15,97 @@ import { cn } from "@/lib/utils";
 const transactions = [
   {
     id: 1,
-    name: "Netflix Subscription",
-    category: "Entertainment",
-    amount: -15.99,
+    name: "Summer Vibes Reel",
+    category: "Lifestyle",
+    amount: 12500, // Views/Engagement
     date: "Feb 3, 2026",
-    status: "completed",
-    icon: "🎬",
+    status: "published",
+    icon: "📹",
   },
   {
     id: 2,
-    name: "Salary Deposit",
-    category: "Income",
-    amount: 5420.0,
+    name: "Tech Review: iPhone 18",
+    category: "Tech",
+    amount: 45200,
     date: "Feb 3, 2026",
-    status: "completed",
-    icon: "💰",
+    status: "published",
+    icon: "📱",
   },
   {
     id: 3,
-    name: "Grocery Store",
-    category: "Shopping",
-    amount: -128.45,
+    name: "Weekly OOTD",
+    category: "Fashion",
+    amount: 8500,
     date: "Feb 2, 2026",
-    status: "completed",
-    icon: "🛒",
+    status: "published",
+    icon: "👗",
   },
   {
     id: 4,
-    name: "Uber Ride",
-    category: "Transport",
-    amount: -24.5,
+    name: "Morning Routine",
+    category: "Wellness",
+    amount: 1200,
     date: "Feb 2, 2026",
-    status: "completed",
-    icon: "🚗",
+    status: "published",
+    icon: "🧘",
   },
   {
     id: 5,
-    name: "Investment Return",
-    category: "Investment",
-    amount: 892.3,
+    name: "Viral Dance Challenge",
+    category: "Dance",
+    amount: 890000,
     date: "Feb 1, 2026",
-    status: "completed",
-    icon: "📈",
+    status: "published",
+    icon: "💃",
   },
   {
     id: 6,
-    name: "Electric Bill",
-    category: "Utilities",
-    amount: -156.0,
-    date: "Feb 1, 2026",
-    status: "pending",
-    icon: "⚡",
+    name: "Q&A Session",
+    category: "Community",
+    amount: 0,
+    date: "Feb 5, 2026",
+    status: "scheduled",
+    icon: "❓",
   },
   {
     id: 7,
-    name: "Gym Membership",
-    category: "Health",
-    amount: -49.99,
+    name: "Gym Workout",
+    category: "Fitness",
+    amount: 3200,
     date: "Jan 31, 2026",
-    status: "completed",
+    status: "published",
     icon: "🏋️",
   },
   {
     id: 8,
-    name: "Freelance Payment",
-    category: "Income",
-    amount: 1250.0,
+    name: "Brand Sponsorship",
+    category: "Ad",
+    amount: 15000,
     date: "Jan 30, 2026",
-    status: "completed",
+    status: "published",
     icon: "💼",
   },
   {
     id: 9,
-    name: "Restaurant",
-    category: "Dining",
-    amount: -85.6,
+    name: "Food Review",
+    category: "Food",
+    amount: 5600,
     date: "Jan 30, 2026",
-    status: "completed",
+    status: "published",
     icon: "🍽️",
   },
   {
     id: 10,
-    name: "Spotify Premium",
-    category: "Entertainment",
-    amount: -9.99,
+    name: "Tutorial Preview",
+    category: "Education",
+    amount: 0,
     date: "Jan 29, 2026",
-    status: "failed",
-    icon: "🎵",
+    status: "draft",
+    icon: "📚",
   },
 ];
 
-const filters = ["All", "Income", "Expense", "Pending"];
+const filters = ["All", "Published", "Scheduled", "Draft"];
 
 const Transactions = () => {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -115,9 +115,9 @@ const Transactions = () => {
     const matchesSearch = tx.name.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesFilter =
       activeFilter === "All" ||
-      (activeFilter === "Income" && tx.amount > 0) ||
-      (activeFilter === "Expense" && tx.amount < 0) ||
-      (activeFilter === "Pending" && tx.status === "pending");
+      (activeFilter === "Published" && tx.status === "published") ||
+      (activeFilter === "Scheduled" && tx.status === "scheduled") ||
+      (activeFilter === "Draft" && tx.status === "draft");
     return matchesSearch && matchesFilter;
   });
 
@@ -131,8 +131,8 @@ const Transactions = () => {
         className="flex flex-col md:flex-row md:items-center justify-between gap-4"
       >
         <div>
-          <h2 className="text-2xl font-bold text-foreground">Transactions</h2>
-          <p className="text-muted-foreground">Track and manage all your transactions</p>
+          <h2 className="text-2xl font-bold text-foreground">Scheduled Posts</h2>
+          <p className="text-muted-foreground">Track and manage your content schedule</p>
         </div>
         <Button className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2">
           <Download className="h-4 w-4" />
@@ -151,7 +151,7 @@ const Transactions = () => {
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <Input
-            placeholder="Search transactions..."
+            placeholder="Search posts..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="pl-10 bg-secondary/50 border-0 focus-visible:ring-1 focus-visible:ring-primary"
@@ -196,10 +196,10 @@ const Transactions = () => {
             <thead>
               <tr className="border-b border-border">
                 <th className="text-left text-xs font-medium text-muted-foreground uppercase tracking-wider px-6 py-4">
-                  Transaction
+                  Content
                 </th>
                 <th className="text-left text-xs font-medium text-muted-foreground uppercase tracking-wider px-6 py-4">
-                  Category
+                  Trend Category
                 </th>
                 <th className="text-left text-xs font-medium text-muted-foreground uppercase tracking-wider px-6 py-4">
                   Date
@@ -208,7 +208,7 @@ const Transactions = () => {
                   Status
                 </th>
                 <th className="text-right text-xs font-medium text-muted-foreground uppercase tracking-wider px-6 py-4">
-                  Amount
+                  Engagement Score
                 </th>
               </tr>
             </thead>
@@ -236,12 +236,13 @@ const Transactions = () => {
                     <span className="text-sm text-muted-foreground">{tx.date}</span>
                   </td>
                   <td className="px-6 py-4">
+
                     <span
                       className={cn(
                         "inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium",
-                        tx.status === "completed" && "badge-success",
-                        tx.status === "pending" && "badge-pending",
-                        tx.status === "failed" && "badge-failed"
+                        tx.status === "published" && "badge-success",
+                        tx.status === "scheduled" && "badge-pending",
+                        tx.status === "draft" && "badge-failed"
                       )}
                     >
                       {tx.status.charAt(0).toUpperCase() + tx.status.slice(1)}
@@ -249,7 +250,7 @@ const Transactions = () => {
                   </td>
                   <td className="px-6 py-4 text-right">
                     <div className="flex items-center justify-end gap-1">
-                      {tx.amount > 0 ? (
+                      {tx.amount > 10000 ? (
                         <ArrowUpRight className="h-4 w-4 text-success" />
                       ) : (
                         <ArrowDownRight className="h-4 w-4 text-muted-foreground" />
@@ -257,10 +258,10 @@ const Transactions = () => {
                       <span
                         className={cn(
                           "font-medium",
-                          tx.amount > 0 ? "text-success" : "text-foreground"
+                          tx.amount > 10000 ? "text-success" : "text-foreground"
                         )}
                       >
-                        {tx.amount > 0 ? "+" : ""}${Math.abs(tx.amount).toFixed(2)}
+                        {(tx.amount / 1000).toFixed(1)}k
                       </span>
                     </div>
                   </td>
@@ -273,7 +274,7 @@ const Transactions = () => {
         {/* Pagination */}
         <div className="flex items-center justify-between px-6 py-4 border-t border-border">
           <p className="text-sm text-muted-foreground">
-            Showing {filteredTransactions.length} of {transactions.length} transactions
+            Showing {filteredTransactions.length} of {transactions.length} posts
           </p>
           <div className="flex gap-2">
             <Button variant="outline" size="sm" className="border-border/50">
