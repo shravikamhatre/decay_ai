@@ -142,6 +142,95 @@ app.post("/api/user/preferences", async (req, res) => {
     }
 });
 
+// Get trending content for a niche
+const fs = require("fs");
+const path = require("path");
+
+app.get("/api/trends/:niche", (req, res) => {
+    try {
+        const { niche } = req.params;
+
+        // Capitalize first letter for filename
+        const nicheCapitalized = niche.charAt(0).toUpperCase() + niche.slice(1).toLowerCase();
+        const filePath = path.join(__dirname, "..", "genai", `daily_${nicheCapitalized}.json`);
+
+        if (!fs.existsSync(filePath)) {
+            return res.status(404).json({ error: `No trends found for niche: ${niche}` });
+        }
+
+        const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
+
+        // Calculate content schedule - distribute top trends across 7 days
+        const today = new Date();
+        const schedule = [];
+
+        // Add top trending content (good category)
+        data.top_trends_good.slice(0, 7).forEach((trend, index) => {
+            const date = new Date(today);
+            date.setDate(date.getDate() + index);
+
+            schedule.push({
+                id: `trend-${index}`,
+                title: trend.name,
+                category: trend.score > 10 ? "good" : trend.score > 2 ? "okay" : "bad",
+                date: date.toISOString().split("T")[0],
+                score: trend.score,
+                signals: trend.signals,
+                type: "trend"
+            });
+        });
+
+        // Add top music recommendations
+        data.top_music_good.slice(0, 5).forEach((music, index) => {
+            const date = new Date(today);
+            date.setDate(date.getDate() + index);
+
+            schedule.push({
+                id: `music-${index}`,
+                title: `🎵 ${music.name}`,
+                category: music.score > 5 ? "good" : "okay",
+                date: date.toISOString().split("T")[0],
+                score: music.score,
+                signals: music.signals,
+                type: "music"
+            });
+        });
+
+        // Add declining trends as warnings
+        data.top_trends_declining.slice(0, 3).forEach((trend, index) => {
+            const date = new Date(today);
+            date.setDate(date.getDate() + index + 2);
+
+            schedule.push({
+                id: `decline-${index}`,
+                title: `⚠️ Avoid: ${trend.name}`,
+                category: "bad",
+                date: date.toISOString().split("T")[0],
+                score: trend.score,
+                signals: trend.signals,
+                type: "declining"
+            });
+        });
+
+        console.log(`📊 Trends loaded for: ${niche} (${schedule.length} items)`);
+
+        res.json({
+            success: true,
+            niche: data.niche,
+            schedule,
+            raw: {
+                trendsGood: data.top_trends_good,
+                trendsDeclining: data.top_trends_declining,
+                musicGood: data.top_music_good,
+                musicDeclining: data.top_music_declining
+            }
+        });
+    } catch (error) {
+        console.error("Trends error:", error);
+        res.status(500).json({ error: "Failed to load trends" });
+    }
+});
+
 // Start server
 app.listen(PORT, () => {
     console.log(`🚀 Server running on http://localhost:${PORT}`);
