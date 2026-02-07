@@ -173,7 +173,7 @@ const transactions = [
 
 const filters = ["All", "Published", "Scheduled", "Draft"];
 
-const ScheduledPosts = () => {
+const YourPlatforms = () => {
     // Portfolio State
     const totalValue = assets.reduce((sum, asset) => sum + asset.value, 0);
 
@@ -199,8 +199,8 @@ const ScheduledPosts = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
             >
-                <h2 className="text-2xl font-bold text-foreground">Content Calendar & Scheduled Posts</h2>
-                <p className="text-muted-foreground">Track performance and manage your content schedule</p>
+                <h2 className="text-2xl font-bold text-foreground">Your Platforms</h2>
+                <p className="text-muted-foreground">Track platform performance and manage your content schedule</p>
             </motion.div>
 
             {/* --- Portfolio Section --- */}
@@ -465,7 +465,7 @@ const ScheduledPosts = () => {
                     className="flex flex-col md:flex-row md:items-center justify-between gap-4"
                 >
                     <div>
-                        <h2 className="text-xl font-bold text-foreground">Scheduled Posts</h2>
+                        <h2 className="text-xl font-bold text-foreground">Content Schedule</h2>
                     </div>
                     <Button className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2">
                         <Download className="h-4 w-4" />
@@ -624,4 +624,4 @@ const ScheduledPosts = () => {
     );
 };
 
-export default ScheduledPosts;
+export default YourPlatforms;
