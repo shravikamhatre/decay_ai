@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Sidebar from "./Sidebar";
+// import Sidebar from "./Sidebar"; // Removed Sidebar
 import TopBar from "./TopBar";
 import FloatingAIAssistant from "@/components/ai/FloatingAIAssistant";
 import StaggeredMenu from "@/components/ui/StaggeredMenu";
@@ -10,9 +10,9 @@ interface AppLayoutProps {
 
 const menuItems = [
   { label: 'Dashboard', ariaLabel: 'Go to dashboard', link: '/dashboard' },
-  { label: 'Scheduled Posts', ariaLabel: 'View scheduled posts', link: '/transactions' },
+  { label: 'Your Platforms', ariaLabel: 'View platform analytics', link: '/your-platforms' },
   { label: 'Trend Insights', ariaLabel: 'View trend insights', link: '/insights' },
-  { label: 'Content Calendar', ariaLabel: 'View content calendar', link: '/portfolio' },
+  { label: 'Calendar', ariaLabel: 'View content calendar', link: '/calendar' },
   { label: 'Settings', ariaLabel: 'Go to settings', link: '/settings' }
 ];
 
@@ -40,8 +40,8 @@ const AppLayout = ({ title }: AppLayoutProps) => {
         isFixed={true}
         className="z-50"
       />
-      <Sidebar />
-      <div className="ml-64">
+      {/* <Sidebar /> Removed Sidebar component */}
+      <div className="w-full"> {/* Removed ml-64 */}
         <TopBar />
         <main className="p-6">
           <Outlet />

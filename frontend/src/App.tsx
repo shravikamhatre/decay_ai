@@ -11,7 +11,7 @@ import Insights from "@/pages/Insights";
 import Landing from "@/pages/Landing";
 import Login from "@/pages/Login";
 import Onboarding from "@/pages/Onboarding";
-import ScheduledPosts from "@/pages/ScheduledPosts"; // Import ScheduledPosts
+import YourPlatforms from "@/pages/YourPlatforms"; // Import YourPlatforms
 import Settings from "@/pages/Settings";
 import Signup from "@/pages/Signup";
 import NotFound from "@/pages/NotFound";
@@ -32,9 +32,10 @@ const App = () => (
                         <Route path="/onboarding" element={<Onboarding />} />
 
                         <Route element={<AppLayout />}>
+                            <Route path="/calendar" element={<CalendarPage />} />
                             <Route path="/dashboard" element={<Dashboard />} />
                             <Route path="/insights" element={<Insights />} />
-                            <Route path="/scheduled-posts" element={<ScheduledPosts />} />
+                            <Route path="/your-platforms" element={<YourPlatforms />} />
                             <Route path="/settings" element={<Settings />} />
                         </Route>
 

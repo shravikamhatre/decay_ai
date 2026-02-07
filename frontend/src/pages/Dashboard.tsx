@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import CustomCalendar from "@/components/CustomCalendar";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const [date, setDate] = useState<Date | undefined>(new Date());
+  const navigate = useNavigate();
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -30,11 +32,14 @@ const Dashboard = () => {
             <h2 className="text-lg font-semibold">Calendar</h2>
           </div>
 
-          <div className="flex-1 flex flex-col items-center justify-start overflow-hidden z-10 relative w-full">
+          <div
+            className="flex-1 flex flex-col items-center justify-start overflow-hidden z-10 relative w-full cursor-pointer hover:bg-secondary/10 transition-colors rounded-md"
+            onClick={() => navigate("/calendar")}
+          >
             <CustomCalendar
               compact
-              className="w-full h-full"
-              onDayClick={(d) => setDate(d)}
+              className="w-full h-full pointer-events-none" // Disable internal pointer events so the parent click handler works smoothly for the whole widget
+              onDayClick={() => navigate("/calendar")}
             />
             <div className="mt-2 w-full flex justify-center shrink-0">
               <Button asChild className="w-full" variant="outline" size="sm">
