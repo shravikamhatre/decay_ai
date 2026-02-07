@@ -22,6 +22,7 @@ import { cn } from "@/lib/utils";
 import ScrollVelocity from "@/components/ui/ScrollVelocity";
 import TypingEffect from "@/components/ui/TypingEffect";
 import { Timeline } from "@/components/ui/timeline";
+import FlipPill from "@/components/ui/FlipPill";
 
 const Landing = () => {
   return (
@@ -87,14 +88,14 @@ const Landing = () => {
         <ScrollVelocity
           texts={[
             <span className="inline-flex items-center gap-4 whitespace-nowrap">
-              <span className="bg-waxy-lime px-6 py-2 rounded-full text-black border border-black inline-flex items-center justify-center">Fashion & Beauty</span>
-              <span className="bg-waxy-blue px-6 py-2 rounded-full text-black border border-black inline-flex items-center justify-center">Tech & Gadgets</span>
-              <span className="bg-waxy-pink px-6 py-2 rounded-full text-black border border-black inline-flex items-center justify-center">Food & Cooking</span>
+              <FlipPill className="bg-waxy-lime px-6 py-2 rounded-full text-black border border-black inline-flex items-center justify-center">Fashion & Beauty</FlipPill>
+              <FlipPill className="bg-waxy-blue px-6 py-2 rounded-full text-black border border-black inline-flex items-center justify-center">Tech & Gadgets</FlipPill>
+              <FlipPill className="bg-waxy-pink px-6 py-2 rounded-full text-black border border-black inline-flex items-center justify-center">Food & Cooking</FlipPill>
             </span>,
             <span className="inline-flex items-center gap-4 whitespace-nowrap">
-              <span className="bg-waxy-yellow px-6 py-2 rounded-full text-black border border-black inline-flex items-center justify-center">Travel & Lifestyle</span>
-              <span className="bg-waxy-mint px-6 py-2 rounded-full text-black border border-black inline-flex items-center justify-center">Gaming & Esports</span>
-              <span className="bg-waxy-terracotta px-6 py-2 rounded-full text-black border border-black inline-flex items-center justify-center">Education</span>
+              <FlipPill className="bg-waxy-yellow px-6 py-2 rounded-full text-black border border-black inline-flex items-center justify-center">Travel & Lifestyle</FlipPill>
+              <FlipPill className="bg-waxy-mint px-6 py-2 rounded-full text-black border border-black inline-flex items-center justify-center">Gaming & Esports</FlipPill>
+              <FlipPill className="bg-waxy-terracotta px-6 py-2 rounded-full text-black border border-black inline-flex items-center justify-center">Education</FlipPill>
             </span>
           ]}
           velocity={50}

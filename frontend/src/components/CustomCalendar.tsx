@@ -26,6 +26,7 @@ interface CustomCalendarProps {
     dayCategories?: Record<string, DayCategories>; // Multiple categories per day
     tasks?: Task[];
     onDayClick?: (day: Date) => void;
+    onTaskClick?: (task: Task) => void;
 }
 
 // Get category indicator dots - the decay theme colors
@@ -42,7 +43,7 @@ const getCategoryDots = (categories: DayCategories | undefined) => {
     );
 };
 
-const CustomCalendar = ({ className, compact = false, dayCategories, tasks, onDayClick }: CustomCalendarProps) => {
+const CustomCalendar = ({ className, compact = false, dayCategories, tasks, onDayClick, onTaskClick }: CustomCalendarProps) => {
     const [currentMonth, setCurrentMonth] = useState(new Date());
     const [selectedDate, setSelectedDate] = useState(new Date());
 
@@ -142,8 +143,12 @@ const CustomCalendar = ({ className, compact = false, dayCategories, tasks, onDa
                                 {dayTasks.slice(0, 2).map((task) => (
                                     <div
                                         key={task.id}
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            onTaskClick?.(task);
+                                        }}
                                         className={cn(
-                                            "text-xs px-2 py-0.5 rounded-full truncate font-medium",
+                                            "text-xs px-2 py-0.5 rounded-full truncate font-medium hover:opacity-80 transition-opacity cursor-pointer",
                                             task.category === "good" && "bg-[#2DD881] text-black",
                                             task.category === "okay" && "bg-[#FFE733] text-black",
                                             task.category === "bad" && "bg-red-500 text-white"
