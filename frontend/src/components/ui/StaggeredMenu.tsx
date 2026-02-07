@@ -1,3 +1,4 @@
+
 import React, { useCallback, useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import './StaggeredMenu.css';
@@ -12,6 +13,13 @@ export interface StaggeredMenuSocialItem {
     label: string;
     link: string;
 }
+
+export const menuItems: StaggeredMenuItem[] = [
+    { label: 'Dashboard', ariaLabel: 'Go to dashboard', link: '/dashboard' },
+    { label: 'Scheduled Posts', ariaLabel: 'View your scheduled posts', link: '/scheduled-posts' },
+    { label: 'Trend Insights', ariaLabel: 'Analyze trends', link: '/insights' },
+    { label: 'Settings', ariaLabel: 'Manage settings', link: '/settings' },
+];
 
 export interface StaggeredMenuProps {
     position?: 'left' | 'right';

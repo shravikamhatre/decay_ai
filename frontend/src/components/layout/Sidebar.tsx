@@ -14,9 +14,8 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { icon: LayoutDashboard, label: "Dashboard", path: "/dashboard" },
-  { icon: ArrowLeftRight, label: "Scheduled Posts", path: "/transactions" },
+  { icon: ArrowLeftRight, label: "Scheduled Posts", path: "/scheduled-posts" },
   { icon: Sparkles, label: "Trend Insights", path: "/insights" },
-  { icon: PieChart, label: "Content Calendar", path: "/portfolio" },
   { icon: Settings, label: "Settings", path: "/settings" },
 ];
 

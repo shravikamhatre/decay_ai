@@ -286,10 +286,10 @@ const Landing = () => {
             <div className="absolute inset-0 bg-primary/5" />
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Ready to Transform Your Finances?
+                Ready to Transform Your Socials?
               </h2>
               <p className="text-muted-foreground max-w-xl mx-auto mb-8">
-                Join thousands of users who have already revolutionized their financial journey.
+                Join thousands of users who have already revolutionized their Digital journey.
               </p>
               <Link to="/signup">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2 h-12 px-8">

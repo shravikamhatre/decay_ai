@@ -11,10 +11,9 @@ import Insights from "@/pages/Insights";
 import Landing from "@/pages/Landing";
 import Login from "@/pages/Login";
 import Onboarding from "@/pages/Onboarding";
-import Portfolio from "@/pages/Portfolio";
+import ScheduledPosts from "@/pages/ScheduledPosts"; // Import ScheduledPosts
 import Settings from "@/pages/Settings";
 import Signup from "@/pages/Signup";
-import Transactions from "@/pages/Transactions";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,12 +32,10 @@ const App = () => (
                         <Route path="/onboarding" element={<Onboarding />} />
 
                         <Route element={<AppLayout />}>
-                            <Route path="/calendar" element={<CalendarPage />} />
                             <Route path="/dashboard" element={<Dashboard />} />
                             <Route path="/insights" element={<Insights />} />
-                            <Route path="/portfolio" element={<Portfolio />} />
+                            <Route path="/scheduled-posts" element={<ScheduledPosts />} />
                             <Route path="/settings" element={<Settings />} />
-                            <Route path="/transactions" element={<Transactions />} />
                         </Route>
 
                         <Route path="*" element={<NotFound />} />
