@@ -56,9 +56,9 @@ const Signup = () => {
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary">
               <Sun className="h-6 w-6 text-primary-foreground" />
             </div>
-            <span className="text-xl font-semibold text-foreground">Shelf Life</span>
+            <span className="text-xl font-bold text-foreground">the decay</span>
           </Link>
-          <h1 className="text-2xl font-bold text-foreground mb-2">Join Shelf Life</h1>
+          <h1 className="text-2xl font-bold text-foreground mb-2">Join the decay</h1>
           <p className="text-muted-foreground">Start your creator journey today</p>
         </div>
 

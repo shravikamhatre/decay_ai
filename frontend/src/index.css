@@ -4,51 +4,73 @@
 
 @layer base {
     :root {
+        /* WaxyWeb Palette - Refined */
         --background: 0 0% 100%;
-        --foreground: 222.2 84% 4.9%;
+        /* Pure White as requested (90% dominance) */
+        --foreground: 0 0% 0%;
+        /* Black */
 
         --card: 0 0% 100%;
-        --card-foreground: 222.2 84% 4.9%;
+        --card-foreground: 0 0% 0%;
 
         --popover: 0 0% 100%;
-        --popover-foreground: 222.2 84% 4.9%;
+        --popover-foreground: 0 0% 0%;
 
-        --primary: 222.2 47.4% 11.2%;
-        --primary-foreground: 210 40% 98%;
+        --primary: 0 0% 0%;
+        /* Black */
+        --primary-foreground: 0 0% 100%;
+        /* White */
 
-        --secondary: 210 40% 96.1%;
-        --secondary-foreground: 222.2 47.4% 11.2%;
+        --secondary: 40 33% 98%;
+        /* Cream/Off-white for subtle sections #FDFBF7 */
+        --secondary-foreground: 0 0% 0%;
 
-        --muted: 210 40% 96.1%;
-        --muted-foreground: 215.4 16.3% 46.9%;
+        --muted: 0 0% 96%;
+        --muted-foreground: 0 0% 40%;
 
-        --accent: 210 40% 96.1%;
-        --accent-foreground: 222.2 47.4% 11.2%;
+        --accent: 40 33% 98%;
+        --accent-foreground: 0 0% 0%;
 
         --destructive: 0 84.2% 60.2%;
-        --destructive-foreground: 210 40% 98%;
+        --destructive-foreground: 0 0% 98%;
 
-        --border: 214.3 31.8% 91.4%;
-        --input: 214.3 31.8% 91.4%;
-        --ring: 222.2 84% 4.9%;
+        --border: 0 0% 90%;
+        /* Subtle styling, not harsh black everywhere */
+        --input: 0 0% 90%;
+        --ring: 0 0% 0%;
 
-        --radius: 0.5rem;
+        --radius: 1rem;
 
-        --sidebar-background: 0 0% 98%;
-        --sidebar-foreground: 240 5.3% 26.1%;
-        --sidebar-primary: 240 5.9% 10%;
-        --sidebar-primary-foreground: 0 0% 98%;
-        --sidebar-accent: 240 4.8% 95.9%;
-        --sidebar-accent-foreground: 240 5.9% 10%;
-        --sidebar-border: 220 13% 91%;
-        --sidebar-ring: 217.2 91.2% 59.8%;
+        /* Specific WaxyWeb Colors */
+        --color-lime: 150 70% 51%;
+        /* #2DD881 converted to HSL approx */
+        --color-yellow: 53 100% 60%;
+        /* #FFE733 */
+        --color-terracotta: 11 50% 56%;
+        /* #C66B56 */
+        --color-peach: 21 100% 77%;
+        /* #FFB38A */
+        --color-pink: 332 100% 65%;
+        /* #FF4D9F */
+        --color-blue: 197 88% 73%;
+        /* #7DD3F5 */
+        --color-mint: 158 55% 78%;
+        /* #A8E6CF */
 
-        /* Accent colors for UI pops */
-        --accent-orange: 25 95% 53%;
-        --accent-blue: 217 91% 60%;
-        --accent-gray: 220 9% 46%;
-        --accent-green: 142 71% 45%;
-        --accent-yellow: 45 93% 47%;
+        /* Sidebar specific */
+        --sidebar-background: 0 0% 100%;
+        --sidebar-foreground: 0 0% 0%;
+        --sidebar-primary: 0 0% 0%;
+        --sidebar-primary-foreground: 0 0% 100%;
+        --sidebar-accent: 40 33% 98%;
+        --sidebar-accent-foreground: 0 0% 0%;
+        --sidebar-border: 0 0% 90%;
+        --sidebar-ring: 0 0% 0%;
+
+        --font-serif: "Playfair Display", serif;
+        --font-sans: "Outfit", sans-serif;
+        --font-airone: "Syne", sans-serif;
+        --font-quote: "Playfair Display", serif;
     }
 
     .dark {
@@ -82,6 +104,86 @@
 
 
 @layer base {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-airone font-bold lowercase;
+    }
+
+    .font-airone {
+        font-family: var(--font-airone);
+    }
+
+    .font-quote {
+        font-family: var(--font-quote);
+        font-style: italic;
+    }
+
+    .shadow-waxy {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .shadow-waxy-hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    /* WaxyWeb Color Utilities */
+    .bg-waxy-lime {
+        background-color: #2DD881;
+    }
+
+    .bg-waxy-yellow {
+        background-color: #FFE733;
+    }
+
+    .bg-waxy-terracotta {
+        background-color: #C66B56;
+    }
+
+    .bg-waxy-peach {
+        background-color: #FFB38A;
+    }
+
+    .bg-waxy-pink {
+        background-color: #FF4D9F;
+    }
+
+    .bg-waxy-blue {
+        background-color: #7DD3F5;
+    }
+
+    .bg-waxy-mint {
+        background-color: #A8E6CF;
+    }
+
+    .text-waxy-lime {
+        color: #2DD881;
+    }
+
+    .text-waxy-yellow {
+        color: #FFE733;
+    }
+
+    .text-waxy-terracotta {
+        color: #C66B56;
+    }
+
+    .text-waxy-peach {
+        color: #FFB38A;
+    }
+
+    .text-waxy-pink {
+        color: #FF4D9F;
+    }
+
+    .text-waxy-blue {
+        color: #7DD3F5;
+    }
+
     * {
         @apply border-border;
     }

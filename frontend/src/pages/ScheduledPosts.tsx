@@ -331,7 +331,15 @@ const ScheduledPosts = () => {
                                     initial={{ opacity: 0, x: 10 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: 0.3 + index * 0.05 }}
-                                    className="flex items-center justify-between p-4 rounded-xl bg-secondary/30 hover:bg-secondary/50 transition-colors cursor-pointer"
+                                    className={cn(
+                                        "flex items-center justify-between p-4 rounded-xl bg-white border-l-4 shadow-sm hover:shadow-md transition-all cursor-pointer",
+                                        asset.id === 1 && "border-l-black",
+                                        asset.id === 2 && "border-l-[#FF4D9F]", // Pink
+                                        asset.id === 3 && "border-l-[#C66B56]", // Terracotta (Red-ish)
+                                        asset.id === 4 && "border-l-[#7DD3F5]", // Blue
+                                        asset.id === 5 && "border-l-[#0077B5]", // LinkedIn Blue
+                                        "border-t border-r border-b border-gray-100" // Subtle border on other sides
+                                    )}
                                 >
                                     <div className="flex items-center gap-4">
                                         <div className={cn("h-10 w-10 rounded-xl flex items-center justify-center text-white font-bold text-sm", asset.color)}>
@@ -350,7 +358,7 @@ const ScheduledPosts = () => {
                                         <div
                                             className={cn(
                                                 "flex items-center justify-end gap-1 text-sm",
-                                                asset.change > 0 ? "text-success" : "text-destructive"
+                                                asset.change > 0 ? "text-waxy-lime" : "text-destructive"
                                             )}
                                         >
                                             {asset.change > 0 ? (
@@ -365,7 +373,7 @@ const ScheduledPosts = () => {
 
                                     {/* Progress bar */}
                                     <div className="hidden md:block w-24">
-                                        <div className="h-1.5 rounded-full bg-secondary overflow-hidden">
+                                        <div className="h-1.5 rounded-full bg-gray-100 overflow-hidden">
                                             <div
                                                 className={cn("h-full rounded-full transition-all", asset.color)}
                                                 style={{ width: `${asset.allocation}%` }}

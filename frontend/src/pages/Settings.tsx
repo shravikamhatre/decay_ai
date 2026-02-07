@@ -329,7 +329,7 @@ const Settings = () => {
                 {[
                   { title: "FAQ", description: "Frequently asked questions" },
                   { title: "Contact Support", description: "Get help from our team" },
-                  { title: "Documentation", description: "Learn how to use Shelf Life" },
+                  { title: "Documentation", description: <span>Learn how to use <strong className="font-bold text-foreground">the decay</strong></span> },
                   { title: "Community", description: "Join our community forum" },
                 ].map((item, index) => (
                   <button
