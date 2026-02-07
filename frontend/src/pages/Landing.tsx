@@ -21,6 +21,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import ScrollVelocity from "@/components/ui/ScrollVelocity";
 import TypingEffect from "@/components/ui/TypingEffect";
+import { Timeline } from "@/components/ui/timeline";
 
 const Landing = () => {
   return (
@@ -55,7 +56,7 @@ const Landing = () => {
                 initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }}
                 className="font-airone text-7xl md:text-9xl font-bold text-black leading-[0.9] mb-8 lowercase tracking-tighter"
               >
-                the decay
+                <span className="font-quote italic">the</span> decay
               </motion.h1>
               <motion.div
                 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
@@ -86,14 +87,14 @@ const Landing = () => {
         <ScrollVelocity
           texts={[
             <span className="inline-flex items-center gap-4 whitespace-nowrap">
-              <span className="bg-waxy-lime px-6 py-2 rounded-full text-black inline-flex items-center justify-center">Fashion & Beauty</span>
-              <span className="bg-waxy-blue px-6 py-2 rounded-full text-black inline-flex items-center justify-center">Tech & Gadgets</span>
-              <span className="bg-waxy-pink px-6 py-2 rounded-full text-black inline-flex items-center justify-center">Food & Cooking</span>
+              <span className="bg-waxy-lime px-6 py-2 rounded-full text-black border border-black inline-flex items-center justify-center">Fashion & Beauty</span>
+              <span className="bg-waxy-blue px-6 py-2 rounded-full text-black border border-black inline-flex items-center justify-center">Tech & Gadgets</span>
+              <span className="bg-waxy-pink px-6 py-2 rounded-full text-black border border-black inline-flex items-center justify-center">Food & Cooking</span>
             </span>,
             <span className="inline-flex items-center gap-4 whitespace-nowrap">
-              <span className="bg-waxy-yellow px-6 py-2 rounded-full text-black inline-flex items-center justify-center">Travel & Lifestyle</span>
-              <span className="bg-waxy-mint px-6 py-2 rounded-full text-black inline-flex items-center justify-center">Gaming & Esports</span>
-              <span className="bg-waxy-terracotta px-6 py-2 rounded-full text-white inline-flex items-center justify-center">Education</span>
+              <span className="bg-waxy-yellow px-6 py-2 rounded-full text-black border border-black inline-flex items-center justify-center">Travel & Lifestyle</span>
+              <span className="bg-waxy-mint px-6 py-2 rounded-full text-black border border-black inline-flex items-center justify-center">Gaming & Esports</span>
+              <span className="bg-waxy-terracotta px-6 py-2 rounded-full text-black border border-black inline-flex items-center justify-center">Education</span>
             </span>
           ]}
           velocity={50}
@@ -119,87 +120,85 @@ const Landing = () => {
 
 
       {/* How It Works Section */}
-      <section className="py-24 px-6 bg-black text-white border-t border-white/10">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="font-airone text-4xl md:text-6xl font-bold text-center mb-16 lowercase">Three steps. Actually simple.</h2>
-          <div className="space-y-8">
-            {[
-              { step: "01", title: "Pick your niche", desc: "Fashion, tech, finance, whatever. We track trends you care about. Not the ones you don't.", color: "bg-waxy-yellow" },
-              { step: "02", title: "We predict the collapse", desc: "Our AI spots engagement drops, influencer exodus, saturation, algorithm shifts. The stuff you miss while sleeping.", color: "bg-waxy-lime" },
-              { step: "03", title: "Post or pivot", desc: "Green? Ship it. Yellow? Reconsider. Red? We'll swap it for something that's actually rising. Your choice.", color: "bg-waxy-pink" },
-            ].map((item, i) => (
-              <div key={i} className={cn("flex gap-6 md:gap-12 items-start p-8 rounded-3xl text-black transition-transform hover:scale-[1.02]", item.color)}>
-                <span className="font-airone font-bold text-5xl md:text-6xl opacity-40">{item.step}</span>
-                <div className="pt-2">
-                  <h3 className="font-airone font-bold text-2xl md:text-3xl mb-3 lowercase">{item.title}</h3>
-                  <p className="text-black/80 text-lg leading-relaxed font-medium">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+      <section className="bg-black text-white border-t border-white/10" id="how-it-works">
+        <div className="w-full">
+          <Timeline
+            data={[
+              {
+                title: "step 01",
+                content: (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1, boxShadow: "0 0 60px -15px rgba(250, 204, 21, 0.6)" }}
+                    viewport={{ margin: "-100px" }}
+                    transition={{ duration: 0.5 }}
+                    className="bg-waxy-yellow p-8 rounded-3xl text-black shadow-lg"
+                  >
+                    <h3 className="font-airone font-bold text-2xl md:text-4xl mb-4 lowercase">Pick your niche</h3>
+                    <p className="text-black/80 text-lg leading-relaxed font-medium">
+                      Fashion, tech, finance, whatever. We track trends you care about. Not the ones you don't.
+                    </p>
+                  </motion.div>
+                ),
+              },
+              {
+                title: "step 02",
+                content: (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1, boxShadow: "0 0 60px -15px rgba(132, 204, 22, 0.6)" }}
+                    viewport={{ margin: "-100px" }}
+                    transition={{ duration: 0.5 }}
+                    className="bg-waxy-lime p-8 rounded-3xl text-black shadow-lg"
+                  >
+                    <h3 className="font-airone font-bold text-2xl md:text-4xl mb-4 lowercase">We predict the collapse</h3>
+                    <p className="text-black/80 text-lg leading-relaxed font-medium">
+                      Our AI spots engagement drops, influencer exodus, saturation, algorithm shifts. The stuff you miss while sleeping.
+                    </p>
+                  </motion.div>
+                ),
+              },
+              {
+                title: "step 03",
+                content: (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1, boxShadow: "0 0 60px -15px rgba(236, 72, 153, 0.6)" }}
+                    viewport={{ margin: "-100px" }}
+                    transition={{ duration: 0.5 }}
+                    className="bg-waxy-pink p-8 rounded-3xl text-black shadow-lg"
+                  >
+                    <h3 className="font-airone font-bold text-2xl md:text-4xl mb-4 lowercase">Post or pivot</h3>
+                    <p className="text-black/80 text-lg leading-relaxed font-medium">
+                      Green? Ship it. Yellow? Reconsider. Red? We'll swap it for something that's actually rising. Your choice.
+                    </p>
+                  </motion.div>
+                ),
+              },
+            ]}
+          />
         </div>
       </section>
 
-      {/* Problem/Solution Section */}
-      <section className="py-24 px-6 bg-black text-white border-t border-white/10">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="font-airone text-4xl md:text-6xl font-bold text-center mb-16 lowercase">You're probably doing this wrong.</h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="p-0">
-              <h3 className="font-airone font-bold text-2xl mb-8 text-red-500 lowercase">The Problem</h3>
-              <ul className="space-y-4">
-                {[
-                  "Posting trends three days too late",
-                  "Missing obvious decline signals",
-                  "Wasting good content on dead hashtags",
-                  "No idea when to stop",
-                  "Calendar full of yesterday's viral moments"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-gray-400">
-                    <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-1" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="p-0">
-              <h3 className="font-airone font-bold text-2xl mb-8 text-green-500 lowercase">The Solution</h3>
-              <ul className="space-y-4">
-                {[
-                  "Know the exact posting window",
-                  "Catch decline before engagement tanks",
-                  "Auto-remove dying content",
-                  "One-click regeneration",
-                  "Always riding what's actually trending"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-gray-400">
-                    <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-1" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Explainability Section */}
-      <section className="py-24 px-6 bg-black text-white border-t border-white/10">
+      <section className="py-24 px-6 bg-white text-black border-t border-gray-100">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-16">
             <h2 className="font-airone text-4xl md:text-6xl font-bold mb-4 lowercase">We show our work.</h2>
-            <p className="text-xl text-gray-400">Because 'trust the algorithm' is a terrible answer.</p>
+            <p className="text-xl text-gray-600">Because 'trust the algorithm' is a terrible answer.</p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { title: "Engagement dropping", desc: "Likes and shares down 30% week-over-week? We flag it yellow. Down 50%? Red. Math, not magic." },
-              { title: "Influencer exodus", desc: "When top creators stop using a trend, everyone else follows. We track who's bailing. You get the heads up." },
-              { title: "Content saturation", desc: "Ten thousand videos using the same audio this week versus two thousand last week? Oversaturated. We'll tell you to skip it." },
-              { title: "Algorithm penalties", desc: "Platform changed what it promotes? We detect it, explain it, and suggest alternatives. No guessing required." },
+              { title: "Engagement dropping", desc: "Likes and shares down 30% week-over-week? We flag it yellow. Down 50%? Red. Math, not magic.", color: "bg-waxy-blue" },
+              { title: "Influencer exodus", desc: "When top creators stop using a trend, everyone else follows. We track who's bailing. You get the heads up.", color: "bg-waxy-mint" },
+              { title: "Content saturation", desc: "Ten thousand videos using the same audio this week versus two thousand last week? Oversaturated. We'll tell you to skip it.", color: "bg-waxy-yellow" },
+              { title: "Algorithm penalties", desc: "Platform changed what it promotes? We detect it, explain it, and suggest alternatives. No guessing required.", color: "bg-waxy-pink" },
             ].map((item, i) => (
-              <div key={i} className="py-6 border-b border-white/10 last:border-0 hover:opacity-80 transition-opacity">
+              <div key={i} className={cn("p-8 rounded-3xl transition-transform hover:scale-[1.02] text-black", item.color)}>
                 <h3 className="font-airone font-bold text-xl mb-3 lowercase">{item.title}</h3>
-                <p className="text-gray-400 leading-relaxed">{item.desc}</p>
+                <p className="text-black/80 leading-relaxed font-medium">{item.desc}</p>
               </div>
             ))}
           </div>

@@ -46,21 +46,21 @@
 
         --radius: 1rem;
 
-        /* Specific WaxyWeb Colors */
-        --color-lime: 150 70% 51%;
-        /* #2DD881 converted to HSL approx */
-        --color-yellow: 53 100% 60%;
-        /* #FFE733 */
-        --color-terracotta: 11 50% 56%;
-        /* #C66B56 */
-        --color-peach: 21 100% 77%;
-        /* #FFB38A */
-        --color-pink: 332 100% 65%;
-        /* #FF4D9F */
-        --color-blue: 197 88% 73%;
-        /* #7DD3F5 */
-        --color-mint: 158 55% 78%;
-        /* #A8E6CF */
+        /* Specific WaxyWeb Colors - Pastel Refined */
+        --color-lime: 84 85% 80%;
+        /* #D9F99D */
+        --color-yellow: 53 98% 77%;
+        /* #FEF08A */
+        --color-terracotta: 32 98% 72%;
+        /* #FDBA74 */
+        --color-peach: 32 98% 83%;
+        /* #FED7AA */
+        --color-pink: 325 78% 91%;
+        /* #FBCFE8 */
+        --color-blue: 203 95% 86%;
+        /* #BAE6FD */
+        --color-mint: 168 88% 78%;
+        /* #99F6E4 */
 
         /* Sidebar specific */
         --sidebar-background: 0 0% 100%;
@@ -168,57 +168,57 @@
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     }
 
-    /* WaxyWeb Color Utilities */
+    /* WaxyWeb Color Utilities - PASTEL */
     .bg-waxy-lime {
-        background-color: #2DD881;
+        background-color: #D9F99D;
     }
 
     .bg-waxy-yellow {
-        background-color: #FFE733;
+        background-color: #FEF08A;
     }
 
     .bg-waxy-terracotta {
-        background-color: #C66B56;
+        background-color: #FDBA74;
     }
 
     .bg-waxy-peach {
-        background-color: #FFB38A;
+        background-color: #FED7AA;
     }
 
     .bg-waxy-pink {
-        background-color: #FF4D9F;
+        background-color: #FBCFE8;
     }
 
     .bg-waxy-blue {
-        background-color: #7DD3F5;
+        background-color: #BAE6FD;
     }
 
     .bg-waxy-mint {
-        background-color: #A8E6CF;
+        background-color: #99F6E4;
     }
 
     .text-waxy-lime {
-        color: #2DD881;
+        color: #D9F99D;
     }
 
     .text-waxy-yellow {
-        color: #FFE733;
+        color: #FEF08A;
     }
 
     .text-waxy-terracotta {
-        color: #C66B56;
+        color: #FDBA74;
     }
 
     .text-waxy-peach {
-        color: #FFB38A;
+        color: #FED7AA;
     }
 
     .text-waxy-pink {
-        color: #FF4D9F;
+        color: #FBCFE8;
     }
 
     .text-waxy-blue {
-        color: #7DD3F5;
+        color: #BAE6FD;
     }
 
     * {
