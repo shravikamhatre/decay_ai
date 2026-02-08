@@ -9,10 +9,8 @@ interface AppLayoutProps {
 }
 
 const menuItems = [
-  { label: 'Dashboard', ariaLabel: 'Go to dashboard', link: '/dashboard' },
-  { label: 'Your Platforms', ariaLabel: 'View platform analytics', link: '/your-platforms' },
-  { label: 'Trend Insights', ariaLabel: 'View trend insights', link: '/insights' },
   { label: 'Calendar', ariaLabel: 'View content calendar', link: '/calendar' },
+  { label: 'Trending Insights', ariaLabel: 'View trend insights', link: '/trend-analysis' },
   { label: 'Settings', ariaLabel: 'Go to settings', link: '/settings' }
 ];
 
@@ -24,15 +22,15 @@ const socialItems = [
 
 const AppLayout = ({ title }: AppLayoutProps) => {
   return (
-    <div className="min-h-screen bg-background relative">
+    <div className="min-h-screen bg-black text-white relative">
       <StaggeredMenu
         position="right"
         items={menuItems}
         socialItems={socialItems}
         displaySocials
         displayItemNumbering={true}
-        menuButtonColor="#000000"
-        openMenuButtonColor="#000000"
+        menuButtonColor="#ffffff"
+        openMenuButtonColor="#ffffff"
         changeMenuColorOnOpen={true}
         colors={['#f4f4f5', '#e4e4e7']} // Zinc-100, Zinc-200 for light mode layers
         logoUrl="" // Removing default logo to fit theme

@@ -33,11 +33,11 @@ const Settings = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-black text-white">
       {/* Header */}
-      <div className="px-6 md:px-12 pt-8 pb-6 border-b border-gray-100">
+      <div className="px-6 md:px-12 pt-8 pb-6 border-b border-zinc-800">
         <h1 className="font-airone text-4xl md:text-5xl font-bold lowercase tracking-tight">settings</h1>
-        <p className="text-gray-500 mt-2">manage your account preferences</p>
+        <p className="text-zinc-400 mt-2">manage your account preferences</p>
       </div>
 
       <div className="px-6 md:px-12 py-8">
@@ -47,7 +47,7 @@ const Settings = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4 }}
-            className="bg-gray-50 border border-gray-100 rounded-2xl p-4 h-fit"
+            className="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 h-fit"
           >
             <nav className="space-y-1">
               {settingsSections.map((section) => (
@@ -57,8 +57,8 @@ const Settings = () => {
                   className={cn(
                     "w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all",
                     activeSection === section.id
-                      ? "bg-black text-white"
-                      : "text-gray-500 hover:bg-gray-100 hover:text-black"
+                      ? "bg-white text-black"
+                      : "text-zinc-500 hover:bg-zinc-800 hover:text-white"
                   )}
                 >
                   <section.icon className="h-5 w-5" />
@@ -82,7 +82,7 @@ const Settings = () => {
             {/* Account Settings */}
             {activeSection === "account" && (
               <>
-                <div className="bg-gray-50 border border-gray-100 rounded-2xl p-6">
+                <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
                   <h3 className="font-airone text-lg font-bold lowercase mb-6">profile information</h3>
 
                   <div className="flex items-center gap-6 mb-6">
@@ -92,42 +92,42 @@ const Settings = () => {
                         alt="Profile"
                         className="h-20 w-20 rounded-2xl object-cover"
                       />
-                      <button className="absolute -bottom-2 -right-2 flex h-8 w-8 items-center justify-center rounded-lg bg-black text-white">
+                      <button className="absolute -bottom-2 -right-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white text-black">
                         <User className="h-4 w-4" />
                       </button>
                     </div>
                     <div>
-                      <p className="font-bold text-black">John Doe</p>
-                      <p className="text-sm text-gray-500">Premium Member</p>
+                      <p className="font-bold text-white">John Doe</p>
+                      <p className="text-sm text-zinc-500">Premium Member</p>
                     </div>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label className="text-black font-bold">First Name</Label>
+                      <Label className="text-white font-bold">First Name</Label>
                       <Input
                         defaultValue="John"
-                        className="rounded-xl border-gray-200 focus:border-black focus:ring-black"
+                        className="rounded-xl bg-black border-zinc-800 text-white focus:border-white focus:ring-white"
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label className="text-black font-bold">Last Name</Label>
+                      <Label className="text-white font-bold">Last Name</Label>
                       <Input
                         defaultValue="Doe"
-                        className="rounded-xl border-gray-200 focus:border-black focus:ring-black"
+                        className="rounded-xl bg-black border-zinc-800 text-white focus:border-white focus:ring-white"
                       />
                     </div>
                     <div className="space-y-2 md:col-span-2">
-                      <Label className="text-black font-bold">Email</Label>
+                      <Label className="text-white font-bold">Email</Label>
                       <Input
                         type="email"
                         defaultValue="john.doe@example.com"
-                        className="rounded-xl border-gray-200 focus:border-black focus:ring-black"
+                        className="rounded-xl bg-black border-zinc-800 text-white focus:border-white focus:ring-white"
                       />
                     </div>
                   </div>
 
-                  <Button className="mt-6 bg-black text-white hover:bg-gray-800 rounded-full font-bold">
+                  <Button className="mt-6 bg-white text-black hover:bg-zinc-200 rounded-full font-bold">
                     Save Changes
                   </Button>
                 </div>
@@ -147,55 +147,55 @@ const Settings = () => {
             {/* Security Settings */}
             {activeSection === "security" && (
               <>
-                <div className="bg-gray-50 border border-gray-100 rounded-2xl p-6">
+                <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
                   <h3 className="font-airone text-lg font-bold lowercase mb-6">change password</h3>
 
                   <div className="space-y-4 max-w-md">
                     <div className="space-y-2">
-                      <Label className="text-black font-bold">Current Password</Label>
+                      <Label className="text-white font-bold">Current Password</Label>
                       <div className="relative">
                         <Input
                           type={showPassword ? "text" : "password"}
                           placeholder="••••••••"
-                          className="pr-10 rounded-xl border-gray-200 focus:border-black focus:ring-black"
+                          className="pr-10 rounded-xl bg-black border-zinc-800 text-white focus:border-white focus:ring-white"
                         />
                         <button
                           type="button"
                           onClick={() => setShowPassword(!showPassword)}
-                          className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-black"
+                          className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-white"
                         >
                           {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                         </button>
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <Label className="text-black font-bold">New Password</Label>
+                      <Label className="text-white font-bold">New Password</Label>
                       <Input
                         type="password"
                         placeholder="••••••••"
-                        className="rounded-xl border-gray-200 focus:border-black focus:ring-black"
+                        className="rounded-xl bg-black border-zinc-800 text-white focus:border-white focus:ring-white"
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label className="text-black font-bold">Confirm New Password</Label>
+                      <Label className="text-white font-bold">Confirm New Password</Label>
                       <Input
                         type="password"
                         placeholder="••••••••"
-                        className="rounded-xl border-gray-200 focus:border-black focus:ring-black"
+                        className="rounded-xl bg-black border-zinc-800 text-white focus:border-white focus:ring-white"
                       />
                     </div>
                   </div>
 
-                  <Button className="mt-6 bg-black text-white hover:bg-gray-800 rounded-full font-bold">
+                  <Button className="mt-6 bg-white text-black hover:bg-zinc-200 rounded-full font-bold">
                     Update Password
                   </Button>
                 </div>
 
-                <div className="bg-gray-50 border border-gray-100 rounded-2xl p-6">
+                <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
                   <h3 className="font-airone text-lg font-bold lowercase mb-4">two-factor authentication</h3>
 
                   <div className="space-y-4">
-                    <div className="flex items-center justify-between p-4 rounded-xl bg-waxy-lime">
+                    <div className="flex items-center justify-between p-4 rounded-xl bg-waxy-lime text-black">
                       <div className="flex items-center gap-3">
                         <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-black/10">
                           <Smartphone className="h-5 w-5" />
@@ -211,27 +211,27 @@ const Settings = () => {
                       </div>
                     </div>
 
-                    <div className="flex items-center justify-between p-4 rounded-xl bg-white border border-gray-100">
+                    <div className="flex items-center justify-between p-4 rounded-xl bg-black border border-zinc-800">
                       <div className="flex items-center gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gray-100">
-                          <Mail className="h-5 w-5 text-gray-500" />
+                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-800">
+                          <Mail className="h-5 w-5 text-zinc-500" />
                         </div>
                         <div>
-                          <p className="font-bold">Email Verification</p>
-                          <p className="text-sm text-gray-500">Receive codes via email</p>
+                          <p className="font-bold text-white">Email Verification</p>
+                          <p className="text-sm text-zinc-500">Receive codes via email</p>
                         </div>
                       </div>
                       <Switch />
                     </div>
 
-                    <div className="flex items-center justify-between p-4 rounded-xl bg-white border border-gray-100">
+                    <div className="flex items-center justify-between p-4 rounded-xl bg-black border border-zinc-800">
                       <div className="flex items-center gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gray-100">
-                          <Lock className="h-5 w-5 text-gray-500" />
+                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-800">
+                          <Lock className="h-5 w-5 text-zinc-500" />
                         </div>
                         <div>
-                          <p className="font-bold">Security Keys</p>
-                          <p className="text-sm text-gray-500">Use hardware security keys</p>
+                          <p className="font-bold text-white">Security Keys</p>
+                          <p className="text-sm text-zinc-500">Use hardware security keys</p>
                         </div>
                       </div>
                       <Switch />
@@ -243,7 +243,7 @@ const Settings = () => {
 
             {/* Notifications Settings */}
             {activeSection === "notifications" && (
-              <div className="bg-gray-50 border border-gray-100 rounded-2xl p-6">
+              <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
                 <h3 className="font-airone text-lg font-bold lowercase mb-6">notification preferences</h3>
 
                 <div className="space-y-4">
@@ -256,18 +256,18 @@ const Settings = () => {
                   ].map((item, index) => (
                     <div
                       key={index}
-                      className="flex items-center justify-between p-4 rounded-xl bg-white border border-gray-100"
+                      className="flex items-center justify-between p-4 rounded-xl bg-black border border-zinc-800"
                     >
                       <div>
-                        <p className="font-bold">{item.title}</p>
-                        <p className="text-sm text-gray-500">{item.description}</p>
+                        <p className="font-bold text-white">{item.title}</p>
+                        <p className="text-sm text-zinc-500">{item.description}</p>
                       </div>
                       <Switch defaultChecked={item.enabled} />
                     </div>
                   ))}
                 </div>
 
-                <Button className="mt-6 bg-black text-white hover:bg-gray-800 rounded-full font-bold">
+                <Button className="mt-6 bg-white text-black hover:bg-zinc-200 rounded-full font-bold">
                   Save Preferences
                 </Button>
               </div>
@@ -292,23 +292,23 @@ const Settings = () => {
                   </Button>
                 </div>
 
-                <div className="bg-gray-50 border border-gray-100 rounded-2xl p-6">
+                <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
                   <h3 className="font-airone text-lg font-bold lowercase mb-4">payment method</h3>
 
-                  <div className="flex items-center justify-between p-4 rounded-xl bg-white border border-gray-100 mb-4">
+                  <div className="flex items-center justify-between p-4 rounded-xl bg-black border border-zinc-800 mb-4">
                     <div className="flex items-center gap-3">
                       <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 text-white text-xs font-bold">
                         VISA
                       </div>
                       <div>
-                        <p className="font-bold">•••• •••• •••• 4242</p>
-                        <p className="text-sm text-gray-500">Expires 12/26</p>
+                        <p className="font-bold text-white">•••• •••• •••• 4242</p>
+                        <p className="text-sm text-zinc-500">Expires 12/26</p>
                       </div>
                     </div>
-                    <Button variant="ghost" size="sm" className="font-bold">Edit</Button>
+                    <Button variant="ghost" size="sm" className="font-bold text-white hover:text-white/80">Edit</Button>
                   </div>
 
-                  <Button variant="outline" className="border-gray-200 text-black hover:bg-gray-100 rounded-full font-bold">
+                  <Button variant="outline" className="border-zinc-800 text-white hover:bg-zinc-800 rounded-full font-bold bg-transparent">
                     Add Payment Method
                   </Button>
                 </div>
@@ -317,7 +317,7 @@ const Settings = () => {
 
             {/* Help & Support */}
             {activeSection === "help" && (
-              <div className="bg-gray-50 border border-gray-100 rounded-2xl p-6">
+              <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
                 <h3 className="font-airone text-lg font-bold lowercase mb-6">help & support</h3>
 
                 <div className="space-y-3">
@@ -329,13 +329,13 @@ const Settings = () => {
                   ].map((item, index) => (
                     <button
                       key={index}
-                      className="w-full flex items-center justify-between p-4 rounded-xl bg-white border border-gray-100 hover:bg-gray-100 transition-colors"
+                      className="w-full flex items-center justify-between p-4 rounded-xl bg-black border border-zinc-800 hover:bg-zinc-800 transition-colors"
                     >
                       <div className="text-left">
-                        <p className="font-bold">{item.title}</p>
-                        <p className="text-sm text-gray-500">{item.description}</p>
+                        <p className="font-bold text-white">{item.title}</p>
+                        <p className="text-sm text-zinc-500">{item.description}</p>
                       </div>
-                      <ChevronRight className="h-5 w-5 text-gray-400" />
+                      <ChevronRight className="h-5 w-5 text-zinc-600" />
                     </button>
                   ))}
                 </div>
