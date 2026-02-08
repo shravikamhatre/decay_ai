@@ -158,6 +158,52 @@ app.post("/preferences/content", authMiddleware, async (req, res) => {
   res.json({ success: true });
 });
 
+// Trend explanation endpoint - integrates with genai/llm
+app.post("/explain-trend", async (req, res) => {
+  try {
+    const { trend_name, base, platform, status, signals } = req.body;
+
+    if (!trend_name || !status || !signals) {
+      return res.status(400).json({ error: "Missing required fields: trend_name, status, signals" });
+    }
+
+    // Map frontend status to calendar_color for LLM
+    const calendar_color = status === "rising" ? "green" : "red";
+
+    // Build trend data structure expected by LLM
+    const trendData = {
+      trend_name,
+      base: base || trend_name,
+      platform: platform || "Social Media",
+      calendar_color,
+      current_trend: {
+        score: signals.score || 0,
+        velocity_change: signals.velocity_pct || 0,
+        engagement: signals.engagement_pct || 0,
+        saturation: signals.saturation_pct || 0,
+        decay: signals.decay_score || 0,
+        appearance: signals.appearance_pct || 0,
+        novelty: signals.novelty || 0,
+      },
+      recommended_trends: [], // Can be populated from frontend if needed
+    };
+
+    // Dynamic import for ES module
+    const { explainTrend } = await import("../genai/llm/explainTrend.js");
+    const result = await explainTrend(trendData);
+
+    res.json({
+      success: true,
+      trend_name: result.trend_name,
+      explanation: result.explanation,
+      calendar_color: result.calendar_color,
+    });
+  } catch (err) {
+    console.error("Explain trend error:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
 app.listen(3000, () => {
   console.log("Server running on http://localhost:3000");
 });

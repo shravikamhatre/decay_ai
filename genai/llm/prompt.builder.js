@@ -33,8 +33,8 @@ Decay level: ${decay}
     recommended_trends.length === 0
       ? "None"
       : recommended_trends
-          .map((t, i) =>
-            `
+        .map((t, i) =>
+          `
 ${i + 1}. ${t.name}
 Score: ${t.score}
 Velocity change: ${t.velocity_change}
@@ -43,8 +43,8 @@ Saturation: ${t.saturation}
 Decay: ${t.decay}
 Novelty: ${t.novelty}
 `.trim(),
-          )
-          .join("\n\n");
+        )
+        .join("\n\n");
 
   const systemPrompt = `
 You are an explainable AI assistant for social media trend analysis.
@@ -53,7 +53,11 @@ Do not use markdown, bullet symbols, or emojis.
 Do not mention machine learning, models, or probabilities.
 Explain decisions using plain language and observable signals only.
 Keep the tone calm, confident, and actionable.
+
+Hard constraint:
+The entire response must be under 75 words.
 `.trim();
+
 
   const userPrompt =
     trend_state === "GOOD"
@@ -115,4 +119,5 @@ If signals conflict, prioritize velocity change and decay over all other signals
   };
 }
 
-module.exports = { buildExplainPrompt };
+
+export { buildExplainPrompt };
