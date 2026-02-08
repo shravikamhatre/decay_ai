@@ -1,21 +1,65 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Eye, EyeOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useAuth, API_URL } from "@/contexts/AuthContext";
 
 const Login = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const { login } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Get the intended destination or default to /calendar
+  const from = location.state?.from?.pathname || "/calendar";
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Login:", { email, password });
-    navigate("/calendar");
+    setError("");
+    setIsLoading(true);
+
+    try {
+      const response = await fetch(`${API_URL}/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Login failed");
+      }
+
+      // Fetch user details from /me endpoint
+      const meResponse = await fetch(`${API_URL}/me`, {
+        headers: { Authorization: `Bearer ${data.session.access_token}` },
+      });
+      const meData = await meResponse.json();
+
+      // Login with user data
+      login(
+        {
+          id: data.user.id,
+          email: data.user.email,
+          name: meData.user?.name || data.user.email.split("@")[0],
+        },
+        data.session.access_token
+      );
+
+      navigate(from, { replace: true });
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "An error occurred");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -41,6 +85,12 @@ const Login = () => {
         {/* Login Card */}
         <div className="bg-zinc-900 rounded-3xl p-8 border border-zinc-800">
           <form onSubmit={handleSubmit} className="space-y-5">
+            {error && (
+              <div className="p-3 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-sm">
+                {error}
+              </div>
+            )}
+
             <div className="space-y-2">
               <Label htmlFor="email" className="text-white font-bold">Email</Label>
               <Input
@@ -49,6 +99,7 @@ const Login = () => {
                 placeholder="john@example.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                disabled={isLoading}
                 className="rounded-xl border-zinc-700 bg-black text-white placeholder:text-zinc-600 focus:border-white focus:ring-white"
               />
             </div>
@@ -65,6 +116,7 @@ const Login = () => {
                   placeholder="••••••••"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
+                  disabled={isLoading}
                   className="pr-10 rounded-xl border-zinc-700 bg-black text-white placeholder:text-zinc-600 focus:border-white focus:ring-white"
                 />
                 <button
@@ -77,8 +129,12 @@ const Login = () => {
               </div>
             </div>
 
-            <Button type="submit" className="w-full bg-white text-black hover:bg-zinc-200 rounded-full font-bold h-12">
-              Sign In
+            <Button
+              type="submit"
+              disabled={isLoading}
+              className="w-full bg-white text-black hover:bg-zinc-200 rounded-full font-bold h-12 disabled:opacity-50"
+            >
+              {isLoading ? "Signing in..." : "Sign In"}
             </Button>
           </form>
 
@@ -122,3 +178,4 @@ const Login = () => {
 };
 
 export default Login;
+

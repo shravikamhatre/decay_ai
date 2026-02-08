@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
+import { useAuth, API_URL } from "@/contexts/AuthContext";
 
 const steps = [
   { id: 1, title: "Account" },
@@ -15,8 +16,11 @@ const steps = [
 
 const Signup = () => {
   const navigate = useNavigate();
+  const { login } = useAuth();
   const [currentStep, setCurrentStep] = useState(1);
   const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -35,6 +39,71 @@ const Signup = () => {
 
   const prevStep = () => {
     if (currentStep > 1) setCurrentStep(currentStep - 1);
+  };
+
+  const handleSubmit = async () => {
+    setError("");
+    setIsLoading(true);
+
+    try {
+      const response = await fetch(`${API_URL}/signup`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: formData.email,
+          password: formData.password,
+          name: `${formData.firstName} ${formData.lastName}`.trim(),
+          accountType: "creator",
+          categories: [formData.investmentGoal || "Brand Awareness"],
+          formats: ["video", "image"],
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Signup failed");
+      }
+
+      // Login after signup
+      const loginResponse = await fetch(`${API_URL}/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: formData.email,
+          password: formData.password,
+        }),
+      });
+
+      const loginData = await loginResponse.json();
+
+      if (loginResponse.ok && loginData.session) {
+        login(
+          {
+            id: loginData.user.id,
+            email: loginData.user.email,
+            name: `${formData.firstName} ${formData.lastName}`.trim(),
+          },
+          loginData.session.access_token
+        );
+      } else {
+        // Still store user data locally even if auto-login fails
+        login(
+          {
+            id: data.userId,
+            email: formData.email,
+            name: `${formData.firstName} ${formData.lastName}`.trim(),
+          },
+          "" // Empty token, user will need to login again
+        );
+      }
+
+      navigate("/onboarding");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "An error occurred");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -87,6 +156,12 @@ const Signup = () => {
 
         {/* Signup Card */}
         <div className="bg-zinc-900 rounded-3xl p-8 border border-zinc-800">
+          {error && (
+            <div className="p-3 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-sm mb-5">
+              {error}
+            </div>
+          )}
+
           <motion.div
             key={currentStep}
             initial={{ opacity: 0, x: 20 }}
@@ -105,6 +180,7 @@ const Signup = () => {
                     placeholder="john@example.com"
                     value={formData.email}
                     onChange={(e) => updateFormData("email", e.target.value)}
+                    disabled={isLoading}
                     className="rounded-xl border-zinc-700 bg-black text-white placeholder:text-zinc-600 focus:border-white focus:ring-white"
                   />
                 </div>
@@ -118,6 +194,7 @@ const Signup = () => {
                       placeholder="••••••••"
                       value={formData.password}
                       onChange={(e) => updateFormData("password", e.target.value)}
+                      disabled={isLoading}
                       className="pr-10 rounded-xl border-zinc-700 bg-black text-white placeholder:text-zinc-600 focus:border-white focus:ring-white"
                     />
                     <button
@@ -146,6 +223,7 @@ const Signup = () => {
                     placeholder="John"
                     value={formData.firstName}
                     onChange={(e) => updateFormData("firstName", e.target.value)}
+                    disabled={isLoading}
                     className="rounded-xl border-zinc-700 bg-black text-white placeholder:text-zinc-600 focus:border-white focus:ring-white"
                   />
                 </div>
@@ -158,6 +236,7 @@ const Signup = () => {
                     placeholder="Doe"
                     value={formData.lastName}
                     onChange={(e) => updateFormData("lastName", e.target.value)}
+                    disabled={isLoading}
                     className="rounded-xl border-zinc-700 bg-black text-white placeholder:text-zinc-600 focus:border-white focus:ring-white"
                   />
                 </div>
@@ -175,6 +254,7 @@ const Signup = () => {
                         key={goal}
                         type="button"
                         onClick={() => updateFormData("investmentGoal", goal)}
+                        disabled={isLoading}
                         className={cn(
                           "p-4 rounded-2xl border-2 text-sm font-bold transition-all duration-300",
                           formData.investmentGoal === goal
@@ -205,6 +285,7 @@ const Signup = () => {
                 type="button"
                 variant="outline"
                 onClick={prevStep}
+                disabled={isLoading}
                 className="flex-1 rounded-full border-zinc-700 bg-transparent text-white hover:bg-zinc-800 hover:text-white h-12"
               >
                 <ArrowLeft className="h-4 w-4 mr-2" />
@@ -213,14 +294,12 @@ const Signup = () => {
             )}
             <Button
               type="button"
-              onClick={currentStep === 3 ? () => {
-                console.log("Submit:", formData);
-                navigate("/onboarding");
-              } : nextStep}
-              className="flex-1 bg-white text-black hover:bg-zinc-200 rounded-full font-bold h-12"
+              onClick={currentStep === 3 ? handleSubmit : nextStep}
+              disabled={isLoading}
+              className="flex-1 bg-white text-black hover:bg-zinc-200 rounded-full font-bold h-12 disabled:opacity-50"
             >
-              {currentStep === 3 ? "Finish" : "Continue"}
-              {currentStep < 3 && <ArrowRight className="h-4 w-4 ml-2" />}
+              {isLoading ? "Creating account..." : currentStep === 3 ? "Finish" : "Continue"}
+              {currentStep < 3 && !isLoading && <ArrowRight className="h-4 w-4 ml-2" />}
             </Button>
           </div>
         </div>
@@ -237,3 +316,4 @@ const Signup = () => {
 };
 
 export default Signup;
+

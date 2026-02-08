@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import { useAuth } from "@/contexts/AuthContext";
 import { motion } from "framer-motion";
 import {
   User,
@@ -27,8 +28,21 @@ const settingsSections = [
 ];
 
 const Settings = () => {
+  const { user } = useAuth();
   const [activeSection, setActiveSection] = useState("account");
   const [showPassword, setShowPassword] = useState(false);
+
+  // Parse user name into first and last
+  const { firstName, lastName } = useMemo(() => {
+    if (!user?.name) return { firstName: "", lastName: "" };
+    const parts = user.name.split(" ");
+    return {
+      firstName: parts[0] || "",
+      lastName: parts.slice(1).join(" ") || "",
+    };
+  }, [user?.name]);
+
+  const userEmail = user?.email || "";
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -95,7 +109,7 @@ const Settings = () => {
                       </button>
                     </div>
                     <div>
-                      <p className="font-bold text-white">John Doe</p>
+                      <p className="font-bold text-white">{user?.name || "User"}</p>
                       <p className="text-sm text-zinc-500">Premium Member</p>
                     </div>
                   </div>
@@ -104,14 +118,14 @@ const Settings = () => {
                     <div className="space-y-2">
                       <Label className="text-white font-bold">First Name</Label>
                       <Input
-                        defaultValue="John"
+                        defaultValue={firstName}
                         className="rounded-xl bg-black border-zinc-800 text-white focus:border-white focus:ring-white"
                       />
                     </div>
                     <div className="space-y-2">
                       <Label className="text-white font-bold">Last Name</Label>
                       <Input
-                        defaultValue="Doe"
+                        defaultValue={lastName}
                         className="rounded-xl bg-black border-zinc-800 text-white focus:border-white focus:ring-white"
                       />
                     </div>
@@ -119,7 +133,7 @@ const Settings = () => {
                       <Label className="text-white font-bold">Email</Label>
                       <Input
                         type="email"
-                        defaultValue="john.doe@example.com"
+                        defaultValue={userEmail}
                         className="rounded-xl bg-black border-zinc-800 text-white focus:border-white focus:ring-white"
                       />
                     </div>
