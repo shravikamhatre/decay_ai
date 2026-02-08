@@ -112,10 +112,9 @@ app.post("/logout", async (req, res) => {
   }
 });
 
-app.get("/me", async (req, res) => {
+app.get("/me", authMiddleware, async (req, res) => {
   try {
-    // TEMPORARY: Using query param instead of auth header for testing
-    const userId = req.query.userId || req.user?.id;
+    const userId = req.user.id;
 
     const { data: user, error: userError } = await supabase
       .from("users")
@@ -131,9 +130,10 @@ app.get("/me", async (req, res) => {
       .eq("user_id", userId)
       .single();
 
-    if (profileError) throw profileError;
+    // Profile may not exist for all users, so don't fail if missing
+    if (profileError && profileError.code !== 'PGRST116') throw profileError;
 
-    res.json({ user, profile });
+    res.json({ user, profile: profile || null });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
