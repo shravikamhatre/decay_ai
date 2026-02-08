@@ -33,10 +33,7 @@ const App = () => (
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
 
-              {/* TEMPORARY: Calendar without auth for testing */}
-              <Route path="/calendar" element={<CalendarPage />} />
-
-              {/* Protected routes */}
+              {/* Onboarding route */}
               <Route
                 path="/onboarding"
                 element={
@@ -46,6 +43,7 @@ const App = () => (
                 }
               />
 
+              {/* Protected app routes with layout */}
               <Route
                 element={
                   <ProtectedRoute>
@@ -53,6 +51,7 @@ const App = () => (
                   </ProtectedRoute>
                 }
               >
+                <Route path="/calendar" element={<CalendarPage />} />
                 <Route path="/feedback" element={<Feedback />} />
                 <Route path="/settings" element={<Settings />} />
                 <Route path="/trend-analysis" element={<TrendAnalysis />} />

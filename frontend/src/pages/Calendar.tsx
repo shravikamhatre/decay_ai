@@ -420,21 +420,21 @@ const CalendarPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white overflow-x-hidden">
       {/* Header */}
-      <div className="px-6 md:px-12 pt-8 pb-6 border-b border-zinc-800">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="px-4 sm:px-6 md:px-8 lg:px-12 pt-6 sm:pt-8 pb-4 sm:pb-6 border-b border-zinc-800">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
           <div>
-            <h1 className="font-airone text-4xl md:text-5xl font-bold lowercase tracking-tight">
+            <h1 className="font-airone text-3xl sm:text-4xl md:text-5xl font-bold lowercase tracking-tight">
               calendar
             </h1>
-            <p className="text-zinc-400 mt-2">
+            <p className="text-zinc-400 mt-2 text-sm sm:text-base">
               track content performance over time
             </p>
           </div>
 
           {/* Legend */}
-          <div className="flex items-center gap-6 text-sm">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-6 text-xs sm:text-sm">
             <div className="flex items-center gap-2">
               <span className="w-3 h-3 rounded-full bg-waxy-lime" />
               <span className="text-gray-500">trending</span>
@@ -451,10 +451,10 @@ const CalendarPage = () => {
         </div>
       </div>
 
-      <div className="px-6 md:px-12 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="px-4 sm:px-6 md:px-8 lg:px-12 py-4 sm:py-8 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 w-full">
           {/* Calendar */}
-          <div className="lg:col-span-2 bg-zinc-900/50 rounded-3xl p-6 border border-zinc-800/50 backdrop-blur-sm relative overflow-hidden">
+          <div className="md:col-span-2 bg-zinc-900/50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 border border-zinc-800/50 backdrop-blur-sm relative overflow-hidden w-full">
             <div className="absolute top-0 right-0 p-4 opacity-20 pointer-events-none">
               <div className="w-32 h-32 bg-waxy-lime rounded-full blur-[80px]" />
             </div>
@@ -471,27 +471,27 @@ const CalendarPage = () => {
           </div>
 
           {/* Side Panel (Dynamic Content) */}
-          <div className="bg-waxy-yellow/10 border border-waxy-yellow/20 rounded-3xl p-6 relative overflow-hidden flex flex-col h-full">
+          <div className="bg-waxy-yellow/10 border border-waxy-yellow/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 relative overflow-hidden flex flex-col w-full md:min-h-full">
             <div className="absolute bottom-0 left-0 p-4 opacity-10 pointer-events-none">
               <div className="w-24 h-24 bg-waxy-yellow rounded-full blur-[60px]" />
             </div>
 
             {selectedTask ? (
               // Task Details View
-              <div className="space-y-6 relative z-10 animate-in fade-in slide-in-from-right-4 duration-300">
+              <div className="space-y-4 sm:space-y-6 relative z-10 animate-in fade-in slide-in-from-right-4 duration-300">
                 <Button
                   variant="ghost"
                   onClick={() => setSelectedTask(null)}
-                  className="p-0 h-auto text-zinc-500 hover:text-white hover:bg-transparent -ml-2 mb-2"
+                  className="p-0 h-auto text-zinc-500 hover:text-white hover:bg-transparent -ml-2 mb-2 text-sm sm:text-base"
                 >
                   ← Back to {format(selectedDate, "MMM d")}
                 </Button>
 
                 <div className="space-y-2">
-                  <h3 className="font-airone text-2xl font-bold lowercase text-waxy-yellow leading-tight">
+                  <h3 className="font-airone text-lg sm:text-2xl font-bold lowercase text-waxy-yellow leading-tight">
                     {selectedTask.title}
                   </h3>
-                  <div className="flex items-center gap-2 text-sm text-zinc-400">
+                  <div className="flex items-center gap-2 text-xs sm:text-sm text-zinc-400">
                     <CalendarIcon className="w-4 h-4" />
                     <span>
                       {format(new Date(selectedTask.date), "MMMM d, yyyy")}
@@ -516,19 +516,19 @@ const CalendarPage = () => {
                 </div>
 
                 {/* Trend Metrics */}
-                <div className="space-y-3 bg-zinc-800/50 rounded-xl p-4">
+                <div className="space-y-3 bg-zinc-800/50 rounded-xl p-3 sm:p-4">
                   <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest">
                     Trend Analysis
                   </p>
                   <div className="grid grid-cols-2 gap-3">
                     <div>
-                      <p className="text-2xl font-bold text-waxy-lime">
+                      <p className="text-xl sm:text-2xl font-bold text-waxy-lime">
                         {selectedTask.daysUntilDecay || "?"}
                       </p>
                       <p className="text-xs text-zinc-400">days until decay</p>
                     </div>
                     <div>
-                      <p className="text-2xl font-bold text-white">
+                      <p className="text-xl sm:text-2xl font-bold text-white">
                         {selectedTask.trendScore?.toFixed(1) || "?"}
                       </p>
                       <p className="text-xs text-zinc-400">trend score</p>
@@ -557,16 +557,18 @@ const CalendarPage = () => {
                       <Button
                         variant="outline"
                         className={cn(
-                          "w-full justify-start text-left font-normal border-zinc-700 hover:bg-zinc-800 bg-transparent text-zinc-300",
+                          "w-full justify-start text-left font-normal border-zinc-700 hover:bg-zinc-800 bg-transparent text-zinc-300 text-sm sm:text-base",
                           !rescheduleDate && "text-muted-foreground",
                         )}
                       >
-                        <CalendarIcon className="mr-3 h-4 w-4" />
-                        {rescheduleDate ? (
-                          format(rescheduleDate, "PPP")
-                        ) : (
-                          <span>Reschedule to...</span>
-                        )}
+                        <CalendarIcon className="mr-3 h-4 w-4 shrink-0" />
+                        <span className="truncate">
+                          {rescheduleDate ? (
+                            format(rescheduleDate, "PPP")
+                          ) : (
+                            <span>Reschedule to...</span>
+                          )}
+                        </span>
                       </Button>
                     </PopoverTrigger>
                     <PopoverContent
@@ -623,25 +625,25 @@ const CalendarPage = () => {
                   <Button
                     onClick={handleRefreshTrend}
                     variant="outline"
-                    className="w-full justify-start border-zinc-700 hover:bg-zinc-800 hover:text-white bg-transparent text-zinc-300"
+                    className="w-full justify-start border-zinc-700 hover:bg-zinc-800 hover:text-white bg-transparent text-zinc-300 text-sm sm:text-base"
                   >
-                    <RefreshCw className="w-4 h-4 mr-3" />
-                    Find Alternative Trend
+                    <RefreshCw className="w-4 h-4 mr-3 shrink-0" />
+                    <span className="truncate">Find Alternative Trend</span>
                   </Button>
 
                   <Button
-                    onClick={() => setShowFeedbackDialog(true)}
-                    className="w-full justify-start bg-waxy-yellow hover:bg-waxy-yellow/90 text-black font-medium"
+                    onClick={() => navigate("/feedback")}
+                    className="w-full justify-start bg-waxy-yellow hover:bg-waxy-yellow/90 text-black font-medium text-sm sm:text-base"
                   >
-                    <MessageSquare className="w-4 h-4 mr-3" />
-                    Share Feedback
+                    <MessageSquare className="w-4 h-4 mr-3 shrink-0" />
+                    <span className="truncate">Share Feedback</span>
                   </Button>
                 </div>
               </div>
             ) : (
               // Day Task List View
               <div className="relative z-10 animate-in fade-in slide-in-from-left-4 duration-300">
-                <h3 className="font-airone text-xl font-bold lowercase mb-4 text-waxy-yellow">
+                <h3 className="font-airone text-lg sm:text-xl font-bold lowercase mb-4 text-waxy-yellow">
                   {format(selectedDate, "MMMM d, yyyy")}
                 </h3>
 
@@ -651,7 +653,7 @@ const CalendarPage = () => {
                       <div
                         key={task.id}
                         onClick={() => handleTaskClick(task)}
-                        className={`px-4 py-3 rounded-2xl font-medium flex items-start gap-3 cursor-pointer hover:opacity-90 transition-opacity ${
+                        className={`px-3 sm:px-4 py-2 sm:py-3 rounded-2xl font-medium flex items-start gap-2 sm:gap-3 cursor-pointer hover:opacity-90 transition-opacity text-sm sm:text-base ${
                           task.category === "good"
                             ? "bg-waxy-lime text-black"
                             : task.category === "okay"
@@ -660,21 +662,21 @@ const CalendarPage = () => {
                         }`}
                       >
                         {task.category === "good" && (
-                          <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-4 sm:w-5 h-4 sm:h-5 shrink-0 mt-0.5" />
                         )}
                         {task.category === "okay" && (
-                          <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5" />
+                          <AlertTriangle className="w-4 sm:w-5 h-4 sm:h-5 shrink-0 mt-0.5" />
                         )}
                         {task.category === "bad" && (
-                          <XCircle className="w-5 h-5 shrink-0 mt-0.5" />
+                          <XCircle className="w-4 sm:w-5 h-4 sm:h-5 shrink-0 mt-0.5" />
                         )}
-                        <span>{task.title}</span>
+                        <span className="truncate">{task.title}</span>
                       </div>
                     ))}
                   </div>
                 ) : (
-                  <div className="flex items-center justify-center h-48 border-2 border-dashed border-zinc-700/50 rounded-2xl">
-                    <p className="text-zinc-500 text-center px-4">
+                  <div className="flex items-center justify-center h-32 sm:h-48 border-2 border-dashed border-zinc-700/50 rounded-2xl">
+                    <p className="text-zinc-500 text-center px-4 text-xs sm:text-sm">
                       No content scheduled for this day
                     </p>
                   </div>
