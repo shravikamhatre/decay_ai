@@ -16,6 +16,7 @@ import Settings from "@/pages/Settings";
 import Signup from "@/pages/Signup";
 import NotFound from "@/pages/NotFound";
 import TrendAnalysis from "@/pages/TrendAnalysis";
+import HypeMeter from "@/pages/HypeMeter";
 
 const queryClient = new QueryClient();
 
@@ -55,6 +56,7 @@ const App = () => (
                 <Route path="/feedback" element={<Feedback />} />
                 <Route path="/settings" element={<Settings />} />
                 <Route path="/trend-analysis" element={<TrendAnalysis />} />
+                <Route path="/hypemeter" element={<HypeMeter />} />
               </Route>
 
               <Route path="*" element={<NotFound />} />

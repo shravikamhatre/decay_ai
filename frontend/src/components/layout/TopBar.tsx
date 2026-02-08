@@ -56,12 +56,6 @@ const TopBar = () => {
           </div>
           <ChevronDown className="h-4 w-4 text-zinc-400" />
         </button>
-
-        {/* Balance indicator */}
-        <div className="hidden lg:flex items-center gap-2 rounded-xl bg-zinc-900/50 border border-white/5 px-4 py-2 hover:bg-zinc-800 transition-colors">
-          <span className="text-sm text-zinc-400">Engagement:</span>
-          <span className="text-sm font-bold text-waxy-lime">98.5%</span>
-        </div>
       </div>
 
       {/* Right section - spacer to balance layout if needed */}

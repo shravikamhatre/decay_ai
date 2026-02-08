@@ -9,7 +9,8 @@ interface AppLayoutProps {
 
 const menuItems = [
   { label: 'Calendar', ariaLabel: 'View content calendar', link: '/calendar' },
-  { label: 'Trending Insights', ariaLabel: 'View trend insights', link: '/trend-analysis' },
+  { label: 'Trend Analysis', ariaLabel: 'View trend insights', link: '/trend-analysis' },
+  { label: 'HypeMeter', ariaLabel: 'Explore content trends', link: '/hypemeter' },
   { label: 'Settings', ariaLabel: 'Go to settings', link: '/settings' }
 ];
 

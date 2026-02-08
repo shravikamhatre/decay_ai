@@ -244,8 +244,8 @@ const today = startOfDay(new Date());
 const generateInitialTasks = (): Task[] => {
   return top10Trends.map((trend, index) => {
     const daysUntilDecay = predictDaysUntilDecay(trend.signals.decay_score);
-    // Spread trends across the next 7 days initially
-    const assignedDay = index % 7;
+    // Spread trends across the next 14 days initially
+    const assignedDay = index % 14;
     const taskDate = addDays(today, assignedDay);
     const category = getCategoryForDay(assignedDay, daysUntilDecay);
 
@@ -590,20 +590,20 @@ const CalendarPage = () => {
                               prev.map((t) =>
                                 t.id === selectedTask.id
                                   ? {
-                                      ...t,
-                                      date: newDateStr,
-                                      category: newCategory,
-                                    }
+                                    ...t,
+                                    date: newDateStr,
+                                    category: newCategory,
+                                  }
                                   : t,
                               ),
                             );
                             setSelectedTask((prev) =>
                               prev
                                 ? {
-                                    ...prev,
-                                    date: newDateStr,
-                                    category: newCategory,
-                                  }
+                                  ...prev,
+                                  date: newDateStr,
+                                  category: newCategory,
+                                }
                                 : null,
                             );
                             toast.success(
@@ -653,13 +653,12 @@ const CalendarPage = () => {
                       <div
                         key={task.id}
                         onClick={() => handleTaskClick(task)}
-                        className={`px-3 sm:px-4 py-2 sm:py-3 rounded-2xl font-medium flex items-start gap-2 sm:gap-3 cursor-pointer hover:opacity-90 transition-opacity text-sm sm:text-base ${
-                          task.category === "good"
+                        className={`px-3 sm:px-4 py-2 sm:py-3 rounded-2xl font-medium flex items-start gap-2 sm:gap-3 cursor-pointer hover:opacity-90 transition-opacity text-sm sm:text-base ${task.category === "good"
                             ? "bg-waxy-lime text-black"
                             : task.category === "okay"
                               ? "bg-waxy-yellow text-black"
                               : "bg-red-500 text-white"
-                        }`}
+                          }`}
                       >
                         {task.category === "good" && (
                           <CheckCircle2 className="w-4 sm:w-5 h-4 sm:h-5 shrink-0 mt-0.5" />

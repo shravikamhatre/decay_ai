@@ -139,7 +139,7 @@ app.get("/me", async (req, res) => {
   }
 });
 
-app.post("/preferences/content", requireAuth, async (req, res) => {
+app.post("/preferences/content", authMiddleware, async (req, res) => {
   const { wantMore, wantLess } = req.body;
 
   if (!Array.isArray(wantMore) || !Array.isArray(wantLess)) {
