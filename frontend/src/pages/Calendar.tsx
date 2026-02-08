@@ -1,8 +1,7 @@
-import CustomCalendar, { Task, DayCategories } from "@/components/CustomCalendar";
+import CustomCalendar, { Task, DayCategories, DayCategory } from "@/components/CustomCalendar";
 import { useState } from "react";
-import { format } from "date-fns";
-import { CheckCircle2, AlertTriangle, XCircle, Calendar as CalendarIcon, RefreshCw, ThumbsUp, ThumbsDown, X } from "lucide-react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogClose } from "@/components/ui/dialog";
+import { format, startOfDay, addDays, differenceInDays } from "date-fns";
+import { Calendar as CalendarIcon, XCircle, CheckCircle2, AlertTriangle, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
@@ -10,39 +9,115 @@ import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { useNavigate } from "react-router-dom";
 
-// Mock task data
-const initialTasks: Task[] = [
-    { id: "1", title: "Instagram post viral 🎉", category: "good", date: "2026-02-07" },
-    { id: "2", title: "10k new followers", category: "good", date: "2026-02-07" },
-    { id: "3", title: "Moderate engagement", category: "okay", date: "2026-02-10" },
-    { id: "4", title: "Post underperformed", category: "bad", date: "2026-02-05" },
-    { id: "5", title: "Lost followers", category: "bad", date: "2026-02-05" },
-    { id: "6", title: "Great reel views", category: "good", date: "2026-02-12" },
-    { id: "7", title: "Average comments", category: "okay", date: "2026-02-12" },
-    { id: "8", title: "Brand collab landed", category: "good", date: "2026-02-12" },
-    { id: "9", title: "Some saves", category: "okay", date: "2026-02-15" },
-    { id: "10", title: "Low reach", category: "bad", date: "2026-02-15" },
-    { id: "11", title: "Story went viral", category: "good", date: "2026-02-18" },
-    { id: "12", title: "Main post flopped", category: "bad", date: "2026-02-18" },
-    { id: "13", title: "TikTok hit 1M", category: "good", date: "2026-02-20" },
-    { id: "14", title: "YouTube steady", category: "okay", date: "2026-02-20" },
-    { id: "15", title: "Twitter drama", category: "bad", date: "2026-02-20" },
-    { id: "16", title: "Newsletter opened", category: "good", date: "2026-02-20" },
-    { id: "17", title: "Collab post success", category: "good", date: "2026-02-22" },
-    { id: "18", title: "Scheduled content", category: "okay", date: "2026-02-25" },
-    { id: "19", title: "Algorithm change", category: "bad", date: "2026-02-28" },
-    { id: "20", title: "Trending hashtag", category: "good", date: "2026-02-28" },
-    { id: "21", title: "Engagement drop", category: "bad", date: "2026-02-28" },
-];
+// Trend data embedded from genai/daily_Food.json (top 10 good trends)
+const foodTrendsData = {
+    niche: "Food",
+    top_trends_good: [
+        { name: "old money edit - street food hunt", base: "old money edit", score: 29.536, signals: { velocity_pct: 246.443, engagement_pct: 0.83, appearance_pct: 0.333, saturation_pct: 4.857, novelty: 0.565, decay_score: 0.68 } },
+        { name: "soft life edit - cooking", base: "soft life edit", score: 18.422, signals: { velocity_pct: 152.822, engagement_pct: 4.284, appearance_pct: 0.111, saturation_pct: 8.519, novelty: 0.146, decay_score: 0.912 } },
+        { name: "things nobody tells you about as a creator - street food hunt", base: "things nobody tells you about as a creator", score: 5.155, signals: { velocity_pct: 23.851, engagement_pct: -0.771, appearance_pct: 0.0, saturation_pct: 6.364, novelty: 0.269, decay_score: 0.022 } },
+        { name: "get ready with me vlog - cooking", base: "get ready with me vlog", score: 4.026, signals: { velocity_pct: 8.983, engagement_pct: 2.8, appearance_pct: 14.0, saturation_pct: 4.568, novelty: 0.0, decay_score: 0.285 } },
+        { name: "routine reel vlog - street food hunt", base: "routine reel vlog", score: 3.679, signals: { velocity_pct: 11.214, engagement_pct: -0.132, appearance_pct: 1.8, saturation_pct: 2.162, novelty: 0.124, decay_score: 0.068 } },
+        { name: "#facelesscontent #growth - street food hunt", base: "#facelesscontent #growth", score: 3.495, signals: { velocity_pct: 16.628, engagement_pct: 0.097, appearance_pct: 0.273, saturation_pct: 3.079, novelty: 0.753, decay_score: 0.476 } },
+        { name: "old money aesthetic - cooking", base: "old money aesthetic", score: 3.471, signals: { velocity_pct: 28.877, engagement_pct: 9.958, appearance_pct: 0.0, saturation_pct: 4.007, novelty: 0.466, decay_score: 0.868 } },
+        { name: "this changed everything for me before traveling - street food hunt", base: "this changed everything for me before traveling", score: 2.866, signals: { velocity_pct: 11.076, engagement_pct: 0.031, appearance_pct: 5.0, saturation_pct: 4.308, novelty: 0.352, decay_score: 0.028 } },
+        { name: "old money aesthetic - recipe prep", base: "old money aesthetic", score: 2.807, signals: { velocity_pct: 0.053, engagement_pct: 0.507, appearance_pct: 16.0, saturation_pct: 0.106, novelty: 0.0, decay_score: 0.068 } },
+        { name: "old money edit - recipe prep", base: "old money edit", score: 2.73, signals: { velocity_pct: 8.174, engagement_pct: 1.51, appearance_pct: 2.333, saturation_pct: 5.018, novelty: 0.0, decay_score: 0.067 } }
+    ]
+};
 
-const suggestions = [
-    "Behind the scenes reel",
-    "Industry trend analysis",
-    "User generated content highlight",
-    "Q&A session live",
-    "Product teaser carousel",
-    "Flash sale announcement"
-];
+// Trend interface based on the JSON structure
+interface TrendSignals {
+    velocity_pct: number;
+    engagement_pct: number;
+    appearance_pct: number;
+    saturation_pct: number;
+    novelty: number;
+    decay_score: number;
+}
+
+interface Trend {
+    name: string;
+    base: string;
+    score: number;
+    signals: TrendSignals;
+}
+
+interface FoodTrendsData {
+    niche: string;
+    top_trends_good: Trend[];
+}
+
+/**
+ * Predicts the number of days before a trend falls off based on its decay score.
+ * decay_score ranges from 0 to 1, where:
+ * - 0 = very slow decay (trend lasts longer, ~14+ days)
+ * - 1 = very fast decay (trend dies quickly, ~1-2 days)
+ * 
+ * Formula: daysUntilDecay = MAX_DAYS * (1 - decay_score)
+ * Where MAX_DAYS is the maximum lifespan of any trend (e.g., 14 days)
+ */
+const MAX_TREND_LIFESPAN_DAYS = 14;
+
+const predictDaysUntilDecay = (decayScore: number): number => {
+    // Clamp decay score between 0 and 1
+    const clampedScore = Math.max(0, Math.min(1, decayScore));
+    // Calculate days remaining: lower decay = more days
+    const days = Math.round(MAX_TREND_LIFESPAN_DAYS * (1 - clampedScore));
+    // Minimum 1 day
+    return Math.max(1, days);
+};
+
+/**
+ * Determines the category for a trend on a specific day.
+ * - "good": Posting on this day is optimal (within first 50% of trend's lifespan)
+ * - "okay": Trend is still alive but waning (50-80% of lifespan)
+ * - "bad": Trend will likely be dead by this day (>80% of lifespan or expired)
+ */
+const getCategoryForDay = (daysFromNow: number, daysUntilDecay: number): DayCategory => {
+    if (daysFromNow > daysUntilDecay) {
+        return "bad"; // Trend will be dead by this day
+    }
+    const percentageUsed = daysFromNow / daysUntilDecay;
+    if (percentageUsed <= 0.5) {
+        return "good"; // Within first 50% - optimal time to post
+    } else if (percentageUsed <= 0.8) {
+        return "okay"; // 50-80% - still viable but trending down
+    } else {
+        return "bad"; // 80%+ - risky, trend almost dead
+    }
+};
+
+// Get the top 10 trends from the data
+const trendsData = foodTrendsData as FoodTrendsData;
+const top10Trends = trendsData.top_trends_good.slice(0, 10);
+
+// Generate initial tasks by assigning each trend to today (day 0)
+// User can drag them to different days to see viability
+const today = startOfDay(new Date());
+
+const generateInitialTasks = (): Task[] => {
+    return top10Trends.map((trend, index) => {
+        const daysUntilDecay = predictDaysUntilDecay(trend.signals.decay_score);
+        // Spread trends across the next 7 days initially
+        const assignedDay = index % 7;
+        const taskDate = addDays(today, assignedDay);
+        const category = getCategoryForDay(assignedDay, daysUntilDecay);
+
+        return {
+            id: `trend-${index}`,
+            title: trend.name,
+            category,
+            date: format(taskDate, "yyyy-MM-dd"),
+            // Store extra data for display
+            decayScore: trend.signals.decay_score,
+            daysUntilDecay,
+            trendScore: trend.score,
+        } as Task & { decayScore: number; daysUntilDecay: number; trendScore: number };
+    });
+};
+
+const initialTasks = generateInitialTasks();
 
 const generateDayCategories = (tasks: Task[]): Record<string, DayCategories> => {
     const categories: Record<string, DayCategories> = {};
@@ -55,10 +130,17 @@ const generateDayCategories = (tasks: Task[]): Record<string, DayCategories> => 
     return categories;
 };
 
+// Extended Task type with trend metadata
+interface TrendTask extends Task {
+    decayScore?: number;
+    daysUntilDecay?: number;
+    trendScore?: number;
+}
+
 const CalendarPage = () => {
-    const [tasks, setTasks] = useState<Task[]>(initialTasks);
+    const [tasks, setTasks] = useState<TrendTask[]>(initialTasks);
     const [selectedDate, setSelectedDate] = useState<Date>(new Date());
-    const [selectedTask, setSelectedTask] = useState<Task | null>(null);
+    const [selectedTask, setSelectedTask] = useState<TrendTask | null>(null);
     const [rescheduleDate, setRescheduleDate] = useState<Date | undefined>(undefined);
     const navigate = useNavigate();
 
@@ -66,8 +148,28 @@ const CalendarPage = () => {
     const selectedDateKey = format(selectedDate, "yyyy-MM-dd");
     const selectedDayTasks = tasks.filter(task => task.date === selectedDateKey);
 
+    // Recalculate categories when a task is moved
+    const recalculateTaskCategory = (task: TrendTask, newDate: Date): DayCategory => {
+        const daysFromNow = differenceInDays(newDate, today);
+        const daysUntilDecay = task.daysUntilDecay || predictDaysUntilDecay(task.decayScore || 0.5);
+        return getCategoryForDay(daysFromNow, daysUntilDecay);
+    };
+
+    // Handle drag and drop task reassignment
+    const handleTaskDrop = (taskId: string, newDate: Date) => {
+        const newDateStr = format(newDate, "yyyy-MM-dd");
+        setTasks(prev => prev.map(t => {
+            if (t.id === taskId) {
+                const newCategory = recalculateTaskCategory(t, newDate);
+                return { ...t, date: newDateStr, category: newCategory };
+            }
+            return t;
+        }));
+        toast.success(`Trend moved to ${format(newDate, "MMM d")}`);
+    };
+
     const handleTaskClick = (task: Task) => {
-        setSelectedTask(task);
+        setSelectedTask(task as TrendTask);
         setRescheduleDate(new Date(task.date));
     };
 
@@ -75,15 +177,75 @@ const CalendarPage = () => {
         navigate("/feedback");
     };
 
-
-
-    const handleReplace = () => {
+    // Handle removing a trend from the calendar
+    const handleRemoveTrend = () => {
         if (!selectedTask) return;
-        const randomSuggestion = suggestions[Math.floor(Math.random() * suggestions.length)];
+        setTasks(prev => prev.filter(t => t.id !== selectedTask.id));
+        setSelectedTask(null);
+        toast.success("Trend removed from schedule");
+    };
 
-        setTasks(prev => prev.map(t => t.id === selectedTask.id ? { ...t, title: randomSuggestion } : t));
-        setSelectedTask(prev => prev ? { ...prev, title: randomSuggestion } : null);
-        toast.success("Topic replaced with suggestion!");
+    // Handle finding an alternative trend that won't decay on the scheduled day
+    const handleRefreshTrend = () => {
+        if (!selectedTask) return;
+
+        const scheduledDate = new Date(selectedTask.date);
+        const daysFromNow = differenceInDays(scheduledDate, today);
+
+        // Count how many times each trend appears in the schedule (excluding current task)
+        const trendCounts: Record<string, number> = {};
+        tasks.forEach(t => {
+            if (t.id !== selectedTask.id) {
+                trendCounts[t.title] = (trendCounts[t.title] || 0) + 1;
+            }
+        });
+
+        // Get all trends except:
+        // 1. The currently selected one
+        // 2. Trends that already appear twice (max repeat = 2 total)
+        const availableTrends = trendsData.top_trends_good.filter(
+            trend => trend.name !== selectedTask.title && (trendCounts[trend.name] || 0) < 2
+        );
+
+        // Find trends that won't decay on the scheduled day
+        // Decay is calculated from TODAY, so daysFromNow is how many days until the scheduled post
+        const viableTrends = availableTrends.filter(trend => {
+            const trendDaysUntilDecay = predictDaysUntilDecay(trend.signals.decay_score);
+            // Trend is viable if it will still be alive on the scheduled day
+            return daysFromNow <= trendDaysUntilDecay;
+        });
+
+        // If no viable trends, allow any trend but warn the user
+        const trendsToChooseFrom = viableTrends.length > 0 ? viableTrends : availableTrends;
+
+        if (trendsToChooseFrom.length === 0) {
+            toast.error("No alternative trends available");
+            return;
+        }
+
+        // Pick a random trend from the available ones
+        const randomTrend = trendsToChooseFrom[Math.floor(Math.random() * trendsToChooseFrom.length)];
+        const newDaysUntilDecay = predictDaysUntilDecay(randomTrend.signals.decay_score);
+        const newCategory = getCategoryForDay(daysFromNow, newDaysUntilDecay);
+
+        // Update the task with the new trend
+        const updatedTask: TrendTask = {
+            ...selectedTask,
+            title: randomTrend.name,
+            category: newCategory,
+            decayScore: randomTrend.signals.decay_score,
+            daysUntilDecay: newDaysUntilDecay,
+            trendScore: randomTrend.score,
+        };
+
+        setTasks(prev => prev.map(t => t.id === selectedTask.id ? updatedTask : t));
+        setSelectedTask(updatedTask);
+
+        if (viableTrends.length === 0) {
+            toast.warning(`Switched to: ${randomTrend.name} (may decay by then)`);
+        } else {
+            toast.success(`Switched to: ${randomTrend.name}`);
+        }
     };
 
     return (
@@ -128,6 +290,7 @@ const CalendarPage = () => {
                                 setSelectedTask(null); // Reset task view on date change
                             }}
                             onTaskClick={handleTaskClick}
+                            onTaskDrop={handleTaskDrop}
                             dayCategories={dayCategories}
                             tasks={tasks}
                         />
@@ -164,34 +327,44 @@ const CalendarPage = () => {
                                             selectedTask.category === "okay" ? "bg-waxy-yellow/20 text-waxy-yellow" :
                                                 "bg-red-500/20 text-red-400"
                                     )}>
-                                        {selectedTask.category} Performance
+                                        {selectedTask.category === "good" ? "🔥 Hot - Post Now!" :
+                                            selectedTask.category === "okay" ? "⚡ Still Viable" :
+                                                "💀 Trend Dying"}
                                     </span>
                                 </div>
 
-                                {/* Feedback */}
-                                <div className="space-y-2">
-                                    <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest">Feedback</p>
-                                    <Button
-                                        onClick={handleFeedback}
-                                        className="w-full py-4 bg-white text-black hover:bg-zinc-200 font-bold"
-                                    >
-                                        <ThumbsUp className="w-4 h-4 mr-2" />
-                                        Give Feedback
-                                    </Button>
+                                {/* Trend Metrics */}
+                                <div className="space-y-3 bg-zinc-800/50 rounded-xl p-4">
+                                    <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest">Trend Analysis</p>
+                                    <div className="grid grid-cols-2 gap-3">
+                                        <div>
+                                            <p className="text-2xl font-bold text-waxy-lime">
+                                                {selectedTask.daysUntilDecay || "?"}
+                                            </p>
+                                            <p className="text-xs text-zinc-400">days until decay</p>
+                                        </div>
+                                        <div>
+                                            <p className="text-2xl font-bold text-white">
+                                                {selectedTask.trendScore?.toFixed(1) || "?"}
+                                            </p>
+                                            <p className="text-xs text-zinc-400">trend score</p>
+                                        </div>
+                                    </div>
+                                    <div className="pt-2 border-t border-zinc-700/50">
+                                        <div className="flex justify-between text-xs">
+                                            <span className="text-zinc-400">Decay Rate</span>
+                                            <span className="text-white font-medium">
+                                                {selectedTask.decayScore !== undefined
+                                                    ? `${(selectedTask.decayScore * 100).toFixed(0)}%`
+                                                    : "N/A"}
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 {/* Manage Actions */}
                                 <div className="space-y-3">
                                     <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest">Manage</p>
-
-                                    <Button
-                                        onClick={handleReplace}
-                                        variant="outline"
-                                        className="w-full justify-start border-zinc-700 hover:bg-zinc-800 hover:text-white bg-transparent text-zinc-300"
-                                    >
-                                        <RefreshCw className="w-4 h-4 mr-3" />
-                                        Replace with suggestion
-                                    </Button>
 
                                     <Popover>
                                         <PopoverTrigger asChild>
@@ -214,8 +387,9 @@ const CalendarPage = () => {
                                                     setRescheduleDate(date);
                                                     if (date && selectedTask) {
                                                         const newDateStr = format(date, "yyyy-MM-dd");
-                                                        setTasks(prev => prev.map(t => t.id === selectedTask.id ? { ...t, date: newDateStr } : t));
-                                                        setSelectedTask(prev => prev ? { ...prev, date: newDateStr } : null);
+                                                        const newCategory = recalculateTaskCategory(selectedTask, date);
+                                                        setTasks(prev => prev.map(t => t.id === selectedTask.id ? { ...t, date: newDateStr, category: newCategory } : t));
+                                                        setSelectedTask(prev => prev ? { ...prev, date: newDateStr, category: newCategory } : null);
                                                         toast.success(`Rescheduled to ${format(date, "MMM d")}`);
                                                     }
                                                 }}
@@ -228,6 +402,15 @@ const CalendarPage = () => {
                                             />
                                         </PopoverContent>
                                     </Popover>
+
+                                    <Button
+                                        onClick={handleRefreshTrend}
+                                        variant="outline"
+                                        className="w-full justify-start border-zinc-700 hover:bg-zinc-800 hover:text-white bg-transparent text-zinc-300"
+                                    >
+                                        <RefreshCw className="w-4 h-4 mr-3" />
+                                        Find Alternative Trend
+                                    </Button>
                                 </div>
                             </div>
                         ) : (

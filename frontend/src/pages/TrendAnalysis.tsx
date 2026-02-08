@@ -24,8 +24,8 @@ interface TrendData {
     score: number;
     status: "rising" | "falling" | "stable";
     change: string;
-    popularityData: { name: string; value: number }[];
-    declineData: { name: string; value: number }[];
+    popularityData: { name: string; value: number; week: string }[];
+    declineData: { name: string; value: number; week: string }[];
     reasoning: string;
 }
 
@@ -47,25 +47,60 @@ const generateTrendData = (index: number): TrendData => {
     const categories = ["Lifestyle", "Tech", "Fashion", "Food", "Beauty"];
     const status = index < 15 ? "rising" : index < 35 ? "stable" : "falling";
 
-    // Randomized graph data based on status
+    // Randomized graph data based on status - 4 weeks with 7 daily points each
     const baseValue = 1000 + Math.random() * 2000;
-    const popularityData = Array.from({ length: 7 }, (_, i) => ({
-        name: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"][i],
-        value: status === "rising"
-            ? baseValue + (i * 500) + Math.random() * 200
-            : status === "falling"
-                ? baseValue - (i * 300) + Math.random() * 200
-                : baseValue + Math.random() * 500
-    }));
+    const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+    const popularityData: { name: string; value: number; week: string }[] = [];
 
-    const declineData = Array.from({ length: 6 }, (_, i) => ({
-        name: `Week ${i + 1}`,
-        value: status === "falling"
-            ? 100 - (i * 15)
-            : status === "rising"
-                ? 20 + (i * 10)
-                : 50 + (Math.random() * 10 - 5)
-    }));
+    for (let week = 1; week <= 4; week++) {
+        for (let day = 0; day < 7; day++) {
+            const dayIndex = (week - 1) * 7 + day;
+            let value: number;
+
+            if (status === "rising") {
+                // Steady growth over weeks with daily variation
+                value = baseValue + (dayIndex * 80) + Math.random() * 200;
+            } else if (status === "falling") {
+                // Decline over weeks with daily variation
+                value = baseValue - (dayIndex * 50) + Math.random() * 150;
+            } else {
+                // Stable with minor fluctuations
+                value = baseValue + (Math.sin(dayIndex * 0.5) * 300) + Math.random() * 100;
+            }
+
+            popularityData.push({
+                name: `W${week} ${days[day]}`,
+                value: Math.max(100, value),
+                week: `Week ${week}`
+            });
+        }
+    }
+
+    const declineData: { name: string; value: number; week: string }[] = [];
+
+    for (let week = 1; week <= 4; week++) {
+        for (let day = 0; day < 7; day++) {
+            const dayIndex = (week - 1) * 7 + day;
+            let value: number;
+
+            if (status === "falling") {
+                // Retention drops over time
+                value = 100 - (dayIndex * 3) + Math.random() * 5;
+            } else if (status === "rising") {
+                // Retention grows over time
+                value = 30 + (dayIndex * 2) + Math.random() * 5;
+            } else {
+                // Stable retention with minor fluctuations
+                value = 55 + (Math.sin(dayIndex * 0.3) * 8) + Math.random() * 3;
+            }
+
+            declineData.push({
+                name: `W${week} ${days[day]}`,
+                value: Math.max(5, Math.min(100, value)),
+                week: `Week ${week}`
+            });
+        }
+    }
 
     const reasoning = status === "falling"
         ? "Analysis detects distinct audience fatigue. Engagement metrics have dropped 45% week-over-week as saturation hits peak levels."
@@ -125,7 +160,7 @@ const TrendAnalysis = () => {
                                     <TrendingUp className="w-5 h-5 text-waxy-blue" />
                                     Popularity: {selectedTrend.name}
                                 </h3>
-                                <span className="text-xs text-zinc-400 mt-1">7 Day Engagement Volume</span>
+                                <span className="text-xs text-zinc-400 mt-1">4 Week Daily Engagement</span>
                             </div>
                             <span className={cn(
                                 "px-3 py-1 rounded-full text-xs font-bold border",
@@ -173,7 +208,7 @@ const TrendAnalysis = () => {
                                     <TrendingDown className="w-5 h-5 text-waxy-pink" />
                                     Decline Analysis
                                 </h3>
-                                <span className="text-xs text-zinc-400 mt-1">6 Week Retention Rate</span>
+                                <span className="text-xs text-zinc-400 mt-1">4 Week Daily Retention Rate</span>
                             </div>
                             {selectedTrend.status === "falling" && (
                                 <span className="bg-red-900/30 px-3 py-1 rounded-full text-xs font-bold border border-red-800 text-red-400 animate-pulse">
