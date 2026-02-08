@@ -20,45 +20,51 @@ import TrendAnalysis from "@/pages/TrendAnalysis";
 const queryClient = new QueryClient();
 
 const App = () => (
-    <QueryClientProvider client={queryClient}>
-        <AuthProvider>
-            <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-                <TooltipProvider>
-                    <Toaster />
-                    <Sonner />
-                    <BrowserRouter>
-                        <Routes>
-                            {/* Public routes */}
-                            <Route path="/" element={<Landing />} />
-                            <Route path="/login" element={<Login />} />
-                            <Route path="/signup" element={<Signup />} />
+  <QueryClientProvider client={queryClient}>
+    <AuthProvider>
+      <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Routes>
+              {/* Public routes */}
+              <Route path="/" element={<Landing />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
 
-                            {/* Protected routes */}
-                            <Route path="/onboarding" element={
-                                <ProtectedRoute>
-                                    <Onboarding />
-                                </ProtectedRoute>
-                            } />
+              {/* TEMPORARY: Calendar without auth for testing */}
+              <Route path="/calendar" element={<CalendarPage />} />
 
-                            <Route element={
-                                <ProtectedRoute>
-                                    <AppLayout />
-                                </ProtectedRoute>
-                            }>
-                                <Route path="/calendar" element={<CalendarPage />} />
-                                <Route path="/feedback" element={<Feedback />} />
-                                <Route path="/settings" element={<Settings />} />
-                                <Route path="/trend-analysis" element={<TrendAnalysis />} />
-                            </Route>
+              {/* Protected routes */}
+              <Route
+                path="/onboarding"
+                element={
+                  <ProtectedRoute>
+                    <Onboarding />
+                  </ProtectedRoute>
+                }
+              />
 
-                            <Route path="*" element={<NotFound />} />
-                        </Routes>
-                    </BrowserRouter>
-                </TooltipProvider>
-            </ThemeProvider>
-        </AuthProvider>
-    </QueryClientProvider>
+              <Route
+                element={
+                  <ProtectedRoute>
+                    <AppLayout />
+                  </ProtectedRoute>
+                }
+              >
+                <Route path="/feedback" element={<Feedback />} />
+                <Route path="/settings" element={<Settings />} />
+                <Route path="/trend-analysis" element={<TrendAnalysis />} />
+              </Route>
+
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </ThemeProvider>
+    </AuthProvider>
+  </QueryClientProvider>
 );
 
 export default App;
-
