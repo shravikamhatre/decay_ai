@@ -4,7 +4,6 @@ import {
   User,
   Shield,
   Bell,
-  CreditCard,
   HelpCircle,
   ChevronRight,
   Check,
@@ -24,7 +23,6 @@ const settingsSections = [
   { id: "account", label: "Account", icon: User },
   { id: "security", label: "Security", icon: Shield },
   { id: "notifications", label: "Notifications", icon: Bell },
-  { id: "billing", label: "Billing", icon: CreditCard },
   { id: "help", label: "Help & Support", icon: HelpCircle },
 ];
 
@@ -273,47 +271,6 @@ const Settings = () => {
               </div>
             )}
 
-            {/* Billing Settings */}
-            {activeSection === "billing" && (
-              <>
-                <div className="bg-waxy-lime text-black rounded-2xl p-6">
-                  <h3 className="font-airone text-lg font-bold lowercase mb-4">current plan</h3>
-
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="font-bold text-xl">Premium Plan</p>
-                      <p className="text-sm text-black/70">$29/month • Billed monthly</p>
-                    </div>
-                    <span className="bg-black text-white px-3 py-1 rounded-full text-xs font-bold">Active</span>
-                  </div>
-
-                  <Button variant="outline" className="mt-4 border-black text-black hover:bg-black/10 rounded-full font-bold">
-                    Change Plan
-                  </Button>
-                </div>
-
-                <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
-                  <h3 className="font-airone text-lg font-bold lowercase mb-4">payment method</h3>
-
-                  <div className="flex items-center justify-between p-4 rounded-xl bg-black border border-zinc-800 mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 text-white text-xs font-bold">
-                        VISA
-                      </div>
-                      <div>
-                        <p className="font-bold text-white">•••• •••• •••• 4242</p>
-                        <p className="text-sm text-zinc-500">Expires 12/26</p>
-                      </div>
-                    </div>
-                    <Button variant="ghost" size="sm" className="font-bold text-white hover:text-white/80">Edit</Button>
-                  </div>
-
-                  <Button variant="outline" className="border-zinc-800 text-white hover:bg-zinc-800 rounded-full font-bold bg-transparent">
-                    Add Payment Method
-                  </Button>
-                </div>
-              </>
-            )}
 
             {/* Help & Support */}
             {activeSection === "help" && (

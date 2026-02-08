@@ -327,9 +327,9 @@ const CalendarPage = () => {
                                             selectedTask.category === "okay" ? "bg-waxy-yellow/20 text-waxy-yellow" :
                                                 "bg-red-500/20 text-red-400"
                                     )}>
-                                        {selectedTask.category === "good" ? "🔥 Hot - Post Now!" :
-                                            selectedTask.category === "okay" ? "⚡ Still Viable" :
-                                                "💀 Trend Dying"}
+                                        {selectedTask.category === "good" ? "Hot - Post Now!" :
+                                            selectedTask.category === "okay" ? "Still Viable" :
+                                                "Trend Dying"}
                                     </span>
                                 </div>
 

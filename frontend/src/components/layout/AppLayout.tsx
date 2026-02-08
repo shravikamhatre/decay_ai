@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
 // import Sidebar from "./Sidebar"; // Removed Sidebar
 import TopBar from "./TopBar";
-import FloatingAIAssistant from "@/components/ai/FloatingAIAssistant";
 import StaggeredMenu from "@/components/ui/StaggeredMenu";
 
 interface AppLayoutProps {
@@ -45,9 +44,9 @@ const AppLayout = ({ title }: AppLayoutProps) => {
           <Outlet />
         </main>
       </div>
-      <FloatingAIAssistant />
     </div>
   );
 };
 
 export default AppLayout;
+
