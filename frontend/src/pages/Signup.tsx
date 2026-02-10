@@ -38,7 +38,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center p-6">
+    <div className="min-h-screen bg-black flex items-center justify-center p-6">
       <motion.div
         initial={{ opacity: 0, y: 20, scale: 0.95 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -50,8 +50,8 @@ const Signup = () => {
           <Link to="/" className="inline-flex items-center gap-2 mb-6">
             <span className="text-2xl font-black tracking-tighter text-black">the decay</span>
           </Link>
-          <h1 className="font-airone text-3xl font-bold text-black mb-2 lowercase">join the decay</h1>
-          <p className="text-gray-500">start your creator journey today</p>
+          <h1 className="font-airone text-3xl font-bold text-white mb-2 lowercase">join the decay</h1>
+          <p className="text-zinc-400">start your creator journey today</p>
         </div>
 
         {/* Progress Steps */}
@@ -64,8 +64,8 @@ const Signup = () => {
                   currentStep > step.id
                     ? "bg-waxy-lime text-black"
                     : currentStep === step.id
-                      ? "bg-black text-white"
-                      : "bg-gray-100 text-gray-400"
+                      ? "bg-white text-black"
+                      : "bg-zinc-800 text-zinc-500"
                 )}
               >
                 {currentStep > step.id ? <Check className="h-4 w-4" /> : step.id}
@@ -74,7 +74,7 @@ const Signup = () => {
                 <div
                   className={cn(
                     "h-0.5 w-12 mx-2 transition-all duration-300",
-                    currentStep > step.id ? "bg-waxy-lime" : "bg-gray-100"
+                    currentStep > step.id ? "bg-waxy-lime" : "bg-zinc-800"
                   )}
                 />
               )}
@@ -83,7 +83,7 @@ const Signup = () => {
         </div>
 
         {/* Signup Card */}
-        <div className="bg-gray-50 rounded-3xl p-8 border border-gray-100">
+        <div className="bg-zinc-900 rounded-3xl p-8 border border-zinc-800">
           <motion.div
             key={currentStep}
             initial={{ opacity: 0, x: 20 }}
@@ -95,19 +95,19 @@ const Signup = () => {
             {currentStep === 1 && (
               <div className="space-y-5">
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-black font-bold">Email</Label>
+                  <Label htmlFor="email" className="text-white font-bold">Email</Label>
                   <Input
                     id="email"
                     type="email"
                     placeholder="john@example.com"
                     value={formData.email}
                     onChange={(e) => updateFormData("email", e.target.value)}
-                    className="rounded-xl border-gray-200 focus:border-black focus:ring-black bg-white"
+                    className="rounded-xl border-zinc-700 bg-black text-white placeholder:text-zinc-600 focus:border-white focus:ring-white"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="password" className="text-black font-bold">Password</Label>
+                  <Label htmlFor="password" className="text-white font-bold">Password</Label>
                   <div className="relative">
                     <Input
                       id="password"
@@ -115,17 +115,17 @@ const Signup = () => {
                       placeholder="••••••••"
                       value={formData.password}
                       onChange={(e) => updateFormData("password", e.target.value)}
-                      className="pr-10 rounded-xl border-gray-200 focus:border-black focus:ring-black bg-white"
+                      className="pr-10 rounded-xl border-zinc-700 bg-black text-white placeholder:text-zinc-600 focus:border-white focus:ring-white"
                     />
                     <button
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-black transition-colors"
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-white transition-colors"
                     >
                       {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                     </button>
                   </div>
-                  <p className="text-xs text-gray-400">
+                  <p className="text-xs text-zinc-500">
                     Must be at least 8 characters with one number
                   </p>
                 </div>
@@ -136,26 +136,26 @@ const Signup = () => {
             {currentStep === 2 && (
               <div className="space-y-5">
                 <div className="space-y-2">
-                  <Label htmlFor="firstName" className="text-black font-bold">First Name</Label>
+                  <Label htmlFor="firstName" className="text-white font-bold">First Name</Label>
                   <Input
                     id="firstName"
                     type="text"
                     placeholder="John"
                     value={formData.firstName}
                     onChange={(e) => updateFormData("firstName", e.target.value)}
-                    className="rounded-xl border-gray-200 focus:border-black focus:ring-black bg-white"
+                    className="rounded-xl border-zinc-700 bg-black text-white placeholder:text-zinc-600 focus:border-white focus:ring-white"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="lastName" className="text-black font-bold">Last Name</Label>
+                  <Label htmlFor="lastName" className="text-white font-bold">Last Name</Label>
                   <Input
                     id="lastName"
                     type="text"
                     placeholder="Doe"
                     value={formData.lastName}
                     onChange={(e) => updateFormData("lastName", e.target.value)}
-                    className="rounded-xl border-gray-200 focus:border-black focus:ring-black bg-white"
+                    className="rounded-xl border-zinc-700 bg-black text-white placeholder:text-zinc-600 focus:border-white focus:ring-white"
                   />
                 </div>
               </div>
@@ -165,7 +165,7 @@ const Signup = () => {
             {currentStep === 3 && (
               <div className="space-y-5">
                 <div className="space-y-3">
-                  <Label className="text-black font-bold">Primary Goal</Label>
+                  <Label className="text-white font-bold">Primary Goal</Label>
                   <div className="grid grid-cols-2 gap-3">
                     {["Brand Awareness", "Engagement", "Conversion", "Community"].map((goal) => (
                       <button
@@ -175,8 +175,8 @@ const Signup = () => {
                         className={cn(
                           "p-4 rounded-2xl border-2 text-sm font-bold transition-all duration-300",
                           formData.investmentGoal === goal
-                            ? "border-black bg-black text-white"
-                            : "border-gray-200 bg-white text-black hover:border-gray-300"
+                            ? "border-white bg-white text-black"
+                            : "border-zinc-700 bg-black text-white hover:border-zinc-500"
                         )}
                       >
                         {goal}
@@ -202,7 +202,7 @@ const Signup = () => {
                 type="button"
                 variant="outline"
                 onClick={prevStep}
-                className="flex-1 rounded-full border-gray-200 hover:bg-white h-12"
+                className="flex-1 rounded-full border-zinc-700 bg-transparent text-white hover:bg-zinc-800 hover:text-white h-12"
               >
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 Back
@@ -214,7 +214,7 @@ const Signup = () => {
                 console.log("Submit:", formData);
                 navigate("/onboarding");
               } : nextStep}
-              className="flex-1 bg-black text-white hover:bg-gray-800 rounded-full font-bold h-12"
+              className="flex-1 bg-white text-black hover:bg-zinc-200 rounded-full font-bold h-12"
             >
               {currentStep === 3 ? "Finish" : "Continue"}
               {currentStep < 3 && <ArrowRight className="h-4 w-4 ml-2" />}
@@ -222,9 +222,9 @@ const Signup = () => {
           </div>
         </div>
 
-        <p className="text-center mt-6 text-sm text-gray-500">
+        <p className="text-center mt-6 text-sm text-zinc-500">
           Already have an account?{" "}
-          <Link to="/login" className="text-black hover:underline font-bold">
+          <Link to="/login" className="text-white hover:underline font-bold">
             Sign in
           </Link>
         </p>

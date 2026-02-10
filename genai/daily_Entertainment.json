@@ -1,0 +1,532 @@
+{
+  "niche": "Entertainment",
+  "lookback_days": 7,
+  "top_trends_good": [
+    {
+      "name": "cozy minimal edit - skits",
+      "base": "cozy minimal edit",
+      "score": 12.04,
+      "signals": {
+        "velocity_pct": 120.898,
+        "engagement_pct": -0.764,
+        "appearance_pct": 0.571,
+        "saturation_pct": 6.089,
+        "novelty": 0.507,
+        "decay_score": 0.769
+      }
+    },
+    {
+      "name": "old money aesthetic - brainrot",
+      "base": "old money aesthetic",
+      "score": 7.713,
+      "signals": {
+        "velocity_pct": 27.388,
+        "engagement_pct": 3.719,
+        "appearance_pct": -0.105,
+        "saturation_pct": 3.238,
+        "novelty": 0.066,
+        "decay_score": 0.248
+      }
+    },
+    {
+      "name": "before after shorts - skits",
+      "base": "before after shorts",
+      "score": 5.411,
+      "signals": {
+        "velocity_pct": 53.804,
+        "engagement_pct": -0.345,
+        "appearance_pct": 0.5,
+        "saturation_pct": 13.704,
+        "novelty": 0.392,
+        "decay_score": 0.77
+      }
+    },
+    {
+      "name": "faceless reel voiceover - reaction",
+      "base": "faceless reel voiceover",
+      "score": 4.453,
+      "signals": {
+        "velocity_pct": 19.644,
+        "engagement_pct": -0.83,
+        "appearance_pct": 7.0,
+        "saturation_pct": 8.215,
+        "novelty": 0.02,
+        "decay_score": 0.239
+      }
+    },
+    {
+      "name": "photo dump with captions - brainrot",
+      "base": "photo dump with captions",
+      "score": 4.419,
+      "signals": {
+        "velocity_pct": 25.238,
+        "engagement_pct": 0.626,
+        "appearance_pct": -0.05,
+        "saturation_pct": 2.471,
+        "novelty": 0.24,
+        "decay_score": 0.373
+      }
+    },
+    {
+      "name": "this changed everything for me before traveling - reaction",
+      "base": "this changed everything for me before traveling",
+      "score": 4.03,
+      "signals": {
+        "velocity_pct": 0.106,
+        "engagement_pct": 19.768,
+        "appearance_pct": -0.611,
+        "saturation_pct": 0.033,
+        "novelty": 0.059,
+        "decay_score": 0.404
+      }
+    },
+    {
+      "name": "this changed everything for me as a creator - memes",
+      "base": "this changed everything for me as a creator",
+      "score": 3.267,
+      "signals": {
+        "velocity_pct": 10.038,
+        "engagement_pct": 0.526,
+        "appearance_pct": 3.75,
+        "saturation_pct": 2.315,
+        "novelty": 0.0,
+        "decay_score": 0.191
+      }
+    },
+    {
+      "name": "storytime vlog - brainrot",
+      "base": "storytime vlog",
+      "score": 2.92,
+      "signals": {
+        "velocity_pct": 18.087,
+        "engagement_pct": 0.204,
+        "appearance_pct": 0.222,
+        "saturation_pct": 3.713,
+        "novelty": 0.033,
+        "decay_score": 0.818
+      }
+    },
+    {
+      "name": "photo dump vlog - reaction",
+      "base": "photo dump vlog",
+      "score": 2.795,
+      "signals": {
+        "velocity_pct": 12.404,
+        "engagement_pct": -0.879,
+        "appearance_pct": -0.25,
+        "saturation_pct": 3.092,
+        "novelty": 0.272,
+        "decay_score": 0.153
+      }
+    },
+    {
+      "name": "#contentcreator #creatorlife - reaction",
+      "base": "#contentcreator #creatorlife",
+      "score": 2.702,
+      "signals": {
+        "velocity_pct": 0.151,
+        "engagement_pct": 14.625,
+        "appearance_pct": -0.842,
+        "saturation_pct": 0.262,
+        "novelty": 0.341,
+        "decay_score": 0.098
+      }
+    }
+  ],
+  "top_trends_declining": [
+    {
+      "name": "soft life vibe - brainrot",
+      "base": "soft life vibe",
+      "score": 0.116,
+      "signals": {
+        "velocity_pct": -0.819,
+        "engagement_pct": -0.892,
+        "appearance_pct": -0.667,
+        "saturation_pct": -0.723,
+        "novelty": 0.779,
+        "decay_score": 0.849
+      }
+    },
+    {
+      "name": "old money edit - brainrot",
+      "base": "old money edit",
+      "score": 0.125,
+      "signals": {
+        "velocity_pct": -0.95,
+        "engagement_pct": -0.688,
+        "appearance_pct": -0.857,
+        "saturation_pct": -0.756,
+        "novelty": 0.756,
+        "decay_score": 0.51
+      }
+    },
+    {
+      "name": "get ready with me reel - skits",
+      "base": "get ready with me reel",
+      "score": 0.129,
+      "signals": {
+        "velocity_pct": -0.938,
+        "engagement_pct": -0.731,
+        "appearance_pct": 0.286,
+        "saturation_pct": -0.687,
+        "novelty": 0.754,
+        "decay_score": 0.86
+      }
+    },
+    {
+      "name": "photo dump with captions - memes",
+      "base": "photo dump with captions",
+      "score": 0.137,
+      "signals": {
+        "velocity_pct": -0.51,
+        "engagement_pct": -0.586,
+        "appearance_pct": -0.6,
+        "saturation_pct": -0.356,
+        "novelty": 0.376,
+        "decay_score": 0.951
+      }
+    },
+    {
+      "name": "stop scrolling if you in your 20s - skits",
+      "base": "stop scrolling if you in your 20s",
+      "score": 0.139,
+      "signals": {
+        "velocity_pct": -0.889,
+        "engagement_pct": -0.648,
+        "appearance_pct": 0.143,
+        "saturation_pct": -0.072,
+        "novelty": 0.741,
+        "decay_score": 0.404
+      }
+    },
+    {
+      "name": "things nobody tells you about right now - brainrot",
+      "base": "things nobody tells you about right now",
+      "score": 0.14,
+      "signals": {
+        "velocity_pct": -0.917,
+        "engagement_pct": -0.45,
+        "appearance_pct": -0.833,
+        "saturation_pct": -0.903,
+        "novelty": 0.905,
+        "decay_score": 0.862
+      }
+    },
+    {
+      "name": "stop scrolling if you in your 20s - memes",
+      "base": "stop scrolling if you in your 20s",
+      "score": 0.146,
+      "signals": {
+        "velocity_pct": 0.282,
+        "engagement_pct": -0.826,
+        "appearance_pct": -0.765,
+        "saturation_pct": 0.192,
+        "novelty": 0.335,
+        "decay_score": 0.967
+      }
+    },
+    {
+      "name": "photo dump shorts - reaction",
+      "base": "photo dump shorts",
+      "score": 0.151,
+      "signals": {
+        "velocity_pct": -0.591,
+        "engagement_pct": -0.227,
+        "appearance_pct": -0.857,
+        "saturation_pct": -0.295,
+        "novelty": 0.542,
+        "decay_score": 0.756
+      }
+    },
+    {
+      "name": "soft life aesthetic - reaction",
+      "base": "soft life aesthetic",
+      "score": 0.156,
+      "signals": {
+        "velocity_pct": -0.585,
+        "engagement_pct": -0.892,
+        "appearance_pct": 0.077,
+        "saturation_pct": -0.346,
+        "novelty": 0.346,
+        "decay_score": 0.801
+      }
+    },
+    {
+      "name": "this changed everything for me right now - brainrot",
+      "base": "this changed everything for me right now",
+      "score": 0.157,
+      "signals": {
+        "velocity_pct": 0.751,
+        "engagement_pct": -0.602,
+        "appearance_pct": -0.95,
+        "saturation_pct": 1.093,
+        "novelty": 0.273,
+        "decay_score": 0.903
+      }
+    }
+  ],
+  "top_music_good": [
+    {
+      "name": "lush life sped up - brainrot",
+      "base": "lush life sped up",
+      "score": 12.389,
+      "signals": {
+        "velocity_pct": 70.144,
+        "engagement_pct": -0.935,
+        "appearance_pct": 0.889,
+        "saturation_pct": 4.29,
+        "novelty": 0.598,
+        "decay_score": 0.076
+      }
+    },
+    {
+      "name": "golden hour slowed - reaction",
+      "base": "golden hour slowed",
+      "score": 11.059,
+      "signals": {
+        "velocity_pct": 38.441,
+        "engagement_pct": -0.104,
+        "appearance_pct": 4.0,
+        "saturation_pct": 2.425,
+        "novelty": 0.085,
+        "decay_score": 0.196
+      }
+    },
+    {
+      "name": "as it was instrumental - skits",
+      "base": "as it was instrumental",
+      "score": 7.636,
+      "signals": {
+        "velocity_pct": 54.102,
+        "engagement_pct": -0.458,
+        "appearance_pct": -0.176,
+        "saturation_pct": 7.159,
+        "novelty": 0.0,
+        "decay_score": 0.824
+      }
+    },
+    {
+      "name": "calm down sped up - memes",
+      "base": "calm down sped up",
+      "score": 6.792,
+      "signals": {
+        "velocity_pct": 37.126,
+        "engagement_pct": 0.257,
+        "appearance_pct": 0.125,
+        "saturation_pct": 1.962,
+        "novelty": 0.304,
+        "decay_score": 0.261
+      }
+    },
+    {
+      "name": "until i found you sped up - reaction",
+      "base": "until i found you sped up",
+      "score": 4.78,
+      "signals": {
+        "velocity_pct": 19.294,
+        "engagement_pct": 0.107,
+        "appearance_pct": 1.833,
+        "saturation_pct": 2.451,
+        "novelty": 0.179,
+        "decay_score": 0.033
+      }
+    },
+    {
+      "name": "anti hero instrumental - brainrot",
+      "base": "anti hero instrumental",
+      "score": 4.455,
+      "signals": {
+        "velocity_pct": 20.681,
+        "engagement_pct": -0.323,
+        "appearance_pct": 1.571,
+        "saturation_pct": 11.248,
+        "novelty": 0.0,
+        "decay_score": 0.101
+      }
+    },
+    {
+      "name": "blinding lights instrumental - brainrot",
+      "base": "blinding lights instrumental",
+      "score": 3.447,
+      "signals": {
+        "velocity_pct": 17.699,
+        "engagement_pct": -0.598,
+        "appearance_pct": 0.111,
+        "saturation_pct": 2.353,
+        "novelty": 0.333,
+        "decay_score": 0.294
+      }
+    },
+    {
+      "name": "as it was slowed - brainrot",
+      "base": "as it was slowed",
+      "score": 3.004,
+      "signals": {
+        "velocity_pct": 0.065,
+        "engagement_pct": 18.357,
+        "appearance_pct": 2.25,
+        "saturation_pct": 0.108,
+        "novelty": 0.211,
+        "decay_score": 0.465
+      }
+    },
+    {
+      "name": "until i found you remix - skits",
+      "base": "until i found you remix",
+      "score": 2.741,
+      "signals": {
+        "velocity_pct": 4.693,
+        "engagement_pct": -0.103,
+        "appearance_pct": 16.0,
+        "saturation_pct": 3.333,
+        "novelty": 0.039,
+        "decay_score": 0.285
+      }
+    },
+    {
+      "name": "anti hero remix - brainrot",
+      "base": "anti hero remix",
+      "score": 2.704,
+      "signals": {
+        "velocity_pct": 5.525,
+        "engagement_pct": 10.627,
+        "appearance_pct": -0.5,
+        "saturation_pct": 2.12,
+        "novelty": 0.0,
+        "decay_score": 0.678
+      }
+    }
+  ],
+  "top_music_declining": [
+    {
+      "name": "sunroof nightcore - memes",
+      "base": "sunroof nightcore",
+      "score": 0.034,
+      "signals": {
+        "velocity_pct": -0.434,
+        "engagement_pct": -0.493,
+        "appearance_pct": -0.6,
+        "saturation_pct": 1.231,
+        "novelty": 0.692,
+        "decay_score": 0.916
+      }
+    },
+    {
+      "name": "until i found you slowed - reaction",
+      "base": "until i found you slowed",
+      "score": 0.088,
+      "signals": {
+        "velocity_pct": -0.597,
+        "engagement_pct": -0.854,
+        "appearance_pct": -0.846,
+        "saturation_pct": -0.28,
+        "novelty": 0.77,
+        "decay_score": 0.931
+      }
+    },
+    {
+      "name": "as it was sped up - memes",
+      "base": "as it was sped up",
+      "score": 0.112,
+      "signals": {
+        "velocity_pct": -0.855,
+        "engagement_pct": -0.809,
+        "appearance_pct": -0.25,
+        "saturation_pct": -0.64,
+        "novelty": 0.64,
+        "decay_score": 0.889
+      }
+    },
+    {
+      "name": "until i found you nightcore - memes",
+      "base": "until i found you nightcore",
+      "score": 0.125,
+      "signals": {
+        "velocity_pct": -0.41,
+        "engagement_pct": -0.783,
+        "appearance_pct": 0.8,
+        "saturation_pct": 0.331,
+        "novelty": 0.604,
+        "decay_score": 0.918
+      }
+    },
+    {
+      "name": "golden hour lofi edit - memes",
+      "base": "golden hour lofi edit",
+      "score": 0.127,
+      "signals": {
+        "velocity_pct": -0.741,
+        "engagement_pct": -0.571,
+        "appearance_pct": -0.667,
+        "saturation_pct": -0.583,
+        "novelty": 0.597,
+        "decay_score": 0.873
+      }
+    },
+    {
+      "name": "lush life lofi edit - skits",
+      "base": "lush life lofi edit",
+      "score": 0.142,
+      "signals": {
+        "velocity_pct": -0.863,
+        "engagement_pct": -0.13,
+        "appearance_pct": -0.6,
+        "saturation_pct": -0.608,
+        "novelty": 0.813,
+        "decay_score": 0.868
+      }
+    },
+    {
+      "name": "until i found you nightcore - brainrot",
+      "base": "until i found you nightcore",
+      "score": 0.149,
+      "signals": {
+        "velocity_pct": -0.37,
+        "engagement_pct": -0.151,
+        "appearance_pct": -0.938,
+        "saturation_pct": -0.181,
+        "novelty": 0.432,
+        "decay_score": 0.955
+      }
+    },
+    {
+      "name": "anti hero slowed - brainrot",
+      "base": "anti hero slowed",
+      "score": 0.157,
+      "signals": {
+        "velocity_pct": -0.929,
+        "engagement_pct": -0.529,
+        "appearance_pct": -0.071,
+        "saturation_pct": -0.858,
+        "novelty": 0.858,
+        "decay_score": 0.876
+      }
+    },
+    {
+      "name": "anti hero nightcore - skits",
+      "base": "anti hero nightcore",
+      "score": 0.164,
+      "signals": {
+        "velocity_pct": 0.62,
+        "engagement_pct": -0.768,
+        "appearance_pct": -0.333,
+        "saturation_pct": 0.86,
+        "novelty": 0.454,
+        "decay_score": 0.816
+      }
+    },
+    {
+      "name": "until i found you sped up - memes",
+      "base": "until i found you sped up",
+      "score": 0.177,
+      "signals": {
+        "velocity_pct": -0.996,
+        "engagement_pct": 0.351,
+        "appearance_pct": 0.125,
+        "saturation_pct": -0.801,
+        "novelty": 0.801,
+        "decay_score": 0.897
+      }
+    }
+  ]
+}

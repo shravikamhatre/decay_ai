@@ -1,0 +1,532 @@
+{
+  "niche": "Tech",
+  "lookback_days": 7,
+  "top_trends_good": [
+    {
+      "name": "before after shorts - conference day",
+      "base": "before after shorts",
+      "score": 10.648,
+      "signals": {
+        "velocity_pct": 51.684,
+        "engagement_pct": 0.132,
+        "appearance_pct": -0.917,
+        "saturation_pct": 7.823,
+        "novelty": 0.418,
+        "decay_score": 0.043
+      }
+    },
+    {
+      "name": "routine reel reel - conference day",
+      "base": "routine reel reel",
+      "score": 6.902,
+      "signals": {
+        "velocity_pct": 44.429,
+        "engagement_pct": -0.338,
+        "appearance_pct": 0.636,
+        "saturation_pct": 2.021,
+        "novelty": 0.32,
+        "decay_score": 0.517
+      }
+    },
+    {
+      "name": "clean girl edit - workspace setup",
+      "base": "clean girl edit",
+      "score": 6.31,
+      "signals": {
+        "velocity_pct": 25.454,
+        "engagement_pct": -0.261,
+        "appearance_pct": -0.071,
+        "saturation_pct": 7.17,
+        "novelty": 0.0,
+        "decay_score": 0.156
+      }
+    },
+    {
+      "name": "stop scrolling if you as a creator - workspace setup",
+      "base": "stop scrolling if you as a creator",
+      "score": 6.078,
+      "signals": {
+        "velocity_pct": 29.275,
+        "engagement_pct": 2.254,
+        "appearance_pct": 5.5,
+        "saturation_pct": 2.745,
+        "novelty": 0.0,
+        "decay_score": 0.582
+      }
+    },
+    {
+      "name": "get ready with me reel - workspace setup",
+      "base": "get ready with me reel",
+      "score": 4.668,
+      "signals": {
+        "velocity_pct": 29.344,
+        "engagement_pct": 1.927,
+        "appearance_pct": -0.125,
+        "saturation_pct": 3.426,
+        "novelty": 0.277,
+        "decay_score": 0.648
+      }
+    },
+    {
+      "name": "photo dump reel - coding session",
+      "base": "photo dump reel",
+      "score": 4.559,
+      "signals": {
+        "velocity_pct": 33.373,
+        "engagement_pct": 0.122,
+        "appearance_pct": 0.2,
+        "saturation_pct": 1.637,
+        "novelty": 0.439,
+        "decay_score": 0.656
+      }
+    },
+    {
+      "name": "dark academia edit - conference day",
+      "base": "dark academia edit",
+      "score": 4.552,
+      "signals": {
+        "velocity_pct": 35.062,
+        "engagement_pct": 0.023,
+        "appearance_pct": -0.556,
+        "saturation_pct": 10.108,
+        "novelty": 0.036,
+        "decay_score": 0.69
+      }
+    },
+    {
+      "name": "things nobody tells you about right now - workspace setup",
+      "base": "things nobody tells you about right now",
+      "score": 3.525,
+      "signals": {
+        "velocity_pct": 1.769,
+        "engagement_pct": 18.6,
+        "appearance_pct": -0.389,
+        "saturation_pct": 1.159,
+        "novelty": 0.211,
+        "decay_score": 0.388
+      }
+    },
+    {
+      "name": "this changed everything for me right now - workspace setup",
+      "base": "this changed everything for me right now",
+      "score": 2.956,
+      "signals": {
+        "velocity_pct": 23.97,
+        "engagement_pct": -0.085,
+        "appearance_pct": -0.55,
+        "saturation_pct": 3.521,
+        "novelty": 0.049,
+        "decay_score": 0.76
+      }
+    },
+    {
+      "name": "#contentcreator #creatorlife - conference day",
+      "base": "#contentcreator #creatorlife",
+      "score": 2.41,
+      "signals": {
+        "velocity_pct": 9.455,
+        "engagement_pct": 0.017,
+        "appearance_pct": 1.6,
+        "saturation_pct": 3.345,
+        "novelty": 0.206,
+        "decay_score": 0.053
+      }
+    }
+  ],
+  "top_trends_declining": [
+    {
+      "name": "cozy minimal aesthetic - conference day",
+      "base": "cozy minimal aesthetic",
+      "score": 0.093,
+      "signals": {
+        "velocity_pct": -0.822,
+        "engagement_pct": -0.736,
+        "appearance_pct": -0.812,
+        "saturation_pct": -0.363,
+        "novelty": 0.758,
+        "decay_score": 0.682
+      }
+    },
+    {
+      "name": "clean girl aesthetic - coding session",
+      "base": "clean girl aesthetic",
+      "score": 0.101,
+      "signals": {
+        "velocity_pct": 4.254,
+        "engagement_pct": -0.351,
+        "appearance_pct": -0.1,
+        "saturation_pct": 7.217,
+        "novelty": 0.414,
+        "decay_score": 0.828
+      }
+    },
+    {
+      "name": "before after with captions - coding session",
+      "base": "before after with captions",
+      "score": 0.161,
+      "signals": {
+        "velocity_pct": -0.94,
+        "engagement_pct": -0.617,
+        "appearance_pct": -0.583,
+        "saturation_pct": -0.894,
+        "novelty": 0.973,
+        "decay_score": 0.62
+      }
+    },
+    {
+      "name": "before after vlog - coding session",
+      "base": "before after vlog",
+      "score": 0.165,
+      "signals": {
+        "velocity_pct": -0.918,
+        "engagement_pct": -0.815,
+        "appearance_pct": 0.0,
+        "saturation_pct": -0.653,
+        "novelty": 0.696,
+        "decay_score": 0.401
+      }
+    },
+    {
+      "name": "day in my life with captions - workspace setup",
+      "base": "day in my life with captions",
+      "score": 0.166,
+      "signals": {
+        "velocity_pct": -0.911,
+        "engagement_pct": -0.13,
+        "appearance_pct": 0.556,
+        "saturation_pct": -0.694,
+        "novelty": 0.747,
+        "decay_score": 0.947
+      }
+    },
+    {
+      "name": "photo dump shorts - workspace setup",
+      "base": "photo dump shorts",
+      "score": 0.173,
+      "signals": {
+        "velocity_pct": -0.901,
+        "engagement_pct": 0.065,
+        "appearance_pct": -0.545,
+        "saturation_pct": -0.696,
+        "novelty": 0.696,
+        "decay_score": 0.71
+      }
+    },
+    {
+      "name": "routine reel shorts - coding session",
+      "base": "routine reel shorts",
+      "score": 0.177,
+      "signals": {
+        "velocity_pct": -0.633,
+        "engagement_pct": -0.589,
+        "appearance_pct": -0.167,
+        "saturation_pct": -0.447,
+        "novelty": 0.447,
+        "decay_score": 0.719
+      }
+    },
+    {
+      "name": "faceless reel reel - conference day",
+      "base": "faceless reel reel",
+      "score": 0.177,
+      "signals": {
+        "velocity_pct": -0.781,
+        "engagement_pct": -0.101,
+        "appearance_pct": -0.667,
+        "saturation_pct": -0.773,
+        "novelty": 0.773,
+        "decay_score": 0.927
+      }
+    },
+    {
+      "name": "routine reel vlog - coding session",
+      "base": "routine reel vlog",
+      "score": 0.18,
+      "signals": {
+        "velocity_pct": -0.331,
+        "engagement_pct": 0.653,
+        "appearance_pct": -0.2,
+        "saturation_pct": 0.277,
+        "novelty": 0.524,
+        "decay_score": 0.998
+      }
+    },
+    {
+      "name": "things nobody tells you about before traveling - conference day",
+      "base": "things nobody tells you about before traveling",
+      "score": 0.181,
+      "signals": {
+        "velocity_pct": -0.829,
+        "engagement_pct": -0.772,
+        "appearance_pct": -0.188,
+        "saturation_pct": -0.607,
+        "novelty": 0.607,
+        "decay_score": 0.348
+      }
+    }
+  ],
+  "top_music_good": [
+    {
+      "name": "as it was remix - coding session",
+      "base": "as it was remix",
+      "score": 16.206,
+      "signals": {
+        "velocity_pct": 85.928,
+        "engagement_pct": 0.045,
+        "appearance_pct": 0.25,
+        "saturation_pct": 4.076,
+        "novelty": 0.621,
+        "decay_score": 0.06
+      }
+    },
+    {
+      "name": "until i found you instrumental - coding session",
+      "base": "until i found you instrumental",
+      "score": 6.74,
+      "signals": {
+        "velocity_pct": 44.956,
+        "engagement_pct": 1.995,
+        "appearance_pct": 0.286,
+        "saturation_pct": 11.609,
+        "novelty": 0.422,
+        "decay_score": 0.182
+      }
+    },
+    {
+      "name": "golden hour lofi edit - conference day",
+      "base": "golden hour lofi edit",
+      "score": 4.087,
+      "signals": {
+        "velocity_pct": 0.327,
+        "engagement_pct": 10.667,
+        "appearance_pct": 14.0,
+        "saturation_pct": 0.212,
+        "novelty": 0.217,
+        "decay_score": 0.194
+      }
+    },
+    {
+      "name": "anti hero slowed - coding session",
+      "base": "anti hero slowed",
+      "score": 3.783,
+      "signals": {
+        "velocity_pct": 14.527,
+        "engagement_pct": 0.331,
+        "appearance_pct": -0.357,
+        "saturation_pct": 4.171,
+        "novelty": 0.195,
+        "decay_score": 0.058
+      }
+    },
+    {
+      "name": "anti hero remix - conference day",
+      "base": "anti hero remix",
+      "score": 3.106,
+      "signals": {
+        "velocity_pct": 24.538,
+        "engagement_pct": -0.606,
+        "appearance_pct": 0.8,
+        "saturation_pct": 3.718,
+        "novelty": 0.238,
+        "decay_score": 0.692
+      }
+    },
+    {
+      "name": "as it was sped up - workspace setup",
+      "base": "as it was sped up",
+      "score": 2.541,
+      "signals": {
+        "velocity_pct": 1.646,
+        "engagement_pct": 12.169,
+        "appearance_pct": 1.0,
+        "saturation_pct": 1.285,
+        "novelty": 0.0,
+        "decay_score": 0.651
+      }
+    },
+    {
+      "name": "greedy sped up - coding session",
+      "base": "greedy sped up",
+      "score": 2.247,
+      "signals": {
+        "velocity_pct": -0.03,
+        "engagement_pct": 0.572,
+        "appearance_pct": 16.0,
+        "saturation_pct": 0.0,
+        "novelty": 0.0,
+        "decay_score": 0.455
+      }
+    },
+    {
+      "name": "greedy slowed - conference day",
+      "base": "greedy slowed",
+      "score": 2.19,
+      "signals": {
+        "velocity_pct": 8.774,
+        "engagement_pct": -0.583,
+        "appearance_pct": 0.5,
+        "saturation_pct": 2.831,
+        "novelty": 0.3,
+        "decay_score": 0.052
+      }
+    },
+    {
+      "name": "as it was nightcore - coding session",
+      "base": "as it was nightcore",
+      "score": 2.131,
+      "signals": {
+        "velocity_pct": 0.01,
+        "engagement_pct": 6.555,
+        "appearance_pct": 1.333,
+        "saturation_pct": 0.0,
+        "novelty": 0.0,
+        "decay_score": 0.215
+      }
+    },
+    {
+      "name": "greedy nightcore - workspace setup",
+      "base": "greedy nightcore",
+      "score": 2.116,
+      "signals": {
+        "velocity_pct": 8.115,
+        "engagement_pct": 0.475,
+        "appearance_pct": 0.111,
+        "saturation_pct": 1.684,
+        "novelty": 0.06,
+        "decay_score": 0.496
+      }
+    }
+  ],
+  "top_music_declining": [
+    {
+      "name": "as it was slowed - coding session",
+      "base": "as it was slowed",
+      "score": 0.1,
+      "signals": {
+        "velocity_pct": -0.922,
+        "engagement_pct": -0.764,
+        "appearance_pct": -0.389,
+        "saturation_pct": -0.461,
+        "novelty": 0.734,
+        "decay_score": 0.701
+      }
+    },
+    {
+      "name": "as it was lofi edit - conference day",
+      "base": "as it was lofi edit",
+      "score": 0.109,
+      "signals": {
+        "velocity_pct": -0.884,
+        "engagement_pct": -0.877,
+        "appearance_pct": -0.133,
+        "saturation_pct": -0.724,
+        "novelty": 0.766,
+        "decay_score": 0.975
+      }
+    },
+    {
+      "name": "sunroof instrumental - workspace setup",
+      "base": "sunroof instrumental",
+      "score": 0.139,
+      "signals": {
+        "velocity_pct": -0.886,
+        "engagement_pct": -0.584,
+        "appearance_pct": -0.895,
+        "saturation_pct": -0.468,
+        "novelty": 0.833,
+        "decay_score": 0.278
+      }
+    },
+    {
+      "name": "anti hero instrumental - conference day",
+      "base": "anti hero instrumental",
+      "score": 0.156,
+      "signals": {
+        "velocity_pct": -0.325,
+        "engagement_pct": -0.759,
+        "appearance_pct": -0.929,
+        "saturation_pct": -0.264,
+        "novelty": 0.264,
+        "decay_score": 0.834
+      }
+    },
+    {
+      "name": "sunroof sped up - workspace setup",
+      "base": "sunroof sped up",
+      "score": 0.169,
+      "signals": {
+        "velocity_pct": 0.798,
+        "engagement_pct": -0.893,
+        "appearance_pct": -0.909,
+        "saturation_pct": 0.992,
+        "novelty": 0.35,
+        "decay_score": 0.739
+      }
+    },
+    {
+      "name": "until i found you remix - workspace setup",
+      "base": "until i found you remix",
+      "score": 0.172,
+      "signals": {
+        "velocity_pct": -0.862,
+        "engagement_pct": 0.06,
+        "appearance_pct": -0.714,
+        "saturation_pct": -0.708,
+        "novelty": 0.708,
+        "decay_score": 0.735
+      }
+    },
+    {
+      "name": "espresso sped up - workspace setup",
+      "base": "espresso sped up",
+      "score": 0.176,
+      "signals": {
+        "velocity_pct": 0.215,
+        "engagement_pct": -0.248,
+        "appearance_pct": -0.529,
+        "saturation_pct": 0.677,
+        "novelty": 0.376,
+        "decay_score": 0.851
+      }
+    },
+    {
+      "name": "greedy remix - workspace setup",
+      "base": "greedy remix",
+      "score": 0.2,
+      "signals": {
+        "velocity_pct": -0.487,
+        "engagement_pct": -0.064,
+        "appearance_pct": -0.75,
+        "saturation_pct": -0.582,
+        "novelty": 0.878,
+        "decay_score": 0.817
+      }
+    },
+    {
+      "name": "anti hero sped up - conference day",
+      "base": "anti hero sped up",
+      "score": 0.202,
+      "signals": {
+        "velocity_pct": -0.456,
+        "engagement_pct": -0.166,
+        "appearance_pct": -0.75,
+        "saturation_pct": -0.462,
+        "novelty": 0.508,
+        "decay_score": 0.973
+      }
+    },
+    {
+      "name": "until i found you slowed - workspace setup",
+      "base": "until i found you slowed",
+      "score": 0.212,
+      "signals": {
+        "velocity_pct": -0.712,
+        "engagement_pct": 0.016,
+        "appearance_pct": -0.857,
+        "saturation_pct": -0.416,
+        "novelty": 0.594,
+        "decay_score": 0.327
+      }
+    }
+  ]
+}
