@@ -32,9 +32,6 @@ const Landing = () => {
       <nav className="fixed top-0 left-0 right-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-100">
         <div className="w-full flex h-20 items-center justify-between px-6 md:px-12">
           <div className="flex items-center gap-2">
-            <div className="h-10 w-10 bg-black rounded-full flex items-center justify-center">
-              <span className="text-2xl">⚡</span>
-            </div>
             <span className="text-2xl font-black tracking-tighter">the decay</span>
           </div>
           <div className="flex items-center gap-4">
@@ -249,9 +246,6 @@ const Landing = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-16">
             <div className="md:col-span-1">
               <div className="flex items-center gap-2 mb-4">
-                <div className="h-8 w-8 bg-black rounded-full flex items-center justify-center">
-                  <span className="text-xl">⚡</span>
-                </div>
                 <span className="text-xl font-black tracking-tighter">the decay</span>
               </div>
               <p className="text-gray-500 leading-relaxed">
