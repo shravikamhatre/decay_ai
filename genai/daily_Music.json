@@ -1,0 +1,532 @@
+{
+  "niche": "Music",
+  "lookback_days": 7,
+  "top_trends_good": [
+    {
+      "name": "dark academia routine - recording session",
+      "base": "dark academia routine",
+      "score": 41.532,
+      "signals": {
+        "velocity_pct": 145.032,
+        "engagement_pct": 1.718,
+        "appearance_pct": 0.053,
+        "saturation_pct": 5.236,
+        "novelty": 0.046,
+        "decay_score": 0.116
+      }
+    },
+    {
+      "name": "cozy minimal edit - practice session",
+      "base": "cozy minimal edit",
+      "score": 17.715,
+      "signals": {
+        "velocity_pct": 69.456,
+        "engagement_pct": 2.123,
+        "appearance_pct": -0.235,
+        "saturation_pct": 12.715,
+        "novelty": 0.0,
+        "decay_score": 0.193
+      }
+    },
+    {
+      "name": "before after voiceover - practice session",
+      "base": "before after voiceover",
+      "score": 12.405,
+      "signals": {
+        "velocity_pct": 55.031,
+        "engagement_pct": 2.195,
+        "appearance_pct": -0.4,
+        "saturation_pct": 5.245,
+        "novelty": 0.0,
+        "decay_score": 0.253
+      }
+    },
+    {
+      "name": "get ready with me shorts - recording session",
+      "base": "get ready with me shorts",
+      "score": 10.284,
+      "signals": {
+        "velocity_pct": 92.166,
+        "engagement_pct": -0.287,
+        "appearance_pct": -0.85,
+        "saturation_pct": 44.424,
+        "novelty": 0.355,
+        "decay_score": 0.456
+      }
+    },
+    {
+      "name": "quiet luxury edit - studio day",
+      "base": "quiet luxury edit",
+      "score": 10.279,
+      "signals": {
+        "velocity_pct": 56.625,
+        "engagement_pct": 0.439,
+        "appearance_pct": 0.0,
+        "saturation_pct": 33.563,
+        "novelty": 0.0,
+        "decay_score": 0.047
+      }
+    },
+    {
+      "name": "day in my life vlog - studio day",
+      "base": "day in my life vlog",
+      "score": 7.986,
+      "signals": {
+        "velocity_pct": 52.115,
+        "engagement_pct": 0.497,
+        "appearance_pct": -0.867,
+        "saturation_pct": 9.027,
+        "novelty": 0.398,
+        "decay_score": 0.392
+      }
+    },
+    {
+      "name": "things nobody tells you about as a creator - studio day",
+      "base": "things nobody tells you about as a creator",
+      "score": 4.559,
+      "signals": {
+        "velocity_pct": 48.343,
+        "engagement_pct": 1.0,
+        "appearance_pct": -0.7,
+        "saturation_pct": 24.184,
+        "novelty": 0.11,
+        "decay_score": 0.784
+      }
+    },
+    {
+      "name": "routine reel shorts - practice session",
+      "base": "routine reel shorts",
+      "score": 3.354,
+      "signals": {
+        "velocity_pct": 9.141,
+        "engagement_pct": 8.882,
+        "appearance_pct": 1.5,
+        "saturation_pct": 6.818,
+        "novelty": 0.314,
+        "decay_score": 0.049
+      }
+    },
+    {
+      "name": "things nobody tells you about right now - recording session",
+      "base": "things nobody tells you about right now",
+      "score": 3.312,
+      "signals": {
+        "velocity_pct": 40.933,
+        "engagement_pct": 0.053,
+        "appearance_pct": -0.5,
+        "saturation_pct": 5.545,
+        "novelty": 0.607,
+        "decay_score": 0.995
+      }
+    },
+    {
+      "name": "clean girl vibe - recording session",
+      "base": "clean girl vibe",
+      "score": 3.23,
+      "signals": {
+        "velocity_pct": 7.693,
+        "engagement_pct": 1.288,
+        "appearance_pct": 9.0,
+        "saturation_pct": 4.19,
+        "novelty": 0.0,
+        "decay_score": 0.257
+      }
+    }
+  ],
+  "top_trends_declining": [
+    {
+      "name": "get ready with me with captions - recording session",
+      "base": "get ready with me with captions",
+      "score": 0.148,
+      "signals": {
+        "velocity_pct": -0.695,
+        "engagement_pct": -0.894,
+        "appearance_pct": -0.474,
+        "saturation_pct": -0.329,
+        "novelty": 0.777,
+        "decay_score": 0.21
+      }
+    },
+    {
+      "name": "faceless reel voiceover - practice session",
+      "base": "faceless reel voiceover",
+      "score": 0.149,
+      "signals": {
+        "velocity_pct": -0.618,
+        "engagement_pct": -0.487,
+        "appearance_pct": -0.35,
+        "saturation_pct": -0.537,
+        "novelty": 0.637,
+        "decay_score": 0.972
+      }
+    },
+    {
+      "name": "faceless reel shorts - practice session",
+      "base": "faceless reel shorts",
+      "score": 0.15,
+      "signals": {
+        "velocity_pct": -0.177,
+        "engagement_pct": -0.803,
+        "appearance_pct": -0.545,
+        "saturation_pct": -0.268,
+        "novelty": 0.883,
+        "decay_score": 0.767
+      }
+    },
+    {
+      "name": "get ready with me vlog - recording session",
+      "base": "get ready with me vlog",
+      "score": 0.157,
+      "signals": {
+        "velocity_pct": -0.987,
+        "engagement_pct": -0.727,
+        "appearance_pct": -0.389,
+        "saturation_pct": -0.806,
+        "novelty": 0.85,
+        "decay_score": 0.443
+      }
+    },
+    {
+      "name": "storytime voiceover - recording session",
+      "base": "storytime voiceover",
+      "score": 0.164,
+      "signals": {
+        "velocity_pct": -0.714,
+        "engagement_pct": -0.501,
+        "appearance_pct": -0.9,
+        "saturation_pct": -0.735,
+        "novelty": 0.852,
+        "decay_score": 0.682
+      }
+    },
+    {
+      "name": "faceless reel vlog - practice session",
+      "base": "faceless reel vlog",
+      "score": 0.166,
+      "signals": {
+        "velocity_pct": -0.482,
+        "engagement_pct": -0.521,
+        "appearance_pct": -0.95,
+        "saturation_pct": -0.515,
+        "novelty": 0.682,
+        "decay_score": 0.809
+      }
+    },
+    {
+      "name": "day in my life shorts - practice session",
+      "base": "day in my life shorts",
+      "score": 0.167,
+      "signals": {
+        "velocity_pct": -0.958,
+        "engagement_pct": 0.018,
+        "appearance_pct": -0.2,
+        "saturation_pct": -0.89,
+        "novelty": 0.933,
+        "decay_score": 0.985
+      }
+    },
+    {
+      "name": "routine reel with captions - studio day",
+      "base": "routine reel with captions",
+      "score": 0.167,
+      "signals": {
+        "velocity_pct": -0.877,
+        "engagement_pct": -0.768,
+        "appearance_pct": -0.353,
+        "saturation_pct": -0.607,
+        "novelty": 0.707,
+        "decay_score": 0.269
+      }
+    },
+    {
+      "name": "photo dump reel - recording session",
+      "base": "photo dump reel",
+      "score": 0.169,
+      "signals": {
+        "velocity_pct": -0.796,
+        "engagement_pct": -0.146,
+        "appearance_pct": -0.364,
+        "saturation_pct": -0.317,
+        "novelty": 0.743,
+        "decay_score": 0.527
+      }
+    },
+    {
+      "name": "cozy minimal aesthetic - practice session",
+      "base": "cozy minimal aesthetic",
+      "score": 0.17,
+      "signals": {
+        "velocity_pct": -0.453,
+        "engagement_pct": -0.61,
+        "appearance_pct": 0.444,
+        "saturation_pct": -0.164,
+        "novelty": 0.613,
+        "decay_score": 0.842
+      }
+    }
+  ],
+  "top_music_good": [
+    {
+      "name": "blinding lights lofi edit - studio day",
+      "base": "blinding lights lofi edit",
+      "score": 16.938,
+      "signals": {
+        "velocity_pct": 65.322,
+        "engagement_pct": 2.125,
+        "appearance_pct": 0.667,
+        "saturation_pct": 5.854,
+        "novelty": 0.0,
+        "decay_score": 0.197
+      }
+    },
+    {
+      "name": "calm down sped up - practice session",
+      "base": "calm down sped up",
+      "score": 7.285,
+      "signals": {
+        "velocity_pct": 30.661,
+        "engagement_pct": -0.479,
+        "appearance_pct": -0.25,
+        "saturation_pct": 2.614,
+        "novelty": 0.12,
+        "decay_score": 0.055
+      }
+    },
+    {
+      "name": "as it was instrumental - recording session",
+      "base": "as it was instrumental",
+      "score": 3.958,
+      "signals": {
+        "velocity_pct": 23.397,
+        "engagement_pct": -0.076,
+        "appearance_pct": -0.118,
+        "saturation_pct": 12.306,
+        "novelty": 0.249,
+        "decay_score": 0.173
+      }
+    },
+    {
+      "name": "golden hour nightcore - studio day",
+      "base": "golden hour nightcore",
+      "score": 3.847,
+      "signals": {
+        "velocity_pct": 11.942,
+        "engagement_pct": 9.338,
+        "appearance_pct": 8.5,
+        "saturation_pct": 2.603,
+        "novelty": 0.111,
+        "decay_score": 0.631
+      }
+    },
+    {
+      "name": "as it was nightcore - practice session",
+      "base": "as it was nightcore",
+      "score": 2.925,
+      "signals": {
+        "velocity_pct": 4.231,
+        "engagement_pct": 6.075,
+        "appearance_pct": 1.5,
+        "saturation_pct": 1.679,
+        "novelty": 0.0,
+        "decay_score": 0.21
+      }
+    },
+    {
+      "name": "blinding lights instrumental - studio day",
+      "base": "blinding lights instrumental",
+      "score": 2.764,
+      "signals": {
+        "velocity_pct": 8.554,
+        "engagement_pct": -0.453,
+        "appearance_pct": 3.0,
+        "saturation_pct": 2.023,
+        "novelty": 0.0,
+        "decay_score": 0.266
+      }
+    },
+    {
+      "name": "calm down slowed - practice session",
+      "base": "calm down slowed",
+      "score": 2.656,
+      "signals": {
+        "velocity_pct": 0.736,
+        "engagement_pct": 20.885,
+        "appearance_pct": 2.2,
+        "saturation_pct": 0.517,
+        "novelty": 0.505,
+        "decay_score": 0.502
+      }
+    },
+    {
+      "name": "golden hour lofi edit - recording session",
+      "base": "golden hour lofi edit",
+      "score": 2.286,
+      "signals": {
+        "velocity_pct": 16.15,
+        "engagement_pct": -0.077,
+        "appearance_pct": -0.882,
+        "saturation_pct": 6.216,
+        "novelty": 0.453,
+        "decay_score": 0.101
+      }
+    },
+    {
+      "name": "espresso sped up - recording session",
+      "base": "espresso sped up",
+      "score": 2.045,
+      "signals": {
+        "velocity_pct": 12.736,
+        "engagement_pct": -0.506,
+        "appearance_pct": 0.0,
+        "saturation_pct": 10.24,
+        "novelty": 0.0,
+        "decay_score": 0.009
+      }
+    },
+    {
+      "name": "golden hour nightcore - recording session",
+      "base": "golden hour nightcore",
+      "score": 2.009,
+      "signals": {
+        "velocity_pct": -0.35,
+        "engagement_pct": 6.571,
+        "appearance_pct": 3.667,
+        "saturation_pct": -0.189,
+        "novelty": 0.189,
+        "decay_score": 0.158
+      }
+    }
+  ],
+  "top_music_declining": [
+    {
+      "name": "until i found you slowed - studio day",
+      "base": "until i found you slowed",
+      "score": 0.102,
+      "signals": {
+        "velocity_pct": -0.064,
+        "engagement_pct": -0.108,
+        "appearance_pct": 1.714,
+        "saturation_pct": 2.416,
+        "novelty": 0.715,
+        "decay_score": 0.944
+      }
+    },
+    {
+      "name": "espresso remix - studio day",
+      "base": "espresso remix",
+      "score": 0.105,
+      "signals": {
+        "velocity_pct": -0.969,
+        "engagement_pct": -0.923,
+        "appearance_pct": -0.7,
+        "saturation_pct": -0.915,
+        "novelty": 0.929,
+        "decay_score": 0.849
+      }
+    },
+    {
+      "name": "as it was sped up - practice session",
+      "base": "as it was sped up",
+      "score": 0.132,
+      "signals": {
+        "velocity_pct": -0.799,
+        "engagement_pct": -0.47,
+        "appearance_pct": -0.625,
+        "saturation_pct": -0.587,
+        "novelty": 0.63,
+        "decay_score": 0.754
+      }
+    },
+    {
+      "name": "lush life nightcore - studio day",
+      "base": "lush life nightcore",
+      "score": 0.141,
+      "signals": {
+        "velocity_pct": -0.542,
+        "engagement_pct": -0.361,
+        "appearance_pct": 0.0,
+        "saturation_pct": -0.196,
+        "novelty": 0.692,
+        "decay_score": 0.907
+      }
+    },
+    {
+      "name": "until i found you nightcore - recording session",
+      "base": "until i found you nightcore",
+      "score": 0.161,
+      "signals": {
+        "velocity_pct": -0.922,
+        "engagement_pct": -0.104,
+        "appearance_pct": -0.889,
+        "saturation_pct": -0.878,
+        "novelty": 0.918,
+        "decay_score": 0.836
+      }
+    },
+    {
+      "name": "espresso nightcore - practice session",
+      "base": "espresso nightcore",
+      "score": 0.169,
+      "signals": {
+        "velocity_pct": -0.44,
+        "engagement_pct": -0.89,
+        "appearance_pct": -0.3,
+        "saturation_pct": -0.408,
+        "novelty": 0.778,
+        "decay_score": 0.767
+      }
+    },
+    {
+      "name": "sunroof nightcore - practice session",
+      "base": "sunroof nightcore",
+      "score": 0.185,
+      "signals": {
+        "velocity_pct": -0.961,
+        "engagement_pct": 1.016,
+        "appearance_pct": 0.545,
+        "saturation_pct": 0.63,
+        "novelty": 0.767,
+        "decay_score": 0.677
+      }
+    },
+    {
+      "name": "greedy slowed - studio day",
+      "base": "greedy slowed",
+      "score": 0.195,
+      "signals": {
+        "velocity_pct": -0.246,
+        "engagement_pct": -0.94,
+        "appearance_pct": -0.5,
+        "saturation_pct": -0.169,
+        "novelty": 0.221,
+        "decay_score": 0.734
+      }
+    },
+    {
+      "name": "greedy nightcore - practice session",
+      "base": "greedy nightcore",
+      "score": 0.197,
+      "signals": {
+        "velocity_pct": -0.668,
+        "engagement_pct": -0.34,
+        "appearance_pct": -0.833,
+        "saturation_pct": -0.396,
+        "novelty": 0.632,
+        "decay_score": 0.204
+      }
+    },
+    {
+      "name": "calm down nightcore - recording session",
+      "base": "calm down nightcore",
+      "score": 0.201,
+      "signals": {
+        "velocity_pct": -0.606,
+        "engagement_pct": -0.596,
+        "appearance_pct": -0.75,
+        "saturation_pct": -0.53,
+        "novelty": 0.665,
+        "decay_score": 0.362
+      }
+    }
+  ]
+}

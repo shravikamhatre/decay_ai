@@ -1,0 +1,532 @@
+{
+  "niche": "Fashion",
+  "lookback_days": 7,
+  "top_trends_good": [
+    {
+      "name": "routine reel with captions - thrift haul",
+      "base": "routine reel with captions",
+      "score": 8.75,
+      "signals": {
+        "velocity_pct": 65.667,
+        "engagement_pct": 0.862,
+        "appearance_pct": 1.125,
+        "saturation_pct": 32.225,
+        "novelty": 0.001,
+        "decay_score": 0.506
+      }
+    },
+    {
+      "name": "quiet luxury aesthetic - wardrobe planning",
+      "base": "quiet luxury aesthetic",
+      "score": 6.481,
+      "signals": {
+        "velocity_pct": 25.685,
+        "engagement_pct": 1.456,
+        "appearance_pct": 8.0,
+        "saturation_pct": 11.738,
+        "novelty": 0.016,
+        "decay_score": 0.251
+      }
+    },
+    {
+      "name": "old money edit - thrift haul",
+      "base": "old money edit",
+      "score": 2.921,
+      "signals": {
+        "velocity_pct": 6.091,
+        "engagement_pct": 8.951,
+        "appearance_pct": 4.0,
+        "saturation_pct": 4.654,
+        "novelty": 0.0,
+        "decay_score": 0.298
+      }
+    },
+    {
+      "name": "routine reel reel - outfit styling",
+      "base": "routine reel reel",
+      "score": 2.876,
+      "signals": {
+        "velocity_pct": 13.551,
+        "engagement_pct": 12.959,
+        "appearance_pct": 0.25,
+        "saturation_pct": 2.618,
+        "novelty": 0.222,
+        "decay_score": 0.807
+      }
+    },
+    {
+      "name": "faceless reel voiceover - wardrobe planning",
+      "base": "faceless reel voiceover",
+      "score": 2.857,
+      "signals": {
+        "velocity_pct": 0.437,
+        "engagement_pct": 11.011,
+        "appearance_pct": 3.0,
+        "saturation_pct": 0.842,
+        "novelty": 0.959,
+        "decay_score": 0.295
+      }
+    },
+    {
+      "name": "get ready with me voiceover - thrift haul",
+      "base": "get ready with me voiceover",
+      "score": 2.705,
+      "signals": {
+        "velocity_pct": 9.587,
+        "engagement_pct": 1.378,
+        "appearance_pct": 5.0,
+        "saturation_pct": 2.342,
+        "novelty": 0.0,
+        "decay_score": 0.656
+      }
+    },
+    {
+      "name": "dark academia vibe - wardrobe planning",
+      "base": "dark academia vibe",
+      "score": 2.546,
+      "signals": {
+        "velocity_pct": 5.099,
+        "engagement_pct": -0.549,
+        "appearance_pct": 6.0,
+        "saturation_pct": 1.842,
+        "novelty": 0.0,
+        "decay_score": 0.01
+      }
+    },
+    {
+      "name": "get ready with me reel - wardrobe planning",
+      "base": "get ready with me reel",
+      "score": 2.411,
+      "signals": {
+        "velocity_pct": 0.328,
+        "engagement_pct": 13.588,
+        "appearance_pct": -0.455,
+        "saturation_pct": -0.059,
+        "novelty": 0.474,
+        "decay_score": 0.167
+      }
+    },
+    {
+      "name": "soft life edit - outfit styling",
+      "base": "soft life edit",
+      "score": 2.314,
+      "signals": {
+        "velocity_pct": 10.551,
+        "engagement_pct": 1.169,
+        "appearance_pct": -0.944,
+        "saturation_pct": 2.809,
+        "novelty": 0.0,
+        "decay_score": 0.526
+      }
+    },
+    {
+      "name": "storytime vlog - thrift haul",
+      "base": "storytime vlog",
+      "score": 2.265,
+      "signals": {
+        "velocity_pct": -0.017,
+        "engagement_pct": 1.074,
+        "appearance_pct": 18.0,
+        "saturation_pct": 0.138,
+        "novelty": 0.36,
+        "decay_score": 0.156
+      }
+    }
+  ],
+  "top_trends_declining": [
+    {
+      "name": "things nobody tells you about in your 20s - wardrobe planning",
+      "base": "things nobody tells you about in your 20s",
+      "score": 0.105,
+      "signals": {
+        "velocity_pct": -0.9,
+        "engagement_pct": -0.917,
+        "appearance_pct": -0.765,
+        "saturation_pct": -0.802,
+        "novelty": 0.81,
+        "decay_score": 0.793
+      }
+    },
+    {
+      "name": "old money aesthetic - wardrobe planning",
+      "base": "old money aesthetic",
+      "score": 0.105,
+      "signals": {
+        "velocity_pct": -0.956,
+        "engagement_pct": 0.242,
+        "appearance_pct": -0.833,
+        "saturation_pct": -0.127,
+        "novelty": 0.744,
+        "decay_score": 0.822
+      }
+    },
+    {
+      "name": "routine reel reel - wardrobe planning",
+      "base": "routine reel reel",
+      "score": 0.111,
+      "signals": {
+        "velocity_pct": -0.94,
+        "engagement_pct": -0.218,
+        "appearance_pct": -0.462,
+        "saturation_pct": -0.458,
+        "novelty": 0.806,
+        "decay_score": 0.905
+      }
+    },
+    {
+      "name": "faceless reel vlog - outfit styling",
+      "base": "faceless reel vlog",
+      "score": 0.142,
+      "signals": {
+        "velocity_pct": -0.865,
+        "engagement_pct": -0.742,
+        "appearance_pct": -0.077,
+        "saturation_pct": -0.832,
+        "novelty": 0.848,
+        "decay_score": 0.949
+      }
+    },
+    {
+      "name": "before after with captions - wardrobe planning",
+      "base": "before after with captions",
+      "score": 0.147,
+      "signals": {
+        "velocity_pct": -0.651,
+        "engagement_pct": -0.569,
+        "appearance_pct": -0.053,
+        "saturation_pct": -0.402,
+        "novelty": 0.646,
+        "decay_score": 0.789
+      }
+    },
+    {
+      "name": "storytime with captions - outfit styling",
+      "base": "storytime with captions",
+      "score": 0.153,
+      "signals": {
+        "velocity_pct": -0.376,
+        "engagement_pct": -0.885,
+        "appearance_pct": -0.5,
+        "saturation_pct": -0.281,
+        "novelty": 0.281,
+        "decay_score": 0.93
+      }
+    },
+    {
+      "name": "get ready with me vlog - outfit styling",
+      "base": "get ready with me vlog",
+      "score": 0.155,
+      "signals": {
+        "velocity_pct": -0.207,
+        "engagement_pct": -0.825,
+        "appearance_pct": -0.2,
+        "saturation_pct": 0.069,
+        "novelty": 0.586,
+        "decay_score": 0.837
+      }
+    },
+    {
+      "name": "cozy minimal aesthetic - thrift haul",
+      "base": "cozy minimal aesthetic",
+      "score": 0.16,
+      "signals": {
+        "velocity_pct": -0.913,
+        "engagement_pct": -0.918,
+        "appearance_pct": 0.6,
+        "saturation_pct": -0.556,
+        "novelty": 0.812,
+        "decay_score": 0.635
+      }
+    },
+    {
+      "name": "things nobody tells you about right now - outfit styling",
+      "base": "things nobody tells you about right now",
+      "score": 0.164,
+      "signals": {
+        "velocity_pct": 0.643,
+        "engagement_pct": -0.056,
+        "appearance_pct": -0.667,
+        "saturation_pct": 1.222,
+        "novelty": 0.339,
+        "decay_score": 0.988
+      }
+    },
+    {
+      "name": "before after vlog - wardrobe planning",
+      "base": "before after vlog",
+      "score": 0.168,
+      "signals": {
+        "velocity_pct": -0.946,
+        "engagement_pct": -0.552,
+        "appearance_pct": -0.4,
+        "saturation_pct": -0.95,
+        "novelty": 0.953,
+        "decay_score": 0.764
+      }
+    }
+  ],
+  "top_music_good": [
+    {
+      "name": "anti hero instrumental - thrift haul",
+      "base": "anti hero instrumental",
+      "score": 6.794,
+      "signals": {
+        "velocity_pct": 33.401,
+        "engagement_pct": -0.501,
+        "appearance_pct": -0.5,
+        "saturation_pct": 6.895,
+        "novelty": 0.0,
+        "decay_score": 0.457
+      }
+    },
+    {
+      "name": "sunroof remix - thrift haul",
+      "base": "sunroof remix",
+      "score": 5.962,
+      "signals": {
+        "velocity_pct": 23.122,
+        "engagement_pct": 0.029,
+        "appearance_pct": 0.667,
+        "saturation_pct": 3.02,
+        "novelty": 0.169,
+        "decay_score": 0.224
+      }
+    },
+    {
+      "name": "greedy remix - thrift haul",
+      "base": "greedy remix",
+      "score": 4.696,
+      "signals": {
+        "velocity_pct": 11.478,
+        "engagement_pct": 9.321,
+        "appearance_pct": -0.842,
+        "saturation_pct": 2.196,
+        "novelty": 0.049,
+        "decay_score": 0.174
+      }
+    },
+    {
+      "name": "anti hero lofi edit - outfit styling",
+      "base": "anti hero lofi edit",
+      "score": 3.577,
+      "signals": {
+        "velocity_pct": 28.645,
+        "engagement_pct": -0.801,
+        "appearance_pct": -0.158,
+        "saturation_pct": 1.742,
+        "novelty": 0.456,
+        "decay_score": 0.549
+      }
+    },
+    {
+      "name": "until i found you remix - wardrobe planning",
+      "base": "until i found you remix",
+      "score": 3.553,
+      "signals": {
+        "velocity_pct": 27.976,
+        "engagement_pct": 0.316,
+        "appearance_pct": -0.45,
+        "saturation_pct": 7.098,
+        "novelty": 0.504,
+        "decay_score": 0.453
+      }
+    },
+    {
+      "name": "anti hero sped up - outfit styling",
+      "base": "anti hero sped up",
+      "score": 2.267,
+      "signals": {
+        "velocity_pct": 0.628,
+        "engagement_pct": 1.787,
+        "appearance_pct": 16.0,
+        "saturation_pct": 0.427,
+        "novelty": 0.054,
+        "decay_score": 0.662
+      }
+    },
+    {
+      "name": "as it was nightcore - thrift haul",
+      "base": "as it was nightcore",
+      "score": 2.11,
+      "signals": {
+        "velocity_pct": 5.032,
+        "engagement_pct": 0.195,
+        "appearance_pct": 7.5,
+        "saturation_pct": 1.843,
+        "novelty": 0.0,
+        "decay_score": 0.393
+      }
+    },
+    {
+      "name": "as it was lofi edit - thrift haul",
+      "base": "as it was lofi edit",
+      "score": 1.845,
+      "signals": {
+        "velocity_pct": 2.932,
+        "engagement_pct": 4.345,
+        "appearance_pct": 1.375,
+        "saturation_pct": 2.108,
+        "novelty": 0.377,
+        "decay_score": 0.064
+      }
+    },
+    {
+      "name": "until i found you nightcore - wardrobe planning",
+      "base": "until i found you nightcore",
+      "score": 1.75,
+      "signals": {
+        "velocity_pct": 0.104,
+        "engagement_pct": -0.923,
+        "appearance_pct": 11.0,
+        "saturation_pct": 0.157,
+        "novelty": 0.156,
+        "decay_score": 0.198
+      }
+    },
+    {
+      "name": "anti hero nightcore - wardrobe planning",
+      "base": "anti hero nightcore",
+      "score": 1.641,
+      "signals": {
+        "velocity_pct": -0.479,
+        "engagement_pct": 9.741,
+        "appearance_pct": 10.0,
+        "saturation_pct": -0.377,
+        "novelty": 0.489,
+        "decay_score": 0.697
+      }
+    }
+  ],
+  "top_music_declining": [
+    {
+      "name": "golden hour lofi edit - outfit styling",
+      "base": "golden hour lofi edit",
+      "score": 0.085,
+      "signals": {
+        "velocity_pct": -0.909,
+        "engagement_pct": -0.67,
+        "appearance_pct": -0.421,
+        "saturation_pct": -0.357,
+        "novelty": 0.776,
+        "decay_score": 0.887
+      }
+    },
+    {
+      "name": "espresso slowed - thrift haul",
+      "base": "espresso slowed",
+      "score": 0.116,
+      "signals": {
+        "velocity_pct": -0.974,
+        "engagement_pct": -0.695,
+        "appearance_pct": -0.615,
+        "saturation_pct": -0.934,
+        "novelty": 0.937,
+        "decay_score": 0.935
+      }
+    },
+    {
+      "name": "calm down slowed - thrift haul",
+      "base": "calm down slowed",
+      "score": 0.121,
+      "signals": {
+        "velocity_pct": -0.875,
+        "engagement_pct": -0.954,
+        "appearance_pct": -0.7,
+        "saturation_pct": -0.603,
+        "novelty": 0.649,
+        "decay_score": 0.34
+      }
+    },
+    {
+      "name": "golden hour sped up - wardrobe planning",
+      "base": "golden hour sped up",
+      "score": 0.123,
+      "signals": {
+        "velocity_pct": -0.846,
+        "engagement_pct": -0.753,
+        "appearance_pct": -0.444,
+        "saturation_pct": -0.706,
+        "novelty": 0.837,
+        "decay_score": 0.85
+      }
+    },
+    {
+      "name": "lush life sped up - thrift haul",
+      "base": "lush life sped up",
+      "score": 0.126,
+      "signals": {
+        "velocity_pct": -0.933,
+        "engagement_pct": -0.83,
+        "appearance_pct": -0.867,
+        "saturation_pct": -0.56,
+        "novelty": 0.753,
+        "decay_score": 0.11
+      }
+    },
+    {
+      "name": "sunroof slowed - wardrobe planning",
+      "base": "sunroof slowed",
+      "score": 0.135,
+      "signals": {
+        "velocity_pct": -0.957,
+        "engagement_pct": -0.794,
+        "appearance_pct": 0.0,
+        "saturation_pct": -0.615,
+        "novelty": 0.81,
+        "decay_score": 0.644
+      }
+    },
+    {
+      "name": "calm down nightcore - wardrobe planning",
+      "base": "calm down nightcore",
+      "score": 0.14,
+      "signals": {
+        "velocity_pct": -0.577,
+        "engagement_pct": -0.593,
+        "appearance_pct": -0.917,
+        "saturation_pct": -0.481,
+        "novelty": 0.503,
+        "decay_score": 0.792
+      }
+    },
+    {
+      "name": "blinding lights sped up - wardrobe planning",
+      "base": "blinding lights sped up",
+      "score": 0.151,
+      "signals": {
+        "velocity_pct": 0.832,
+        "engagement_pct": -0.737,
+        "appearance_pct": -0.684,
+        "saturation_pct": 0.995,
+        "novelty": 0.637,
+        "decay_score": 0.972
+      }
+    },
+    {
+      "name": "anti hero remix - wardrobe planning",
+      "base": "anti hero remix",
+      "score": 0.153,
+      "signals": {
+        "velocity_pct": -0.929,
+        "engagement_pct": 0.054,
+        "appearance_pct": -0.727,
+        "saturation_pct": -0.695,
+        "novelty": 0.76,
+        "decay_score": 0.755
+      }
+    },
+    {
+      "name": "golden hour sped up - thrift haul",
+      "base": "golden hour sped up",
+      "score": 0.173,
+      "signals": {
+        "velocity_pct": -0.683,
+        "engagement_pct": -0.369,
+        "appearance_pct": -0.167,
+        "saturation_pct": -0.465,
+        "novelty": 0.693,
+        "decay_score": 0.789
+      }
+    }
+  ]
+}

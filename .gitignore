@@ -9,3 +9,4 @@ genai/node_modules/
 frontend/.env
 backend/.env
 genai/.env
+genai/llm/.env
