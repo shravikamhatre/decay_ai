@@ -460,6 +460,6 @@ html {
 
 /* Selection color */
 ::selection {
-    background: hsl(var(--primary) / 0.2);
-    color: hsl(var(--foreground));
+    background: hsl(var(--color-lime));
+    color: black;
 }

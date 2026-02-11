@@ -6,15 +6,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AppLayout from "@/components/layout/AppLayout";
 import { ThemeProvider } from "@/components/theme-provider";
 import CalendarPage from "@/pages/Calendar";
-import Dashboard from "@/pages/Dashboard";
-import Insights from "@/pages/Insights";
+import Feedback from "@/pages/Feedback";
 import Landing from "@/pages/Landing";
 import Login from "@/pages/Login";
 import Onboarding from "@/pages/Onboarding";
-import YourPlatforms from "@/pages/YourPlatforms"; // Import YourPlatforms
 import Settings from "@/pages/Settings";
 import Signup from "@/pages/Signup";
 import NotFound from "@/pages/NotFound";
+import TrendAnalysis from "@/pages/TrendAnalysis";
 
 const queryClient = new QueryClient();
 
@@ -33,10 +32,9 @@ const App = () => (
 
                         <Route element={<AppLayout />}>
                             <Route path="/calendar" element={<CalendarPage />} />
-                            <Route path="/dashboard" element={<Dashboard />} />
-                            <Route path="/insights" element={<Insights />} />
-                            <Route path="/your-platforms" element={<YourPlatforms />} />
+                            <Route path="/feedback" element={<Feedback />} />
                             <Route path="/settings" element={<Settings />} />
+                            <Route path="/trend-analysis" element={<TrendAnalysis />} />
                         </Route>
 
                         <Route path="*" element={<NotFound />} />

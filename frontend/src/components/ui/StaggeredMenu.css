@@ -21,11 +21,11 @@
 .staggered-menu-header {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: auto;
     height: 80px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 0 2rem;
     box-sizing: border-box;
