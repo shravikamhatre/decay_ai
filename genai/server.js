@@ -41,16 +41,61 @@ app.post('/generate', (req, res) => {
 
     pythonProcess.stderr.on('data', (data) => {
         const chunk = data.toString();
-        console.error(`[Python API]: ${chunk}`);
+        // Python generic logs often go to stderr, so we accumulate but don't panic yet
+        // console.error(`[Python API]: ${chunk}`);
         errorOutput += chunk;
     });
 
     pythonProcess.on('close', (code) => {
+        // If code is non-zero, it failed
         if (code !== 0) {
+            console.error(`Python process exited with code ${code}`);
+            console.error(errorOutput);
             return res.status(500).json({ error: 'Generation failed', details: errorOutput });
         }
         res.json({ message: 'Generation complete', output });
     });
+});
+
+// Explain Trend Endpoint
+import { explainTrend } from './llm/explainTrend.js';
+
+app.post('/explain-trend', async (req, res) => {
+    try {
+        const { trend_name, base, platform, status, signals } = req.body;
+
+        // Map frontend "status" -> "calendar_color"
+        let calendar_color = 'red';
+        if (status === 'rising') calendar_color = 'green';
+        if (status === 'stable') calendar_color = 'yellow';
+
+        // Map frontend "signals" -> "current_trend"
+        const current_trend = {
+            score: signals.score,
+            velocity_change: signals.velocity_pct, // Mapping _pct -> _change (or just value)
+            engagement: signals.engagement_pct,
+            saturation: signals.saturation_pct,
+            decay: signals.decay_score,
+            appearance: signals.appearance_pct,
+            novelty: signals.novelty
+        };
+
+        const trendData = {
+            trend_name,
+            base,
+            platform,
+            calendar_color,
+            current_trend,
+            recommended_trends: [] // Frontend doesn't send alternatives yet
+        };
+
+        const result = await explainTrend(trendData);
+        res.json({ success: true, explanation: result.explanation });
+
+    } catch (error) {
+        console.error("Explanation error:", error);
+        res.status(500).json({ success: false, error: error.message });
+    }
 });
 
 // Serve generated data

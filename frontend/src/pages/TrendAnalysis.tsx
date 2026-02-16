@@ -133,7 +133,7 @@ const TrendAnalysis = () => {
         setIsLoading(true);
         setExplanation(null);
         try {
-            const response = await fetch("http://localhost:3000/explain-trend", {
+            const response = await fetch(`${import.meta.env.VITE_GENAI_URL}/explain-trend`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
