@@ -1,10 +1,12 @@
 import express from "express";
+import cors from "cors";
 import dotenv from "dotenv";
 dotenv.config({ path: "./.env" });
 
 const { supabase } = await import("./supabase.js");
 
 const app = express();
+app.use(cors()); // Allow all origins (or configure specific ones)
 app.use(express.json());
 
 const authMiddleware = async (req, res, next) => {
