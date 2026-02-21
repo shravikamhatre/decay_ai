@@ -36,25 +36,37 @@ app.post("/signup", async (req, res) => {
 
   try {
     const { data, error } = await supabase.auth.signUp({ email, password });
-    if (error) throw error;
+    if (error) {
+      console.error("Supabase Auth Error:", error);
+      throw error;
+    }
 
     const userId = data.user.id;
 
-    await supabase.from("users").insert({
+    const { error: userError } = await supabase.from("users").insert({
       id: userId,
       email,
       name,
       account_type: accountType,
     });
+    if (userError) {
+      console.error("User Insert Error:", userError);
+      throw new Error(`User insert failed: ${userError.message}`);
+    }
 
-    await supabase.from("profiles").insert({
+    const { error: profileError } = await supabase.from("profiles").insert({
       user_id: userId,
       categories,
       formats,
     });
+    if (profileError) {
+      console.error("Profile Insert Error:", profileError);
+      throw new Error(`Profile insert failed: ${profileError.message}`);
+    }
 
     res.json({ success: true, userId });
   } catch (err) {
+    console.error("Signup Endpoint Error:", err.message);
     res.status(500).json({ error: err.message });
   }
 });
