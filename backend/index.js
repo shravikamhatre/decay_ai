@@ -1,8 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
+import { supabase } from "./supabase.js";
 dotenv.config({ path: "./.env" });
-
-const { supabase } = await import("./supabase.js");
 
 const app = express();
 app.use(express.json());
@@ -81,32 +80,41 @@ app.post("/login", async (req, res) => {
   }
 });
 
-app.get('/me', authMiddleware, async (req, res) => {
+app.get("/me", authMiddleware, async (req, res) => {
   try {
-    const userId = req.user.id
+    const userId = req.user.id;
 
     const { data: user } = await supabase
-      .from('users')
-      .select('*')
-      .eq('id', userId)
-      .single()
+      .from("users")
+      .select("*")
+      .eq("id", userId)
+      .single();
 
     const { data: profile } = await supabase
-      .from('profiles')
-      .select('*')
-      .eq('user_id', userId)
-      .single()
+      .from("profiles")
+      .select("*")
+      .eq("user_id", userId)
+      .single();
 
-    res.json({ user, profile })
+    res.json({ user, profile });
   } catch (err) {
-    res.status(500).json({ error: err.message })
+    res.status(500).json({ error: err.message });
   }
-})
+});
+app.get("/ping-db", async (req, res) => {
+  try {
+    const { error } = await supabase.from("users").select("id").limit(1);
 
+    if (error) throw error;
 
+    res.status(200).send("DB Alive");
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Error");
+  }
+});
 const PORT = process.env.PORT || 10000;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-
