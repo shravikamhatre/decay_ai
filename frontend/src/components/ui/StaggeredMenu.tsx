@@ -16,9 +16,9 @@ export interface StaggeredMenuSocialItem {
 }
 
 export const menuItems: StaggeredMenuItem[] = [
-    { label: 'Dashboard', ariaLabel: 'Go to dashboard', link: '/dashboard' },
-    { label: 'Scheduled Posts', ariaLabel: 'View your scheduled posts', link: '/scheduled-posts' },
-    { label: 'Trend Insights', ariaLabel: 'Analyze trends', link: '/insights' },
+    { label: 'Calendar', ariaLabel: 'View your calendar', link: '/calendar' },
+    { label: 'Trend Analysis', ariaLabel: 'Analyze trends', link: '/trend-analysis' },
+    { label: 'HypeMeter', ariaLabel: 'Explore content trends', link: '/hypemeter' },
     { label: 'Settings', ariaLabel: 'Manage settings', link: '/settings' },
 ];
 

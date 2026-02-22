@@ -5,6 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AppLayout from "@/components/layout/AppLayout";
 import { ThemeProvider } from "@/components/theme-provider";
+import { AuthProvider } from "@/contexts/AuthContext";
+import ProtectedRoute from "@/components/ProtectedRoute";
 import CalendarPage from "@/pages/Calendar";
 import Feedback from "@/pages/Feedback";
 import Landing from "@/pages/Landing";
@@ -14,35 +16,56 @@ import Settings from "@/pages/Settings";
 import Signup from "@/pages/Signup";
 import NotFound from "@/pages/NotFound";
 import TrendAnalysis from "@/pages/TrendAnalysis";
+import HypeMeter from "@/pages/HypeMeter";
 
 const queryClient = new QueryClient();
 
 const App = () => (
-    <QueryClientProvider client={queryClient}>
-        <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-            <TooltipProvider>
-                <Toaster />
-                <Sonner />
-                <BrowserRouter>
-                    <Routes>
-                        <Route path="/" element={<Landing />} />
-                        <Route path="/login" element={<Login />} />
-                        <Route path="/signup" element={<Signup />} />
-                        <Route path="/onboarding" element={<Onboarding />} />
+  <QueryClientProvider client={queryClient}>
+    <AuthProvider>
+      <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Routes>
+              {/* Public routes */}
+              <Route path="/" element={<Landing />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
 
-                        <Route element={<AppLayout />}>
-                            <Route path="/calendar" element={<CalendarPage />} />
-                            <Route path="/feedback" element={<Feedback />} />
-                            <Route path="/settings" element={<Settings />} />
-                            <Route path="/trend-analysis" element={<TrendAnalysis />} />
-                        </Route>
+              {/* Onboarding route */}
+              <Route
+                path="/onboarding"
+                element={
+                  <ProtectedRoute>
+                    <Onboarding />
+                  </ProtectedRoute>
+                }
+              />
 
-                        <Route path="*" element={<NotFound />} />
-                    </Routes>
-                </BrowserRouter>
-            </TooltipProvider>
-        </ThemeProvider>
-    </QueryClientProvider>
+              {/* Protected app routes with layout */}
+              <Route
+                element={
+                  <ProtectedRoute>
+                    <AppLayout />
+                  </ProtectedRoute>
+                }
+              >
+                <Route path="/calendar" element={<CalendarPage />} />
+                <Route path="/feedback" element={<Feedback />} />
+                <Route path="/settings" element={<Settings />} />
+                <Route path="/trend-analysis" element={<TrendAnalysis />} />
+                <Route path="/hypemeter" element={<HypeMeter />} />
+              </Route>
+
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </ThemeProvider>
+    </AuthProvider>
+  </QueryClientProvider>
 );
 
 export default App;

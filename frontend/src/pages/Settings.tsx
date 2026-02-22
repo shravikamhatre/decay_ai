@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import { useAuth } from "@/contexts/AuthContext";
 import { motion } from "framer-motion";
 import {
   User,
   Shield,
   Bell,
-  CreditCard,
   HelpCircle,
   ChevronRight,
   Check,
@@ -24,13 +24,25 @@ const settingsSections = [
   { id: "account", label: "Account", icon: User },
   { id: "security", label: "Security", icon: Shield },
   { id: "notifications", label: "Notifications", icon: Bell },
-  { id: "billing", label: "Billing", icon: CreditCard },
   { id: "help", label: "Help & Support", icon: HelpCircle },
 ];
 
 const Settings = () => {
+  const { user } = useAuth();
   const [activeSection, setActiveSection] = useState("account");
   const [showPassword, setShowPassword] = useState(false);
+
+  // Parse user name into first and last
+  const { firstName, lastName } = useMemo(() => {
+    if (!user?.name) return { firstName: "", lastName: "" };
+    const parts = user.name.split(" ");
+    return {
+      firstName: parts[0] || "",
+      lastName: parts.slice(1).join(" ") || "",
+    };
+  }, [user?.name]);
+
+  const userEmail = user?.email || "";
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -97,7 +109,7 @@ const Settings = () => {
                       </button>
                     </div>
                     <div>
-                      <p className="font-bold text-white">John Doe</p>
+                      <p className="font-bold text-white">{user?.name || "User"}</p>
                       <p className="text-sm text-zinc-500">Premium Member</p>
                     </div>
                   </div>
@@ -106,14 +118,14 @@ const Settings = () => {
                     <div className="space-y-2">
                       <Label className="text-white font-bold">First Name</Label>
                       <Input
-                        defaultValue="John"
+                        defaultValue={firstName}
                         className="rounded-xl bg-black border-zinc-800 text-white focus:border-white focus:ring-white"
                       />
                     </div>
                     <div className="space-y-2">
                       <Label className="text-white font-bold">Last Name</Label>
                       <Input
-                        defaultValue="Doe"
+                        defaultValue={lastName}
                         className="rounded-xl bg-black border-zinc-800 text-white focus:border-white focus:ring-white"
                       />
                     </div>
@@ -121,7 +133,7 @@ const Settings = () => {
                       <Label className="text-white font-bold">Email</Label>
                       <Input
                         type="email"
-                        defaultValue="john.doe@example.com"
+                        defaultValue={userEmail}
                         className="rounded-xl bg-black border-zinc-800 text-white focus:border-white focus:ring-white"
                       />
                     </div>
@@ -273,47 +285,6 @@ const Settings = () => {
               </div>
             )}
 
-            {/* Billing Settings */}
-            {activeSection === "billing" && (
-              <>
-                <div className="bg-waxy-lime text-black rounded-2xl p-6">
-                  <h3 className="font-airone text-lg font-bold lowercase mb-4">current plan</h3>
-
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="font-bold text-xl">Premium Plan</p>
-                      <p className="text-sm text-black/70">$29/month • Billed monthly</p>
-                    </div>
-                    <span className="bg-black text-white px-3 py-1 rounded-full text-xs font-bold">Active</span>
-                  </div>
-
-                  <Button variant="outline" className="mt-4 border-black text-black hover:bg-black/10 rounded-full font-bold">
-                    Change Plan
-                  </Button>
-                </div>
-
-                <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
-                  <h3 className="font-airone text-lg font-bold lowercase mb-4">payment method</h3>
-
-                  <div className="flex items-center justify-between p-4 rounded-xl bg-black border border-zinc-800 mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 text-white text-xs font-bold">
-                        VISA
-                      </div>
-                      <div>
-                        <p className="font-bold text-white">•••• •••• •••• 4242</p>
-                        <p className="text-sm text-zinc-500">Expires 12/26</p>
-                      </div>
-                    </div>
-                    <Button variant="ghost" size="sm" className="font-bold text-white hover:text-white/80">Edit</Button>
-                  </div>
-
-                  <Button variant="outline" className="border-zinc-800 text-white hover:bg-zinc-800 rounded-full font-bold bg-transparent">
-                    Add Payment Method
-                  </Button>
-                </div>
-              </>
-            )}
 
             {/* Help & Support */}
             {activeSection === "help" && (

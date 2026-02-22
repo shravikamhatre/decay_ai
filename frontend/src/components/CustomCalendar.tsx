@@ -90,11 +90,11 @@ const CustomCalendar = ({ className, compact = false, dayCategories, tasks, onDa
         setDragOverDate(null);
     };
 
-    // Calculate the start of the current week view (today + weekOffset * 7 days)
-    const weekStartDate = addDays(today, weekOffset * 7);
+    // Calculate the start of the current view (today + weekOffset * 14 days)
+    const viewStartDate = addDays(today, weekOffset * 14);
 
-    const nextWeek = () => setWeekOffset(weekOffset + 1);
-    const prevWeek = () => setWeekOffset(weekOffset - 1);
+    const nextPeriod = () => setWeekOffset(weekOffset + 1);
+    const prevPeriod = () => setWeekOffset(weekOffset - 1);
     const goToToday = () => setWeekOffset(0);
 
     // Get tasks for a specific day
@@ -148,41 +148,41 @@ const CustomCalendar = ({ className, compact = false, dayCategories, tasks, onDa
         }
     };
 
-    // Generate the 7 days of the current week view
-    const getWeekDays = () => {
+    // Generate 14 days for the 2-week view
+    const getViewDays = () => {
         const days: Date[] = [];
-        for (let i = 0; i < 7; i++) {
-            days.push(addDays(weekStartDate, i));
+        for (let i = 0; i < 14; i++) {
+            days.push(addDays(viewStartDate, i));
         }
         return days;
     };
 
-    const weekDays = getWeekDays();
-    const weekEndDate = weekDays[6];
+    const viewDays = getViewDays();
+    const viewEndDate = viewDays[13];
 
     const renderHeader = () => {
-        // Format header to show the week range
-        const startMonth = format(weekStartDate, "MMM");
-        const endMonth = format(weekEndDate, "MMM");
-        const startYear = format(weekStartDate, "yyyy");
-        const endYear = format(weekEndDate, "yyyy");
+        // Format header to show the 2-week range
+        const startMonth = format(viewStartDate, "MMM");
+        const endMonth = format(viewEndDate, "MMM");
+        const startYear = format(viewStartDate, "yyyy");
+        const endYear = format(viewEndDate, "yyyy");
 
         let headerText;
         if (startYear !== endYear) {
-            headerText = `${format(weekStartDate, "MMM d, yyyy")} - ${format(weekEndDate, "MMM d, yyyy")}`;
+            headerText = `${format(viewStartDate, "MMM d, yyyy")} - ${format(viewEndDate, "MMM d, yyyy")}`;
         } else if (startMonth !== endMonth) {
-            headerText = `${format(weekStartDate, "MMM d")} - ${format(weekEndDate, "MMM d, yyyy")}`;
+            headerText = `${format(viewStartDate, "MMM d")} - ${format(viewEndDate, "MMM d, yyyy")}`;
         } else {
-            headerText = `${format(weekStartDate, "MMM d")} - ${format(weekEndDate, "d, yyyy")}`;
+            headerText = `${format(viewStartDate, "MMM d")} - ${format(viewEndDate, "d, yyyy")}`;
         }
 
         return (
             <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-2">
-                    <Button variant="ghost" size="icon" onClick={prevWeek} className="hover:bg-gray-100 rounded-full">
+                    <Button variant="ghost" size="icon" onClick={prevPeriod} className="hover:bg-gray-100 rounded-full">
                         <ChevronLeft className="h-5 w-5" />
                     </Button>
-                    <Button variant="ghost" size="icon" onClick={nextWeek} className="hover:bg-gray-100 rounded-full">
+                    <Button variant="ghost" size="icon" onClick={nextPeriod} className="hover:bg-gray-100 rounded-full">
                         <ChevronRight className="h-5 w-5" />
                     </Button>
                     {weekOffset !== 0 && (
@@ -199,11 +199,13 @@ const CustomCalendar = ({ className, compact = false, dayCategories, tasks, onDa
     };
 
     const renderDaysHeader = () => {
+        // Get day names for 7 columns
+        const dayNames = viewDays.slice(0, 7).map(day => format(day, "EEE"));
         return (
             <div className="grid grid-cols-7 mb-2 border-b border-gray-700/50 pb-2">
-                {weekDays.map((day, i) => (
+                {dayNames.map((dayName, i) => (
                     <div key={i} className="text-center font-medium text-gray-400 py-2 uppercase text-xs tracking-wider">
-                        {format(day, "EEE")}
+                        {dayName}
                     </div>
                 ))}
             </div>
@@ -213,7 +215,7 @@ const CustomCalendar = ({ className, compact = false, dayCategories, tasks, onDa
     const renderCells = () => {
         return (
             <div className="grid grid-cols-7 gap-1.5 p-1 flex-1">
-                {weekDays.map((day) => {
+                {viewDays.map((day) => {
                     const formattedDate = format(day, "d");
                     const monthLabel = format(day, "MMM");
                     const isSelected = isSameDay(day, selectedDate);

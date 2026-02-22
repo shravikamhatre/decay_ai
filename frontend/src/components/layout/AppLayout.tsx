@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
 // import Sidebar from "./Sidebar"; // Removed Sidebar
 import TopBar from "./TopBar";
-import FloatingAIAssistant from "@/components/ai/FloatingAIAssistant";
 import StaggeredMenu from "@/components/ui/StaggeredMenu";
 
 interface AppLayoutProps {
@@ -10,7 +9,8 @@ interface AppLayoutProps {
 
 const menuItems = [
   { label: 'Calendar', ariaLabel: 'View content calendar', link: '/calendar' },
-  { label: 'Trending Insights', ariaLabel: 'View trend insights', link: '/trend-analysis' },
+  { label: 'Trend Analysis', ariaLabel: 'View trend insights', link: '/trend-analysis' },
+  { label: 'HypeMeter', ariaLabel: 'Explore content trends', link: '/hypemeter' },
   { label: 'Settings', ariaLabel: 'Go to settings', link: '/settings' }
 ];
 
@@ -45,9 +45,9 @@ const AppLayout = ({ title }: AppLayoutProps) => {
           <Outlet />
         </main>
       </div>
-      <FloatingAIAssistant />
     </div>
   );
 };
 
 export default AppLayout;
+

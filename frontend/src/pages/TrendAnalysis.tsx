@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowLeft, TrendingUp, TrendingDown, AlertTriangle, Info } from "lucide-react";
+import { ArrowLeft, TrendingUp, TrendingDown, AlertTriangle, Info, Sparkles, BrainCircuit, Activity } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
@@ -125,6 +125,53 @@ const topTrends = Array.from({ length: 50 }, (_, i) => generateTrendData(i));
 
 const TrendAnalysis = () => {
     const [selectedTrend, setSelectedTrend] = useState<TrendData>(topTrends[0]);
+    const [explanation, setExplanation] = useState<string | null>(null);
+    const [isLoading, setIsLoading] = useState(false);
+
+    // Fetch AI explanation when trend changes
+    const fetchExplanation = async (trend: TrendData) => {
+        setIsLoading(true);
+        setExplanation(null);
+        try {
+            const response = await fetch("http://localhost:3000/explain-trend", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    trend_name: trend.name,
+                    base: trend.name, // Using name as base for now
+                    platform: "Social Media",
+                    status: trend.status,
+                    signals: {
+                        score: trend.score,
+                        velocity_pct: trend.status === "rising" ? 120 : trend.status === "falling" ? -45 : 10,
+                        engagement_pct: trend.status === "rising" ? 85 : trend.status === "falling" ? -20 : 50,
+                        saturation_pct: trend.status === "rising" ? 30 : trend.status === "falling" ? 90 : 60,
+                        decay_score: trend.status === "falling" ? 0.9 : 0.2,
+                        appearance_pct: 50,
+                        novelty: trend.status === "rising" ? 0.9 : 0.4
+                    }
+                })
+            });
+            const data = await response.json();
+            if (data.success) {
+                setExplanation(data.explanation);
+            }
+        } catch (error) {
+            console.error("Failed to fetch explanation:", error);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    // Initial fetch and on change
+    useState(() => {
+        fetchExplanation(selectedTrend);
+    });
+
+    const handleTrendSelect = (trend: TrendData) => {
+        setSelectedTrend(trend);
+        fetchExplanation(trend);
+    };
 
     return (
         <div className="min-h-screen bg-black text-white font-sans selection:bg-waxy-lime selection:text-black">
@@ -194,64 +241,70 @@ const TrendAnalysis = () => {
                         </div>
                     </motion.div>
 
-                    {/* Decline Graph with Reasoning */}
+                    {/* AI Analysis Panel - Replaces Decline Graph */}
                     <motion.div
-                        key={`dec-${selectedTrend.name}`}
+                        key={`ai-${selectedTrend.name}`}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.1 }}
-                        className="bg-zinc-900 rounded-3xl p-6 border border-zinc-800"
+                        className="bg-zinc-900 rounded-3xl p-6 border border-zinc-800 flex flex-col relative overflow-hidden"
                     >
-                        <div className="flex items-center justify-between mb-6">
-                            <div className="flex flex-col">
-                                <h3 className="font-airone text-2xl font-bold lowercase flex items-center gap-2">
-                                    <TrendingDown className="w-5 h-5 text-waxy-pink" />
-                                    Decline Analysis
-                                </h3>
-                                <span className="text-xs text-zinc-400 mt-1">4 Week Daily Retention Rate</span>
-                            </div>
-                            {selectedTrend.status === "falling" && (
-                                <span className="bg-red-900/30 px-3 py-1 rounded-full text-xs font-bold border border-red-800 text-red-400 animate-pulse">
-                                    Action Needed
-                                </span>
-                            )}
+                        {/* Background sheen effect for AI feel */}
+                        <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
+                            <div className="w-64 h-64 bg-waxy-purple rounded-full blur-[100px]" />
                         </div>
 
-                        <div className="flex flex-col h-full">
-                            <div className="h-[200px] w-full mb-6">
-                                <ResponsiveContainer width="100%" height="100%">
-                                    <LineChart data={selectedTrend.declineData}>
-                                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#3f3f46" />
-                                        <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fill: '#a1a1aa', fontSize: 12 }} dy={10} />
-                                        <Tooltip
-                                            contentStyle={{ backgroundColor: '#18181b', border: '1px solid #27272a', borderRadius: '12px', color: '#fff' }}
-                                            itemStyle={{ color: '#fff' }}
-                                        />
-                                        <Line
-                                            type="monotone"
-                                            dataKey="value"
-                                            stroke={selectedTrend.status === "falling" ? "#DC2626" : "#10B981"}
-                                            strokeWidth={3}
-                                            dot={{ r: 4, fill: selectedTrend.status === "falling" ? "#DC2626" : "#10B981" }}
-                                        />
-                                    </LineChart>
-                                </ResponsiveContainer>
+                        <div className="flex items-center justify-between mb-6 relative z-10">
+                            <div className="flex flex-col">
+                                <h3 className="font-airone text-2xl font-bold lowercase flex items-center gap-2">
+                                    <BrainCircuit className="w-6 h-6 text-waxy-purple" />
+                                    AI Analyst Insight
+                                </h3>
+                                <span className="text-xs text-zinc-400 mt-1 uppercase tracking-wider font-bold">
+                                    Powered by Decay Model v2.4
+                                </span>
                             </div>
+                            <div className="flex items-center gap-2">
+                                {isLoading ? (
+                                    <span className="flex items-center gap-2 text-xs font-bold text-waxy-purple animate-pulse">
+                                        <Activity className="w-3 h-3" />
+                                        ANALYZING SIGNALS...
+                                    </span>
+                                ) : (
+                                    <Button size="sm" variant="outline" className="h-7 text-xs border-zinc-700 bg-zinc-800/50" onClick={() => fetchExplanation(selectedTrend)}>
+                                        <Sparkles className="w-3 h-3 mr-1" />
+                                        Refresh Analysis
+                                    </Button>
+                                )}
+                            </div>
+                        </div>
 
-                            <div className="bg-black p-4 rounded-2xl border border-zinc-800 flex gap-3">
-                                <div className={cn(
-                                    "p-2 rounded-full h-fit flex-shrink-0 text-black",
-                                    selectedTrend.status === "falling" ? "bg-red-400 text-black" : "bg-waxy-lime text-black"
-                                )}>
-                                    <AlertTriangle className="w-5 h-5" />
+                        <div className="flex-1 bg-black/40 rounded-2xl border border-zinc-800/50 p-5 relative z-10 overflow-hidden">
+                            {isLoading ? (
+                                <div className="space-y-4 animate-pulse">
+                                    <div className="h-4 bg-zinc-800 rounded w-3/4"></div>
+                                    <div className="h-4 bg-zinc-800 rounded w-full"></div>
+                                    <div className="h-4 bg-zinc-800 rounded w-5/6"></div>
+                                    <div className="h-20 bg-zinc-800/50 rounded-xl mt-4"></div>
                                 </div>
-                                <div>
-                                    <h4 className="font-bold text-sm uppercase tracking-wider text-zinc-500 mb-1">AI Reasoning</h4>
-                                    <p className="font-medium text-zinc-200 text-sm leading-relaxed">
-                                        {selectedTrend.reasoning}
-                                    </p>
+                            ) : explanation ? (
+                                <div className="prose prose-invert prose-sm max-w-none">
+                                    <div className="whitespace-pre-wrap text-zinc-300 font-medium leading-relaxed">
+                                        {explanation}
+                                    </div>
+
+                                    {/* Statutory/Confidence Footer */}
+                                    <div className="mt-6 pt-4 border-t border-zinc-800/50 flex items-center justify-between text-[10px] text-zinc-500 uppercase tracking-widest font-bold">
+                                        <span>CONFIDENCE: 94.2%</span>
+                                        <span>SIGNALS: VELOCITY, SATURATION, DECAY</span>
+                                    </div>
                                 </div>
-                            </div>
+                            ) : (
+                                <div className="h-full flex flex-col items-center justify-center text-zinc-500 gap-2">
+                                    <AlertTriangle className="w-8 h-8 opacity-50" />
+                                    <p className="text-sm">Analysis unavailable</p>
+                                </div>
+                            )}
                         </div>
                     </motion.div>
 
@@ -280,7 +333,7 @@ const TrendAnalysis = () => {
                                     {topTrends.map((trend) => (
                                         <tr
                                             key={trend.rank}
-                                            onClick={() => setSelectedTrend(trend)}
+                                            onClick={() => handleTrendSelect(trend)}
                                             className={cn(
                                                 "transition-all cursor-pointer",
                                                 selectedTrend.rank === trend.rank ? "bg-zinc-800" : "hover:bg-zinc-800/50",
