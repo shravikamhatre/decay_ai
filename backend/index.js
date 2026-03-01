@@ -2,9 +2,11 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import express from "express";
+import cors from "cors";
 import { supabase } from "./supabase.js";
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 const authMiddleware = async (req, res, next) => {
@@ -34,7 +36,14 @@ app.post("/signup", async (req, res) => {
 
   try {
     const { data, error } = await supabase.auth.signUp({ email, password });
-    if (error) throw error;
+    
+    if (error) {
+      // Check for duplicate email error
+      if (error.message.includes("already registered") || error.message.includes("User already exists")) {
+        return res.status(409).json({ error: "Account already exists with this email" });
+      }
+      throw error;
+    }
 
     const userId = data.user.id;
 
@@ -53,6 +62,10 @@ app.post("/signup", async (req, res) => {
 
     res.json({ success: true, userId });
   } catch (err) {
+    // Catch duplicate email errors
+    if (err.message.includes("duplicate") || err.message.includes("already")) {
+      return res.status(409).json({ error: "Account already exists with this email" });
+    }
     res.status(500).json({ error: err.message });
   }
 });
@@ -102,18 +115,7 @@ app.get("/me", authMiddleware, async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
-app.get("/ping-db", async (req, res) => {
-  try {
-    const { error } = await supabase.from("users").select("id").limit(1);
 
-    if (error) throw error;
-
-    res.status(200).send("DB Alive");
-  } catch (err) {
-    console.error(err);
-    res.status(500).send("Error");
-  }
-});
 const PORT = process.env.PORT || 10000;
 
 app.listen(PORT, () => {
